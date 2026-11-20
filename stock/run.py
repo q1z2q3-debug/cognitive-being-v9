@@ -28,36 +28,11 @@ from stock.encode import DIMS, encode_day, load_ohlc  # noqa: E402
 
 DATA = Path(__file__).resolve().parent / "data"
 
-NAME_MAP = {
-    "sh000001.csv": "上证指数 000001",
-    "sh000300.csv": "沪深300 000300",
-    "sz000001_pab.csv": "平安银行 000001.SZ",
-    "sh601166_xy.csv": "兴业银行 601166.SH",
-    "sh600000_pf.csv": "浦发银行 600000.SH",
-    "sh600016_ms.csv": "民生银行 600016.SH",
-    "sh601818_gd.csv": "光大银行 601818.SH",
-    "sh600015_hx.csv": "华夏银行 600015.SH",
-    "sh601169_bj.csv": "北京银行 601169.SH",
-    "sh601088_sh.csv": "中国神华 601088.SH",
-    "sh601225_sm.csv": "陕西煤业 601225.SH",
-    "sh601857_zy.csv": "中国石油 601857.SH",
-    "sh600938_hq.csv": "中国海油 600938.SH",
-    "sh600900_cj.csv": "长江电力 600900.SH",
-    "sh601628_rs.csv": "中国人寿 601628.SH",
-    "sh600036_zsyh.csv": "招商银行 600036.SH",
-    "sh601398_gsyh.csv": "工商银行 601398.SH",
-    "sh601318_zgpa.csv": "中国平安 601318.SH",
-    "sh600309_whhx.csv": "万华化学 600309.SH",
-    "sh600426_hlhs.csv": "华鲁恒升 600426.SH",
-    "sz002648_wxhx.csv": "卫星化学 002648.SZ",
-    "sz002601_lbjt.csv": "龙佰集团 002601.SZ",
-    "sh600141_xfjt.csv": "兴发集团 600141.SH",
-    "sh600346_hlsh.csv": "恒力石化 600346.SH",
-    "sz002493_rs.csv": "荣盛石化 002493.SZ",
-    "sh600486_ynhg.csv": "扬农化工 600486.SH",
+# 映射不再手写：标的池是 stock/universe.py 一处，文件名 = 代码，
+# 展示名由其派生，避免两份映射漂移。
+from stock.universe import UNIVERSE  # noqa: E402
 
-
-}
+NAME_MAP = {a.file: a.label for a in UNIVERSE}
 OUT = Path(__file__).resolve().parent / "out"
 
 PHASE_CN = {

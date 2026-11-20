@@ -179,7 +179,7 @@
 <rect x="284" y="244" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
 <text x="295.25" y="256.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
 <text x="372" y="260" class="dt" text-anchor="end">−4</text>
-<text x="8" y="285" class="mt" fill="#b9c2bc">沪深300</text>
+<text x="8" y="285" class="mt" fill="#b9c2bc">沪深300 000300.SH</text>
 <rect x="80" y="269" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
 <text x="91.25" y="281.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
 <rect x="105.5" y="269" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
@@ -198,11 +198,11 @@
 <rect x="284" y="269" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
 <text x="295.25" y="281.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
 <text x="372" y="285" class="dt" text-anchor="end">−7</text>
-<text x="8" y="310" class="mt" fill="#b9c2bc">上证</text>
+<text x="8" y="310" class="mt" fill="#b9c2bc">上证指数 000001.SH</text>
 <rect x="80" y="294" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
 <text x="91.25" y="306.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
-<rect x="105.5" y="294" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
-<text x="116.75" y="306.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
+<rect x="105.5" y="294" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
+<text x="116.75" y="306.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
 <rect x="131" y="294" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
 <text x="142.25" y="306.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
 <rect x="156.5" y="294" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
@@ -217,7 +217,7 @@
 <text x="269.75" y="306.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
 <rect x="284" y="294" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
 <text x="295.25" y="306.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
-<text x="372" y="310" class="dt" text-anchor="end">−9</text>
+<text x="372" y="310" class="dt" text-anchor="end">−8</text>
 <text x="8" y="333" class="hd">青 = +1 成立　朱 = −1 反证　暗 = 0 悬置</text>
 <text x="8" y="347" class="hd">距 1 的两只只差一维：北京差「守」，浦发差「人」</text>
 </svg>

@@ -11,25 +11,15 @@ from string import Template
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))
 
-NAMES = {
-    "sh600309_whhx.csv": "万华化学 600309.SH",
-    "sh600426_hlhs.csv": "华鲁恒升 600426.SH",
-    "sz002648_wxhx.csv": "卫星化学 002648.SZ",
-    "sz002601_lbjt.csv": "龙佰集团 002601.SZ",
-    "sh600141_xfjt.csv": "兴发集团 600141.SH",
-    "sh600346_hlsh.csv": "恒力石化 600346.SH",
-    "sz002493_rs.csv": "荣盛石化 002493.SZ",
-    "sh600486_ynhg.csv": "扬农化工 600486.SH",
-}
+from stock.universe import UNIVERSE, INDEX   # noqa: E402
+
+# 化工按业务口径取，不按申万分类：恒力、荣盛在申万里归石油石化，但炼化是同一条产业链
+CHEM_SYMS = ("sh600309", "sh600426", "sz002648", "sz002601",
+             "sh600141", "sh600346", "sz002493", "sh600486")
+NAMES = {a.file: a.label for a in UNIVERSE if a.symbol in CHEM_SYMS}
 CHEM = list(NAMES.values())
-SHORT = {"万华化学 600309.SH": "万华化学", "华鲁恒升 600426.SH": "华鲁恒升",
-         "卫星化学 002648.SZ": "卫星化学", "龙佰集团 002601.SZ": "龙佰集团",
-         "兴发集团 600141.SH": "兴发集团", "恒力石化 600346.SH": "恒力石化",
-         "荣盛石化 002493.SZ": "荣盛石化", "扬农化工 600486.SH": "扬农化工",
-         "上证指数 000001": "上证指数", "招商银行 600036.SH": "招商银行",
-         "浦发银行 600000.SH": "浦发银行", "平安银行 000001.SZ": "平安银行",
-         "北京银行 601169.SH": "北京银行"}
-REF = ["上证指数 000001", "招商银行 600036.SH", "浦发银行 600000.SH", "平安银行 000001.SZ"]
+SHORT = {a.label: a.name for a in UNIVERSE}
+REF = [INDEX[0].label, "招商银行 600036.SH", "浦发银行 600000.SH", "平安银行 000001.SZ"]
 SUB = {"万华化学 600309.SH": "MDI", "华鲁恒升 600426.SH": "煤化工",
        "卫星化学 002648.SZ": "轻烃", "龙佰集团 002601.SZ": "钛白粉",
        "兴发集团 600141.SH": "磷化工", "恒力石化 600346.SH": "炼化",

@@ -5,8 +5,8 @@
   "indices": [
    {
     "key": "上证",
-    "regime": "空头确立",
-    "index": 186,
+    "regime": "多空对峙",
+    "index": 4560,
     "tension": 0.699,
     "certain": 7
    },
@@ -23,38 +23,62 @@
  "sectors": [
   {
    "sector": "公用事业",
-   "n": 1,
-   "certain": 9.0,
-   "dir": 1.0,
-   "median_tension": 0.5,
-   "loose": 0.5,
-   "score": 0.9,
-   "veto": true,
-   "leader": "长电",
-   "reason": "样本不足"
+   "n": 4,
+   "certain": 8.5,
+   "dir": 0.75,
+   "median_tension": 0.467,
+   "loose": 0.533,
+   "score": 0.834,
+   "veto": false,
+   "leader": "华能水电",
+   "reason": ""
   },
   {
-   "sector": "保险",
-   "n": 2,
-   "certain": 7.0,
-   "dir": 0.5,
-   "median_tension": 0.5,
-   "loose": 0.5,
-   "score": 0.711,
+   "sector": "家用电器",
+   "n": 3,
+   "certain": 6.0,
+   "dir": 1.0,
+   "median_tension": 0.383,
+   "loose": 0.617,
+   "score": 0.79,
    "veto": false,
-   "leader": "中国平安",
+   "leader": "海尔",
+   "reason": ""
+  },
+  {
+   "sector": "环保",
+   "n": 3,
+   "certain": 6.67,
+   "dir": 0.33,
+   "median_tension": 0.433,
+   "loose": 0.567,
+   "score": 0.676,
+   "veto": false,
+   "leader": "瀚蓝",
+   "reason": ""
+  },
+  {
+   "sector": "通信",
+   "n": 4,
+   "certain": 8.0,
+   "dir": 0.0,
+   "median_tension": 0.578,
+   "loose": 0.422,
+   "score": 0.64,
+   "veto": false,
+   "leader": "中天",
    "reason": ""
   },
   {
    "sector": "煤炭",
-   "n": 2,
+   "n": 4,
    "certain": 6.5,
-   "dir": 0.5,
+   "dir": 0.25,
    "median_tension": 0.5,
    "loose": 0.5,
-   "score": 0.689,
+   "score": 0.639,
    "veto": false,
-   "leader": "神华",
+   "leader": "兖矿",
    "reason": ""
   },
   {
@@ -70,31 +94,377 @@
    "reason": ""
   },
   {
-   "sector": "石油石化",
-   "n": 2,
-   "certain": 7.0,
+   "sector": "食品饮料",
+   "n": 4,
+   "certain": 6.75,
    "dir": 0.0,
-   "median_tension": 0.671,
-   "loose": 0.329,
-   "score": 0.577,
+   "median_tension": 0.5,
+   "loose": 0.5,
+   "score": 0.6,
+   "veto": false,
+   "leader": "茅台",
+   "reason": ""
+  },
+  {
+   "sector": "交通运输",
+   "n": 4,
+   "certain": 5.25,
+   "dir": 0.0,
+   "median_tension": 0.433,
+   "loose": 0.567,
+   "score": 0.547,
+   "veto": false,
+   "leader": "上港",
+   "reason": ""
+  },
+  {
+   "sector": "石油石化",
+   "n": 5,
+   "certain": 6.2,
+   "dir": -0.2,
+   "median_tension": 0.533,
+   "loose": 0.467,
+   "score": 0.529,
+   "veto": false,
+   "leader": "中石化",
+   "reason": ""
+  },
+  {
+   "sector": "非银金融",
+   "n": 4,
+   "certain": 5.0,
+   "dir": 0.0,
+   "median_tension": 0.5,
+   "loose": 0.5,
+   "score": 0.522,
+   "veto": false,
+   "leader": "中信证",
+   "reason": ""
+  },
+  {
+   "sector": "轻工制造",
+   "n": 3,
+   "certain": 4.67,
+   "dir": 0.0,
+   "median_tension": 0.433,
+   "loose": 0.567,
+   "score": 0.521,
+   "veto": false,
+   "leader": "欧派",
+   "reason": ""
+  },
+  {
+   "sector": "农林牧渔",
+   "n": 4,
+   "certain": 4.75,
+   "dir": 0.0,
+   "median_tension": 0.5,
+   "loose": 0.5,
+   "score": 0.511,
+   "veto": false,
+   "leader": "新希望",
+   "reason": ""
+  },
+  {
+   "sector": "纺织服饰",
+   "n": 3,
+   "certain": 4.33,
+   "dir": 0.0,
+   "median_tension": 0.433,
+   "loose": 0.567,
+   "score": 0.506,
+   "veto": false,
+   "leader": "海澜",
+   "reason": ""
+  },
+  {
+   "sector": "建筑材料",
+   "n": 4,
+   "certain": 6.0,
+   "dir": -0.25,
+   "median_tension": 0.7,
+   "loose": 0.3,
+   "score": 0.477,
    "veto": true,
-   "leader": "中海油",
+   "leader": "巨石",
    "reason": "张力过热"
   },
   {
-   "sector": "化工",
-   "n": 8,
-   "certain": 5.38,
-   "dir": -0.62,
+   "sector": "钢铁",
+   "n": 4,
+   "certain": 4.75,
+   "dir": 0.0,
+   "median_tension": 0.692,
+   "loose": 0.308,
+   "score": 0.473,
+   "veto": true,
+   "leader": "宝钢",
+   "reason": "张力过热"
+  },
+  {
+   "sector": "电子",
+   "n": 4,
+   "certain": 6.0,
+   "dir": -0.25,
+   "median_tension": 0.762,
+   "loose": 0.238,
+   "score": 0.464,
+   "veto": true,
+   "leader": "韦尔",
+   "reason": "张力过热"
+  },
+  {
+   "sector": "美容护理",
+   "n": 3,
+   "certain": 9.0,
+   "dir": -1.0,
    "median_tension": 0.733,
    "loose": 0.267,
-   "score": 0.367,
+   "score": 0.453,
+   "veto": true,
+   "leader": "家化",
+   "reason": "张力过热"
+  },
+  {
+   "sector": "国防军工",
+   "n": 3,
+   "certain": 5.33,
+   "dir": -0.33,
+   "median_tension": 0.655,
+   "loose": 0.345,
+   "score": 0.439,
+   "veto": true,
+   "leader": "沈飞",
+   "reason": "张力过热"
+  },
+  {
+   "sector": "机械设备",
+   "n": 4,
+   "certain": 4.5,
+   "dir": -0.25,
+   "median_tension": 0.608,
+   "loose": 0.392,
+   "score": 0.428,
+   "veto": true,
+   "leader": "三一",
+   "reason": "方向转负"
+  },
+  {
+   "sector": "商贸零售",
+   "n": 4,
+   "certain": 7.25,
+   "dir": -0.75,
+   "median_tension": 0.767,
+   "loose": 0.233,
+   "score": 0.419,
+   "veto": true,
+   "leader": "小商品",
+   "reason": "张力过热"
+  },
+  {
+   "sector": "社会服务",
+   "n": 3,
+   "certain": 6.67,
+   "dir": -0.67,
+   "median_tension": 0.733,
+   "loose": 0.267,
+   "score": 0.416,
+   "veto": true,
+   "leader": "锦江",
+   "reason": "张力过热"
+  },
+  {
+   "sector": "计算机",
+   "n": 4,
+   "certain": 6.75,
+   "dir": -0.75,
+   "median_tension": 0.733,
+   "loose": 0.267,
+   "score": 0.403,
+   "veto": true,
+   "leader": "恒生",
+   "reason": "张力过热"
+  },
+  {
+   "sector": "汽车",
+   "n": 4,
+   "certain": 4.0,
+   "dir": -0.25,
+   "median_tension": 0.653,
+   "loose": 0.347,
+   "score": 0.397,
+   "veto": true,
+   "leader": "上汽",
+   "reason": "张力过热"
+  },
+  {
+   "sector": "综合",
+   "n": 3,
+   "certain": 7.67,
+   "dir": -1.0,
+   "median_tension": 0.733,
+   "loose": 0.267,
+   "score": 0.394,
+   "veto": true,
+   "leader": "新百",
+   "reason": "张力过热"
+  },
+  {
+   "sector": "房地产",
+   "n": 4,
+   "certain": 7.5,
+   "dir": -1.0,
+   "median_tension": 0.7,
+   "loose": 0.3,
+   "score": 0.393,
+   "veto": true,
+   "leader": "保利",
+   "reason": "张力过热"
+  },
+  {
+   "sector": "传媒",
+   "n": 4,
+   "certain": 6.0,
+   "dir": -0.75,
+   "median_tension": 0.733,
+   "loose": 0.267,
+   "score": 0.37,
+   "veto": true,
+   "leader": "分众",
+   "reason": "张力过热"
+  },
+  {
+   "sector": "基础化工",
+   "n": 6,
+   "certain": 5.5,
+   "dir": -0.67,
+   "median_tension": 0.733,
+   "loose": 0.267,
+   "score": 0.365,
    "veto": true,
    "leader": "兴发",
+   "reason": "张力过热"
+  },
+  {
+   "sector": "有色金属",
+   "n": 4,
+   "certain": 7.0,
+   "dir": -1.0,
+   "median_tension": 0.733,
+   "loose": 0.267,
+   "score": 0.365,
+   "veto": true,
+   "leader": "山金",
+   "reason": "张力过热"
+  },
+  {
+   "sector": "医药生物",
+   "n": 4,
+   "certain": 5.25,
+   "dir": -0.75,
+   "median_tension": 0.618,
+   "loose": 0.382,
+   "score": 0.36,
+   "veto": true,
+   "leader": "恒瑞",
+   "reason": "方向转负"
+  },
+  {
+   "sector": "建筑装饰",
+   "n": 4,
+   "certain": 4.0,
+   "dir": -0.5,
+   "median_tension": 0.61,
+   "loose": 0.39,
+   "score": 0.356,
+   "veto": true,
+   "leader": "中铁建",
+   "reason": "方向转负"
+  },
+  {
+   "sector": "电力设备",
+   "n": 4,
+   "certain": 6.5,
+   "dir": -1.0,
+   "median_tension": 0.7,
+   "loose": 0.3,
+   "score": 0.349,
+   "veto": true,
+   "leader": "隆基",
    "reason": "张力过热"
   }
  ],
  "picks": [
+  {
+   "name": "川投能源 600674.SH",
+   "short": "川投",
+   "sector": "公用事业",
+   "state": [
+    1,
+    0,
+    1,
+    1,
+    -1,
+    1,
+    -1,
+    0,
+    1
+   ],
+   "index": 17312,
+   "regime": "多头确立",
+   "tension": 0.467,
+   "certain": 9,
+   "nz": 7,
+   "close": 19.14,
+   "passed": true,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": true,
+    "守≠-1": true
+   },
+   "window": true,
+   "gate": {
+    "certain": true,
+    "tension": true,
+    "方向": true,
+    "nz": true
+   }
+  },
+  {
+   "name": "国投电力 600886.SH",
+   "short": "国投电",
+   "sector": "公用事业",
+   "state": [
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    -1,
+    -1,
+    1
+   ],
+   "index": 19577,
+   "regime": "多头确立",
+   "tension": 0.467,
+   "certain": 9,
+   "nz": 8,
+   "close": 16.82,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": true,
+    "守≠-1": false
+   },
+   "window": false,
+   "gate": {
+    "certain": true,
+    "tension": true,
+    "方向": true,
+    "nz": false
+   }
+  },
   {
    "name": "招商银行 600036.SH",
    "short": "招商",
@@ -131,9 +501,9 @@
    }
   },
   {
-   "name": "中国平安 601318.SH",
-   "short": "中国平安",
-   "sector": "保险",
+   "name": "长江电力 600900.SH",
+   "short": "长电",
+   "sector": "公用事业",
    "state": [
     1,
     0,
@@ -150,7 +520,7 @@
    "tension": 0.5,
    "certain": 9,
    "nz": 7,
-   "close": 55.46,
+   "close": 31.62,
    "passed": true,
    "entry": {
     "正/合同向": true,
@@ -198,6 +568,216 @@
     "tension": true,
     "方向": true,
     "nz": true
+   }
+  },
+  {
+   "name": "贵州茅台 600519.SH",
+   "short": "茅台",
+   "sector": "食品饮料",
+   "state": [
+    1,
+    0,
+    1,
+    1,
+    -1,
+    1,
+    -1,
+    0,
+    0
+   ],
+   "index": 17311,
+   "regime": "弱定向",
+   "tension": 0.5,
+   "certain": 9,
+   "nz": 6,
+   "close": 1485.75,
+   "passed": true,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": true,
+    "守≠-1": true
+   },
+   "window": true,
+   "gate": {
+    "certain": true,
+    "tension": true,
+    "方向": true,
+    "nz": true
+   }
+  },
+  {
+   "name": "中国平安 601318.SH",
+   "short": "中国平安",
+   "sector": "非银金融",
+   "state": [
+    1,
+    0,
+    1,
+    1,
+    -1,
+    1,
+    -1,
+    0,
+    1
+   ],
+   "index": 17312,
+   "regime": "多头确立",
+   "tension": 0.5,
+   "certain": 9,
+   "nz": 7,
+   "close": 55.46,
+   "passed": true,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": true,
+    "守≠-1": true
+   },
+   "window": true,
+   "gate": {
+    "certain": true,
+    "tension": true,
+    "方向": true,
+    "nz": true
+   }
+  },
+  {
+   "name": "中国电信 601728.SH",
+   "short": "电信",
+   "sector": "通信",
+   "state": [
+    1,
+    0,
+    1,
+    1,
+    -1,
+    1,
+    -1,
+    0,
+    1
+   ],
+   "index": 17312,
+   "regime": "多头确立",
+   "tension": 0.567,
+   "certain": 9,
+   "nz": 7,
+   "close": 7.34,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": true,
+    "守≠-1": true
+   },
+   "window": true,
+   "gate": {
+    "certain": true,
+    "tension": false,
+    "方向": true,
+    "nz": true
+   }
+  },
+  {
+   "name": "碧水源 300070.SZ",
+   "short": "碧水源",
+   "sector": "环保",
+   "state": [
+    -1,
+    0,
+    -1,
+    -1,
+    1,
+    -1,
+    1,
+    -1,
+    -1
+   ],
+   "index": 2367,
+   "regime": "空头确立",
+   "tension": 0.767,
+   "certain": 9,
+   "nz": 8,
+   "close": 2.94,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": false,
+    "守≠-1": false
+   },
+   "window": false,
+   "gate": {
+    "certain": true,
+    "tension": false,
+    "方向": true,
+    "nz": false
+   }
+  },
+  {
+   "name": "中国移动 600941.SH",
+   "short": "移动",
+   "sector": "通信",
+   "state": [
+    1,
+    1,
+    1,
+    1,
+    -1,
+    1,
+    -1,
+    1,
+    1
+   ],
+   "index": 19502,
+   "regime": "多头确立",
+   "tension": 0.313,
+   "certain": 8,
+   "nz": 9,
+   "close": 108.71,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": true,
+    "守≠-1": true
+   },
+   "window": true,
+   "gate": {
+    "certain": true,
+    "tension": true,
+    "方向": true,
+    "nz": false
+   }
+  },
+  {
+   "name": "伊利股份 600887.SH",
+   "short": "伊利",
+   "sector": "食品饮料",
+   "state": [
+    1,
+    0,
+    1,
+    1,
+    -1,
+    1,
+    -1,
+    1,
+    1
+   ],
+   "index": 17315,
+   "regime": "多头确立",
+   "tension": 0.433,
+   "certain": 8,
+   "nz": 8,
+   "close": 33.35,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": true,
+    "守≠-1": true
+   },
+   "window": true,
+   "gate": {
+    "certain": true,
+    "tension": true,
+    "方向": true,
+    "nz": false
    }
   },
   {
@@ -271,6 +851,426 @@
    }
   },
   {
+   "name": "中天科技 600522.SH",
+   "short": "中天",
+   "sector": "通信",
+   "state": [
+    -1,
+    -1,
+    -1,
+    -1,
+    1,
+    -1,
+    1,
+    1,
+    -1
+   ],
+   "index": 186,
+   "regime": "空头确立",
+   "tension": 0.578,
+   "certain": 8,
+   "nz": 9,
+   "close": 21.32,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": false,
+    "守≠-1": true
+   },
+   "window": false,
+   "gate": {
+    "certain": true,
+    "tension": false,
+    "方向": true,
+    "nz": false
+   }
+  },
+  {
+   "name": "中国海油 600938.SH",
+   "short": "中海油",
+   "sector": "石油石化",
+   "state": [
+    -1,
+    -1,
+    0,
+    -1,
+    1,
+    -1,
+    1,
+    1,
+    -1
+   ],
+   "index": 915,
+   "regime": "多空对峙",
+   "tension": 0.671,
+   "certain": 8,
+   "nz": 8,
+   "close": 30.29,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": false,
+    "守≠-1": true
+   },
+   "window": false,
+   "gate": {
+    "certain": true,
+    "tension": false,
+    "方向": true,
+    "nz": false
+   }
+  },
+  {
+   "name": "荣盛石化 002493.SZ",
+   "short": "荣盛",
+   "sector": "石油石化",
+   "state": [
+    -1,
+    0,
+    -1,
+    -1,
+    1,
+    -1,
+    1,
+    -1,
+    -1
+   ],
+   "index": 2367,
+   "regime": "空头确立",
+   "tension": 0.733,
+   "certain": 8,
+   "nz": 8,
+   "close": 11.0,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": false,
+    "守≠-1": false
+   },
+   "window": false,
+   "gate": {
+    "certain": true,
+    "tension": false,
+    "方向": true,
+    "nz": false
+   }
+  },
+  {
+   "name": "上港集团 600018.SH",
+   "short": "上港",
+   "sector": "交通运输",
+   "state": [
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    1,
+    -1,
+    0,
+    1
+   ],
+   "index": 15125,
+   "regime": "多空对峙",
+   "tension": 0.318,
+   "certain": 7,
+   "nz": 8,
+   "close": 5.95,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": true,
+    "守≠-1": true
+   },
+   "window": true,
+   "gate": {
+    "certain": true,
+    "tension": true,
+    "方向": true,
+    "nz": false
+   }
+  },
+  {
+   "name": "海尔智家 600690.SH",
+   "short": "海尔",
+   "sector": "家用电器",
+   "state": [
+    1,
+    1,
+    1,
+    1,
+    -1,
+    1,
+    -1,
+    -1,
+    1
+   ],
+   "index": 19496,
+   "regime": "多头确立",
+   "tension": 0.326,
+   "certain": 7,
+   "nz": 9,
+   "close": 23.02,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": true,
+    "守≠-1": false
+   },
+   "window": false,
+   "gate": {
+    "certain": true,
+    "tension": true,
+    "方向": true,
+    "nz": false
+   }
+  },
+  {
+   "name": "华能水电 600025.SH",
+   "short": "华能水电",
+   "sector": "公用事业",
+   "state": [
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    1,
+    -1,
+    0,
+    1
+   ],
+   "index": 15125,
+   "regime": "多空对峙",
+   "tension": 0.4,
+   "certain": 7,
+   "nz": 8,
+   "close": 11.59,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": true,
+    "守≠-1": true
+   },
+   "window": true,
+   "gate": {
+    "certain": true,
+    "tension": true,
+    "方向": true,
+    "nz": false
+   }
+  },
+  {
+   "name": "中国石化 600028.SH",
+   "short": "中石化",
+   "sector": "石油石化",
+   "state": [
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    1,
+    -1,
+    1,
+    0
+   ],
+   "index": 15127,
+   "regime": "多空对峙",
+   "tension": 0.425,
+   "certain": 7,
+   "nz": 8,
+   "close": 6.03,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": true,
+    "守≠-1": true
+   },
+   "window": true,
+   "gate": {
+    "certain": true,
+    "tension": true,
+    "方向": true,
+    "nz": false
+   }
+  },
+  {
+   "name": "伟明环保 603568.SH",
+   "short": "伟明",
+   "sector": "环保",
+   "state": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    -1,
+    -1,
+    1
+   ],
+   "index": 19658,
+   "regime": "多头确立",
+   "tension": 0.433,
+   "certain": 7,
+   "nz": 9,
+   "close": 13.13,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": true,
+    "守≠-1": false
+   },
+   "window": false,
+   "gate": {
+    "certain": true,
+    "tension": true,
+    "方向": true,
+    "nz": false
+   }
+  },
+  {
+   "name": "京沪高铁 601816.SH",
+   "short": "京沪",
+   "sector": "交通运输",
+   "state": [
+    1,
+    1,
+    0,
+    1,
+    -1,
+    1,
+    -1,
+    -1,
+    1
+   ],
+   "index": 18767,
+   "regime": "多空对峙",
+   "tension": 0.433,
+   "certain": 7,
+   "nz": 8,
+   "close": 5.43,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": true,
+    "守≠-1": false
+   },
+   "window": false,
+   "gate": {
+    "certain": true,
+    "tension": true,
+    "方向": true,
+    "nz": false
+   }
+  },
+  {
+   "name": "中煤能源 601898.SH",
+   "short": "中煤",
+   "sector": "煤炭",
+   "state": [
+    0,
+    1,
+    1,
+    1,
+    0,
+    -1,
+    1,
+    -1,
+    1
+   ],
+   "index": 12980,
+   "regime": "多头确立",
+   "tension": 0.5,
+   "certain": 7,
+   "nz": 7,
+   "close": 13.88,
+   "passed": false,
+   "entry": {
+    "正/合同向": false,
+    "进≥0": true,
+    "守≠-1": false
+   },
+   "window": false,
+   "gate": {
+    "certain": true,
+    "tension": true,
+    "方向": false,
+    "nz": true
+   }
+  },
+  {
+   "name": "中兴通讯 000063.SZ",
+   "short": "中兴",
+   "sector": "通信",
+   "state": [
+    -1,
+    0,
+    -1,
+    -1,
+    1,
+    -1,
+    0,
+    -1,
+    -1
+   ],
+   "index": 2358,
+   "regime": "空头确立",
+   "tension": 0.731,
+   "certain": 7,
+   "nz": 7,
+   "close": 26.3,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": false,
+    "守≠-1": false
+   },
+   "window": false,
+   "gate": {
+    "certain": true,
+    "tension": false,
+    "方向": true,
+    "nz": true
+   }
+  },
+  {
+   "name": "美的集团 000333.SZ",
+   "short": "美的",
+   "sector": "家用电器",
+   "state": [
+    1,
+    1,
+    1,
+    1,
+    -1,
+    1,
+    -1,
+    0,
+    1
+   ],
+   "index": 19499,
+   "regime": "多头确立",
+   "tension": 0.4,
+   "certain": 6,
+   "nz": 8,
+   "close": 94.82,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": true,
+    "守≠-1": true
+   },
+   "window": true,
+   "gate": {
+    "certain": true,
+    "tension": true,
+    "方向": true,
+    "nz": false
+   }
+  },
+  {
    "name": "浦发银行 600000.SH",
    "short": "浦发",
    "sector": "银行",
@@ -306,6 +1306,251 @@
    }
   },
   {
+   "name": "海大集团 002311.SZ",
+   "short": "海大",
+   "sector": "农林牧渔",
+   "state": [
+    1,
+    0,
+    1,
+    1,
+    -1,
+    1,
+    -1,
+    1,
+    1
+   ],
+   "index": 17315,
+   "regime": "多头确立",
+   "tension": 0.438,
+   "certain": 6,
+   "nz": 8,
+   "close": 49.75,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": true,
+    "守≠-1": true
+   },
+   "window": true,
+   "gate": {
+    "certain": true,
+    "tension": true,
+    "方向": true,
+    "nz": false
+   }
+  },
+  {
+   "name": "中国石油 601857.SH",
+   "short": "中石油",
+   "sector": "石油石化",
+   "state": [
+    0,
+    -1,
+    1,
+    1,
+    -1,
+    -1,
+    1,
+    0,
+    0
+   ],
+   "index": 8527,
+   "regime": "多空对峙",
+   "tension": 0.533,
+   "certain": 6,
+   "nz": 6,
+   "close": 13.22,
+   "passed": false,
+   "entry": {
+    "正/合同向": false,
+    "进≥0": true,
+    "守≠-1": true
+   },
+   "window": false,
+   "gate": {
+    "certain": true,
+    "tension": true,
+    "方向": false,
+    "nz": true
+   }
+  },
+  {
+   "name": "新希望 000876.SZ",
+   "short": "新希望",
+   "sector": "农林牧渔",
+   "state": [
+    -1,
+    -1,
+    -1,
+    -1,
+    1,
+    0,
+    -1,
+    -1,
+    -1
+   ],
+   "index": 189,
+   "regime": "空头确立",
+   "tension": 0.66,
+   "certain": 6,
+   "nz": 8,
+   "close": 6.78,
+   "passed": false,
+   "entry": {
+    "正/合同向": false,
+    "进≥0": false,
+    "守≠-1": false
+   },
+   "window": false,
+   "gate": {
+    "certain": true,
+    "tension": false,
+    "方向": false,
+    "nz": false
+   }
+  },
+  {
+   "name": "五粮液 000858.SZ",
+   "short": "五粮液",
+   "sector": "食品饮料",
+   "state": [
+    -1,
+    -1,
+    0,
+    -1,
+    -1,
+    -1,
+    -1,
+    0,
+    -1
+   ],
+   "index": 732,
+   "regime": "空头确立",
+   "tension": 0.668,
+   "certain": 6,
+   "nz": 7,
+   "close": 72.55,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": false,
+    "守≠-1": true
+   },
+   "window": false,
+   "gate": {
+    "certain": true,
+    "tension": false,
+    "方向": false,
+    "nz": true
+   }
+  },
+  {
+   "name": "华利集团 300979.SZ",
+   "short": "华利",
+   "sector": "纺织服饰",
+   "state": [
+    -1,
+    -1,
+    0,
+    -1,
+    -1,
+    -1,
+    -1,
+    1,
+    -1
+   ],
+   "index": 735,
+   "regime": "空头确立",
+   "tension": 0.687,
+   "certain": 6,
+   "nz": 8,
+   "close": 35.7,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": false,
+    "守≠-1": true
+   },
+   "window": false,
+   "gate": {
+    "certain": true,
+    "tension": false,
+    "方向": false,
+    "nz": false
+   }
+  },
+  {
+   "name": "欧派家居 603833.SH",
+   "short": "欧派",
+   "sector": "轻工制造",
+   "state": [
+    -1,
+    -1,
+    -1,
+    -1,
+    1,
+    -1,
+    1,
+    0,
+    -1
+   ],
+   "index": 183,
+   "regime": "空头确立",
+   "tension": 0.733,
+   "certain": 6,
+   "nz": 8,
+   "close": 28.7,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": false,
+    "守≠-1": true
+   },
+   "window": false,
+   "gate": {
+    "certain": true,
+    "tension": false,
+    "方向": true,
+    "nz": false
+   }
+  },
+  {
+   "name": "兖矿能源 600188.SH",
+   "short": "兖矿",
+   "sector": "煤炭",
+   "state": [
+    -1,
+    -1,
+    -1,
+    -1,
+    1,
+    -1,
+    1,
+    0,
+    0
+   ],
+   "index": 184,
+   "regime": "空头确立",
+   "tension": 0.752,
+   "certain": 6,
+   "nz": 7,
+   "close": 16.97,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": true,
+    "守≠-1": true
+   },
+   "window": true,
+   "gate": {
+    "certain": true,
+    "tension": false,
+    "方向": true,
+    "nz": true
+   }
+  },
+  {
    "name": "陕西煤业 601225.SH",
    "short": "陕煤",
    "sector": "煤炭",
@@ -326,6 +1571,41 @@
    "certain": 5,
    "nz": 9,
    "close": 27.9,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": true,
+    "守≠-1": true
+   },
+   "window": true,
+   "gate": {
+    "certain": true,
+    "tension": true,
+    "方向": true,
+    "nz": false
+   }
+  },
+  {
+   "name": "格力电器 000651.SZ",
+   "short": "格力",
+   "sector": "家用电器",
+   "state": [
+    1,
+    1,
+    1,
+    1,
+    -1,
+    1,
+    -1,
+    1,
+    1
+   ],
+   "index": 19502,
+   "regime": "多头确立",
+   "tension": 0.383,
+   "certain": 5,
+   "nz": 9,
+   "close": 40.86,
    "passed": false,
    "entry": {
     "正/合同向": true,
@@ -411,9 +1691,44 @@
    }
   },
   {
+   "name": "森马服饰 002563.SZ",
+   "short": "森马",
+   "sector": "纺织服饰",
+   "state": [
+    1,
+    0,
+    1,
+    1,
+    -1,
+    1,
+    -1,
+    1,
+    1
+   ],
+   "index": 17315,
+   "regime": "多头确立",
+   "tension": 0.433,
+   "certain": 5,
+   "nz": 8,
+   "close": 6.11,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": true,
+    "守≠-1": true
+   },
+   "window": true,
+   "gate": {
+    "certain": true,
+    "tension": true,
+    "方向": true,
+    "nz": false
+   }
+  },
+  {
    "name": "中国人寿 601628.SH",
    "short": "人寿",
-   "sector": "保险",
+   "sector": "非银金融",
    "state": [
     1,
     -1,
@@ -443,6 +1758,251 @@
     "tension": true,
     "方向": false,
     "nz": false
+   }
+  },
+  {
+   "name": "招商轮船 601872.SH",
+   "short": "招轮",
+   "sector": "交通运输",
+   "state": [
+    -1,
+    -1,
+    1,
+    -1,
+    1,
+    -1,
+    1,
+    1,
+    -1
+   ],
+   "index": 1644,
+   "regime": "多空对峙",
+   "tension": 0.603,
+   "certain": 5,
+   "nz": 9,
+   "close": 15.45,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": false,
+    "守≠-1": true
+   },
+   "window": false,
+   "gate": {
+    "certain": true,
+    "tension": false,
+    "方向": true,
+    "nz": false
+   }
+  },
+  {
+   "name": "太阳纸业 002078.SZ",
+   "short": "太阳纸",
+   "sector": "轻工制造",
+   "state": [
+    1,
+    -1,
+    1,
+    1,
+    1,
+    1,
+    -1,
+    1,
+    -1
+   ],
+   "index": 15288,
+   "regime": "多头确立",
+   "tension": 0.35,
+   "certain": 4,
+   "nz": 9,
+   "close": 13.9,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": false,
+    "守≠-1": true
+   },
+   "window": false,
+   "gate": {
+    "certain": false,
+    "tension": true,
+    "方向": false,
+    "nz": false
+   }
+  },
+  {
+   "name": "瀚蓝环境 600323.SH",
+   "short": "瀚蓝",
+   "sector": "环保",
+   "state": [
+    1,
+    1,
+    1,
+    1,
+    -1,
+    1,
+    -1,
+    1,
+    1
+   ],
+   "index": 19502,
+   "regime": "多头确立",
+   "tension": 0.386,
+   "certain": 4,
+   "nz": 9,
+   "close": 31.37,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": true,
+    "守≠-1": true
+   },
+   "window": true,
+   "gate": {
+    "certain": false,
+    "tension": true,
+    "方向": true,
+    "nz": false
+   }
+  },
+  {
+   "name": "海天味业 603288.SH",
+   "short": "海天",
+   "sector": "食品饮料",
+   "state": [
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    1,
+    -1,
+    1,
+    0
+   ],
+   "index": 15127,
+   "regime": "多空对峙",
+   "tension": 0.4,
+   "certain": 4,
+   "nz": 8,
+   "close": 36.25,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": true,
+    "守≠-1": true
+   },
+   "window": true,
+   "gate": {
+    "certain": false,
+    "tension": true,
+    "方向": true,
+    "nz": false
+   }
+  },
+  {
+   "name": "晨光股份 603899.SH",
+   "short": "晨光",
+   "sector": "轻工制造",
+   "state": [
+    1,
+    -1,
+    0,
+    1,
+    -1,
+    1,
+    -1,
+    1,
+    -1
+   ],
+   "index": 14397,
+   "regime": "多空对峙",
+   "tension": 0.433,
+   "certain": 4,
+   "nz": 8,
+   "close": 22.88,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": false,
+    "守≠-1": true
+   },
+   "window": false,
+   "gate": {
+    "certain": false,
+    "tension": true,
+    "方向": false,
+    "nz": false
+   }
+  },
+  {
+   "name": "牧原股份 002714.SZ",
+   "short": "牧原",
+   "sector": "农林牧渔",
+   "state": [
+    1,
+    -1,
+    -1,
+    -1,
+    -1,
+    1,
+    -1,
+    0,
+    0
+   ],
+   "index": 13180,
+   "regime": "空头确立",
+   "tension": 0.5,
+   "certain": 4,
+   "nz": 7,
+   "close": 44.85,
+   "passed": false,
+   "entry": {
+    "正/合同向": false,
+    "进≥0": true,
+    "守≠-1": true
+   },
+   "window": false,
+   "gate": {
+    "certain": false,
+    "tension": true,
+    "方向": true,
+    "nz": true
+   }
+  },
+  {
+   "name": "中信证券 600030.SH",
+   "short": "中信证",
+   "sector": "非银金融",
+   "state": [
+    -1,
+    0,
+    -1,
+    1,
+    1,
+    -1,
+    -1,
+    0,
+    0
+   ],
+   "index": 2839,
+   "regime": "弱定向",
+   "tension": 0.533,
+   "certain": 4,
+   "nz": 6,
+   "close": 25.39,
+   "passed": false,
+   "entry": {
+    "正/合同向": false,
+    "进≥0": true,
+    "守≠-1": true
+   },
+   "window": false,
+   "gate": {
+    "certain": false,
+    "tension": true,
+    "方向": true,
+    "nz": true
    }
   },
   {
@@ -516,6 +2076,146 @@
    }
   },
   {
+   "name": "温氏股份 300498.SZ",
+   "short": "温氏",
+   "sector": "农林牧渔",
+   "state": [
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    1,
+    -1,
+    1,
+    1
+   ],
+   "index": 15128,
+   "regime": "多头确立",
+   "tension": 0.4,
+   "certain": 3,
+   "nz": 9,
+   "close": 17.49,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": true,
+    "守≠-1": true
+   },
+   "window": true,
+   "gate": {
+    "certain": false,
+    "tension": true,
+    "方向": true,
+    "nz": false
+   }
+  },
+  {
+   "name": "海澜之家 600398.SH",
+   "short": "海澜",
+   "sector": "纺织服饰",
+   "state": [
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    1,
+    -1,
+    1,
+    0
+   ],
+   "index": 15127,
+   "regime": "多空对峙",
+   "tension": 0.316,
+   "certain": 2,
+   "nz": 8,
+   "close": 6.2,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": true,
+    "守≠-1": true
+   },
+   "window": true,
+   "gate": {
+    "certain": false,
+    "tension": true,
+    "方向": true,
+    "nz": false
+   }
+  },
+  {
+   "name": "顺丰控股 002352.SZ",
+   "short": "顺丰",
+   "sector": "交通运输",
+   "state": [
+    1,
+    0,
+    1,
+    1,
+    -1,
+    1,
+    -1,
+    1,
+    -1
+   ],
+   "index": 17313,
+   "regime": "多空对峙",
+   "tension": 0.381,
+   "certain": 2,
+   "nz": 8,
+   "close": 33.57,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": false,
+    "守≠-1": true
+   },
+   "window": false,
+   "gate": {
+    "certain": false,
+    "tension": true,
+    "方向": false,
+    "nz": false
+   }
+  },
+  {
+   "name": "恒力石化 600346.SH",
+   "short": "恒力",
+   "sector": "石油石化",
+   "state": [
+    1,
+    -1,
+    -1,
+    0,
+    -1,
+    1,
+    -1,
+    1,
+    -1
+   ],
+   "index": 13425,
+   "regime": "多空对峙",
+   "tension": 0.4,
+   "certain": 2,
+   "nz": 8,
+   "close": 16.24,
+   "passed": false,
+   "entry": {
+    "正/合同向": false,
+    "进≥0": false,
+    "守≠-1": true
+   },
+   "window": false,
+   "gate": {
+    "certain": false,
+    "tension": true,
+    "方向": false,
+    "nz": false
+   }
+  },
+  {
    "name": "民生银行 600016.SH",
    "short": "民生",
    "sector": "银行",
@@ -549,12 +2249,47 @@
     "方向": true,
     "nz": false
    }
+  },
+  {
+   "name": "东方财富 300059.SZ",
+   "short": "东财",
+   "sector": "非银金融",
+   "state": [
+    -1,
+    -1,
+    -1,
+    1,
+    -1,
+    -1,
+    -1,
+    0,
+    -1
+   ],
+   "index": 489,
+   "regime": "空头确立",
+   "tension": 0.495,
+   "certain": 2,
+   "nz": 8,
+   "close": 18.41,
+   "passed": false,
+   "entry": {
+    "正/合同向": false,
+    "进≥0": false,
+    "守≠-1": true
+   },
+   "window": false,
+   "gate": {
+    "certain": false,
+    "tension": true,
+    "方向": false,
+    "nz": false
+   }
   }
  ],
  "portfolio": [
   {
-   "short": "招商",
-   "sector": "银行",
+   "short": "川投",
+   "sector": "公用事业",
    "certain": 9,
    "tension": 0.467,
    "index": 17312
@@ -575,10 +2310,10 @@
   }
  ],
  "funnel": {
-  "样本": 24,
-  "行业": 3,
-  "个股": 5,
-  "入场": 5,
+  "样本": 124,
+  "行业": 13,
+  "个股": 8,
+  "入场": 8,
   "组合": 3
  },
  "threshold": {

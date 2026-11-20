@@ -44,8 +44,12 @@ def line_path(values, x0=38, x1=336, y_base=118, px_per_pct=8.0, y0=40, y1=152):
 
 
 def build_svg() -> str:
-    sh = DATA["上证指数 000001"]
-    hs = DATA["沪深300 000300"]
+    sh = DATA["上证指数 000001.SH"]
+    hs = DATA["沪深300 000300.SH"]
+    NV = len([x for x in sh["series"] if x["valid"]])
+    SC = sh["series"][-1]["close"]
+    SR = sh["summary"]["period_return_pct"]
+    HR = hs["summary"]["period_return_pct"]
     sh_rows = [s for s in sh["series"] if s["valid"]]
     hs_rows = [s for s in hs["series"] if s["valid"]]
     sh_n, sh_c = norm_series(sh_rows)
@@ -91,15 +95,15 @@ def build_svg() -> str:
 
     return f"""<svg viewBox="0 0 360 352" width="100%" role="img" aria-label="上证与沪深300 归一化走势及九维三态状态矩阵" style="display:block">
   <rect x="0" y="0" width="360" height="352" fill="#0b1210"/>
-  <text x="30" y="22" font-size="10.5" fill="#5fa79b" font-family="monospace">19 个交易日 · 首日=100</text>
+  <text x="30" y="22" font-size="10.5" fill="#5fa79b" font-family="monospace">{NV} 个交易日 · 首日=100</text>
   <line x1="30" y1="118" x2="340" y2="118" stroke="#24352f" stroke-dasharray="3 3"/>
   <text x="338" y="114" font-size="8.5" fill="#5c6f68" text-anchor="end" font-family="monospace">100</text>
   <polyline points="{p_hs}" fill="none" stroke="#c8a45c" stroke-width="1.3" opacity="0.85"/>
   <polyline points="{p_sh}" fill="none" stroke="#5fa79b" stroke-width="1.9"/>
   <circle cx="{last_x:.1f}" cy="{last_y:.1f}" r="3" fill="#b5452f"/>
-  <text x="{last_x-6:.1f}" y="{last_y+18:.1f}" font-size="9.5" fill="#e8e2d5" text-anchor="end" font-family="monospace">3533.79</text>
-  <text x="30" y="34" font-size="9" fill="#5fa79b" font-family="monospace">上证 -3.14%</text>
-  <text x="30" y="47" font-size="9" fill="#c8a45c" font-family="monospace">沪深300 -2.35%</text>
+  <text x="{last_x-6:.1f}" y="{last_y+18:.1f}" font-size="9.5" fill="#e8e2d5" text-anchor="end" font-family="monospace">{SC:.2f}</text>
+  <text x="30" y="34" font-size="9" fill="#5fa79b" font-family="monospace">上证 {SR:+.2f}%</text>
+  <text x="30" y="47" font-size="9" fill="#c8a45c" font-family="monospace">沪深300 {HR:+.2f}%</text>
   <line x1="30" y1="186" x2="340" y2="186" stroke="#24352f"/>
   {dim_labels}
   {''.join(cells)}
@@ -108,11 +112,42 @@ def build_svg() -> str:
 </svg>"""
 
 
-def build_html(svg: str) -> str:
-    sh = DATA["上证指数 000001"]["summary"]
-    hs = DATA["沪深300 000300"]["summary"]
+def ctx():
+    SV = DATA["上证指数 000001.SH"]["series"]
+    hs_sv = DATA["沪深300 000300.SH"]["series"]
+    ls = SV[-1]
+    st = ls["state"]
+    tmax = max(x["T"] for x in DATA["上证指数 000001.SH"]["summary"]["tension_path"])
+    dy = (ls["close"] / SV[-2]["close"] - 1) * 100
+    return {
+        "NV": len([x for x in SV if x["valid"]]),
+        "SC": ls["close"], "REG": ls["regime"], "IDX": ls["index"], "ST": st,
+        "SR": DATA["上证指数 000001.SH"]["summary"]["period_return_pct"],
+        "HR": DATA["沪深300 000300.SH"]["summary"]["period_return_pct"],
+        "HS_IDX": hs_sv[-1]["index"], "HS_REG": hs_sv[-1]["regime"],
+        "HS_DET": sum(1 for v in hs_sv[-1]["state"] if v),
+        "HS_ZRO": sum(1 for v in hs_sv[-1]["state"] if not v),
+        "GU_CN": {1: "落在 20 日区间下沿（+1）", -1: "站在 20 日区间上沿（−1）",
+                  0: "落在中段（0，无明确位置）"}[ls["state"][6]],
+        "FAN_CN": {1: "反维 +1：今日创 10 日新低，反向力量被确认",
+                   -1: "反维 −1：今日创 10 日新高，反向力量消失",
+                   0: "反维 0：既未创新低也未创新高，仍在区间内"}[ls["state"][4]],
+        "DY": dy,
+        "NEG": [DIMS[i] for i, v in enumerate(st) if v == -1],
+        "POS": [DIMS[i] for i, v in enumerate(st) if v == 1],
+        "ZRO": [DIMS[i] for i, v in enumerate(st) if v == 0],
+        "GU": st[6], "FAN": st[4],
+        "T": ls["tension"]["T"], "TMAX": tmax,
+        "NDET": sum(1 for v in st if v), "NZRO": sum(1 for v in st if not v),
+    }
 
-    why = DATA["上证指数 000001"]["series"][-1]["why"]
+
+def build_html(svg: str) -> str:
+    sh = DATA["上证指数 000001.SH"]["summary"]
+    hs = DATA["沪深300 000300.SH"]["summary"]
+    K = ctx()
+
+    why = DATA["上证指数 000001.SH"]["series"][-1]["why"]
     rows = []
     for d, v, s in zip(DIMS, sh["last_obs"], sh["last_state"]):
         cls = "pos" if v == 1 else ("neg" if v == -1 else "zero")
@@ -131,7 +166,7 @@ def build_html(svg: str) -> str:
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>上证 3533.79 · 三值状态诊断</title>
+<title>上证 {K["SC"]:.2f} · 三值状态诊断</title>
 <style>
 :root{{--ink:#0b1210;--ink2:#0f1a16;--line:#24352f;--paper:#e8e2d5;--dim:#b9b3a6;--muted:#87968f;--celadon:#5fa79b;--cinnabar:#b5452f;--gold:#c8a45c}}
 *{{box-sizing:border-box}}
@@ -191,30 +226,38 @@ footer{{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-s
 <body>
 <div class="wrap">
   <div class="eyebrow">COGNITIVE BEING v9 · MARKET STATE · 2026.11.20</div>
-  <h1>上证 3533.79：空头确立，但位置已到低位</h1>
-  <p class="sub">把 19 个交易日的日 K 编码进九维三态基底，得到 19683 态空间里的一个坐标 <b>#186</b>。<br>
+  <h1>上证 {K["SC"]:.2f}：{K["REG"]}</h1>
+  <p class="sub">把 {K["NV"]} 个交易日的日 K 编码进九维三态基底，得到 19683 态空间里的一个坐标 <b>#{K["IDX"]}</b>。<br>
   这不是预测，是把“现在处于什么状态”变成一个可复算的对象。</p>
 
   <div class="tagline">
-    <span class="pill cool">状态 空头确立</span>
+    <span class="pill cool">状态 {K["REG"]}</span>
     <span class="pill hot">张力 {sh['tension']['T']}</span>
     <span class="pill">确定 {sh['determined_dims']}/9</span>
     <span class="pill">悬置 {sh['suspended_dims']}/9</span>
-    <span class="pill">19 日 {sh['period_return_pct']:+.2f}%</span>
+    <span class="pill">{K["NV"]} 日 {K["SR"]:+.2f}%</span>
   </div>
 
   <figure>
   {svg}
-  <figcaption>上：两指数归一化走势（首日=100），朱点为 11/20 收盘，已跌破 10 月低点 3574.27。
+  <figcaption>上：两指数归一化走势（首日=100），朱点为 11/20 收盘 {K["SC"]:.2f}，{("已创 10 日新低" if K["FAN"] == 1 else "未创 10 日新低")}；今日 {K["DY"]:+.2f}%。
   下：11/20 的九维三态矩阵，行分“当日观测”与“累积吸收”，列自上而下为天地人正反合归守进。</figcaption>
   </figure>
 
   <h2>四条判读 <span>WHAT IT SAYS</span></h2>
   <ul class="pts">
-    <li><b>方向已经确立，不是猜测。</b>7 个维度给出确定值，只有量能与风险两维悬置。天（趋势）、正（多头证据）、合（均线一致性）、进（动量）四维同时为 −1。这四维同向在 10/29、11/16 也出现过，但只有今天叠加了反维确认。</li>
-    <li><em>但位置在低位。</em>归维 +1：收盘落在近 20 日区间的下沿（约 15% 分位）。低位是反弹的必要条件，不是充分条件——它只说明“下行空间已被压缩”，不说明“会反弹”。</li>
-    <li><b>空头证据今天才被确认。</b>反维由 0 跳到 +1，因为收盘 3533.79 跌破了 10 月 23 日的 3574.27。这是 19 日里唯一一次“创阶段新低”被记录，之前的下行都还在区间内。</li>
-    <li><em>张力 {sh['tension']['T']}，19 日最高。</em>波动负荷、跌破 MA20 的深度、状态抖动三项同时偏高。在引擎语义里，高张力意味着系统接近需要“转化”的临界点——即旧状态维持成本已经大于重构成本。</li>
+    <li><b>{K["NDET"]} 维给出确定值，{K["NZRO"]} 维悬置。</b>
+    为 −1 的是 {("、".join(K["NEG"]) or "无")}；为 +1 的是 {("、".join(K["POS"]) or "无")}；
+    悬置的是 {("、".join(K["ZRO"]) or "无")}。同向的维越多，这个坐标越不像噪声；
+    悬置越多，说明这一天的证据越不足以支撑一个判断。</li>
+    <li><em>位置：{K["GU_CN"]}。</em>
+    归维测的是 20 日区间分位，不是好坏。下沿只说明“下行空间已被压缩”，不说明“会反弹”；
+    上沿只说明“趋势在上”，不说明“还能追”。位置要和动量一起看。</li>
+    <li><b>{K["FAN_CN"]}。</b>
+    “反”维的方向是反的：+1 是空头证据成立，−1 是多头证据成立。把它当利多是误读。</li>
+    <li><em>张力 {K["T"]:.2f}，{("本期最高" if K["T"] >= K["TMAX"] - 1e-9 else "本期区间内")}。</em>
+    波动负荷、跌破 MA20 的深度、状态抖动三项加权。张力高不等于要跌，
+    它表示“旧状态的维持成本已经接近重构成本”——系统正在被推向转化相。</li>
   </ul>
 
   <h2>九维快照 <span>SNAPSHOT</span></h2>
@@ -231,7 +274,7 @@ footer{{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-s
   <h2>机制检验 <span>MECHANISM</span></h2>
   <div class="grid2">
     <div class="cell"><div class="k">观测层直接反转</div><div class="v">{sh['obs_direct_flips']} 维次</div>
-      <div class="d">19 日里，同一天从 +1 直接跳到 −1 的次数。市场确实在硬转向。</div></div>
+      <div class="d">{K["NV"]} 日里，同一天从 +1 直接跳到 −1 的次数。市场确实在硬转向。</div></div>
     <div class="cell"><div class="k">累积态直接反转</div><div class="v">{sh['state_direct_flips']} 次</div>
       <div class="d">经过三态吸收后，已确立的判断一次都没有被硬翻，全部先退成 0 悬置再重建。</div></div>
   </div>
@@ -244,13 +287,13 @@ footer{{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-s
   <table class="cross">
     <thead><tr><th>标的</th><th>今日</th><th>19 日</th><th>累积态</th><th>确定/悬置</th></tr></thead>
     <tbody>
-      <tr><td class="dim">上证 000001</td><td class="neg">−1.22%</td><td>{sh['period_return_pct']:+.2f}%</td><td class="dim" style="font-size:11.5px">#186</td><td>7 / 2</td></tr>
-      <tr><td class="dim">沪深300 000300</td><td class="neg">−0.76%</td><td>{hs['period_return_pct']:+.2f}%</td><td class="dim" style="font-size:11.5px">#21</td><td>5 / 4</td></tr>
+      <tr><td class="dim">上证 000001</td><td class="neg">{K["DY"]:+.2f}%</td><td>{K["SR"]:+.2f}%</td><td class="dim" style="font-size:11.5px">#{K["IDX"]}</td><td>{K["NDET"]} / {K["NZRO"]}</td></tr>
+      <tr><td class="dim">沪深300 000300.SH</td><td class="neg">−0.76%</td><td>{hs['period_return_pct']:+.2f}%</td><td class="dim" style="font-size:11.5px">#{K["HS_IDX"]}</td><td>{K["HS_DET"]} / {K["HS_ZRO"]}</td></tr>
       <tr><td class="dim">深证成指 399001</td><td class="neg">−3.09%</td><td>—</td><td class="dim" style="font-size:11.5px">未编码</td><td>—</td></tr>
     </tbody>
   </table>
   <p class="sub" style="margin-top:12px">上证 159 家上涨 / 2176 家下跌，沪深300 95 / 202。大盘权重抗跌、小盘杀跌的宽度差异，
-  在状态上也对得上：沪深300 有 4 维悬置（量能、情绪、位置、风险都没定），上证只有 2 维。</p>
+  在状态上也对得上：沪深300 有 {K["HS_ZRO"]} 维悬置，上证有 {K["NZRO"]} 维。</p>
 
   <h2>边界 <span>LIMITS</span></h2>
   <div class="note-box">

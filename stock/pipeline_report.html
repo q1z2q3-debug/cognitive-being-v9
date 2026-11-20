@@ -16,7 +16,7 @@ font-size:16px;line-height:1.85;-webkit-font-smoothing:antialiased}
 .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-variant-numeric:tabular-nums}
 .eyebrow{color:var(--gold);font-size:12px;letter-spacing:.22em}
 h1{font-size:33px;line-height:1.25;font-weight:600;margin:14px 0 10px}
-.lead{color:var(--dim);font-size:15.5px;max-width:650px}
+.lead{color:var(--dim);font-size:15.5px;max-width:660px}
 .bar{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
 border:1px solid var(--line);margin:30px 0}
 .bar div{background:var(--panel);padding:16px 14px}
@@ -31,21 +31,29 @@ figure{margin:24px 0;max-width:640px}
 figure svg{width:100%;height:auto;display:block;border:1px solid var(--line)}
 figcaption{color:var(--dim);font-size:12.5px;margin-top:10px;line-height:1.7}
 table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;table-layout:fixed}
-.s1{width:20%}.s2{width:10%}.s3{width:12%}.s4{width:12%}.s5{width:14%}.s6{width:12%}.s7{width:22%}
-.p1{width:18%}.p2{width:15%}.p3{width:11%}.p4{width:11%}.p5{width:9%}.p6{width:24%}.p7{width:12%}
+.s1{width:20%}.s2{width:10%}.s3{width:12%}.s4{width:12%}.s5{width:14%}.s6{width:12%}.s7{width:20%}
+.p1{width:13%}.p2{width:14%}.p3{width:9%}.p4{width:9%}.p5{width:8%}.p6{width:33%}.p7{width:11%}
 th{color:var(--dim);font-weight:500;font-size:12px;text-align:left;
 padding:8px 6px;border-bottom:1px solid var(--line)}
 td{padding:9px 6px;border-bottom:1px solid #1a2723;color:#c9d1ca}
 td.mono{font-size:12.5px}
 tr.cut td{color:#6b7a74}
 tr.hl td{color:var(--gold)}
-.gy{color:var(--jade);margin-right:6px}.gn{color:#6b7a74;margin-right:6px;text-decoration:line-through}
+.gy{color:var(--jade);margin-right:6px;white-space:nowrap}.gn{color:#6b7a74;margin-right:6px;text-decoration:line-through;white-space:nowrap}
 @media(max-width:860px){.gy,.gn{margin-right:3px}}
 .note{background:var(--panel);border-left:3px solid var(--jade);padding:18px 20px;margin:20px 0}
 .note .k{color:var(--jade);font-size:12px;letter-spacing:.14em;display:block;margin-bottom:6px}
 .warn{border-left-color:var(--cinn)}.warn .k{color:var(--cinn)}
 ul{padding-left:22px;margin:0 0 14px}li{margin-bottom:8px;color:#cfd6cf}
 li b{color:var(--fog);font-weight:600}
+.veto{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);
+border:1px solid var(--line);margin:14px 0}
+.veto .vt{background:var(--panel);padding:9px 12px;font-size:12.5px;line-height:1.6}
+.veto .vt b{color:#d8a49c;font-weight:600;display:inline-block;min-width:58px}
+.veto .vt em{color:var(--cinn);font-style:normal;font-size:11px}
+.veto .vt i{color:var(--mid);font-style:normal;font-size:11px;margin-left:8px;
+font-family:ui-monospace,monospace}
+.vhead{color:var(--dim);font-size:12px;letter-spacing:.1em;margin-top:18px}
 .foot{color:var(--mid);font-size:12.5px;line-height:1.9;border-top:1px solid var(--line);
 padding-top:20px;margin-top:44px}
 a{color:var(--jade);text-decoration:none;border-bottom:1px dotted #2c4740;white-space:nowrap}
@@ -54,8 +62,9 @@ a{color:var(--jade);text-decoration:none;border-bottom:1px dotted #2c4740;white-
 .bar{grid-template-columns:1fr 1fr}
 table{font-size:12px}th{font-size:11px}th,td{padding:7px 4px}
 td.mono{font-size:11px}
-.s1{width:19%}.s2{width:9%}.s3{width:11%}.s4{width:11%}.s5{width:15%}.s6{width:12%}.s7{width:24%}
-.p1{width:17%}.p2{width:14%}.p3{width:10%}.p4{width:10%}.p5{width:10%}.p6{width:25%}.p7{width:14%}
+.s1{width:19%}.s2{width:9%}.s3{width:11%}.s4{width:11%}.s5{width:15%}.s6{width:12%}.s7{width:23%}
+.p1{width:12%}.p2{width:13%}.p3{width:8%}.p4{width:8%}.p5{width:7%}.p6{width:40%}.p7{width:12%}
+.veto{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -63,13 +72,13 @@ td.mono{font-size:11px}
 <div class="wrap">
 <div class="eyebrow">润泽说 · 认知生命体 v9 · 流程</div>
 <h1>五层漏斗</h1>
-<p class="lead">自上而下五层，每层只回答一个问题，每层都能拦人。今天的答案是：<b>市场防守档，六个行业剩三个，
-24 只样本剩 5 只，收成 3 只组合。</b></p>
+<p class="lead">自上而下五层，每层只回答一个问题，每层都能拦人。今天的答案是：<b>市场防守档，
+31 个行业剩 13 个，124 只样本剩 8 只，收成 3 只组合。</b></p>
 
 <div class="bar">
 <div><b class="c">防守</b><span>市场状态 · 仓位 3 成以内</span></div>
-<div><b class="g">3 / 6</b><span>候选行业</span></div>
-<div><b class="j">5 / 24</b><span>过筛个股</span></div>
+<div><b class="g">13 / 31</b><span>候选行业</span></div>
+<div><b class="j">8 / 124</b><span>过筛个股</span></div>
 <div><b class="j">3</b><span>组合持仓</span></div>
 </div>
 
@@ -80,74 +89,102 @@ td.mono{font-size:11px}
 <text x="10" y="18" class="lb">五层筛选：每层留下什么，卡在哪一层</text>
 <text x="10" y="33" class="sb">条长 = 该层保留比例；灰段为被拦截部分</text>
 <text x="10" y="54" class="lb">L0 防守档</text>
-<text x="108" y="54" class="sb">2 个指数均空头确立</text>
-<rect x="108" y="64" width="200" height="8" fill="#1b2723"/>
-<rect x="108" y="64" width="200" height="8" rx="2" fill="#5fa79b"/>
+<text x="112" y="54" class="sb">上证对峙 · 沪深300空头</text>
+<rect x="112" y="64" width="196" height="8" fill="#1b2723"/>
+<rect x="112" y="64" width="196" height="8" rx="2" fill="#5fa79b"/>
 <text x="308" y="74" class="vl" text-anchor="end">2 / 2</text>
-<rect x="114" y="72" width="1" height="22" fill="#24352f"/>
-<text x="10" y="100" class="lb">L1 3 / 6 行业</text>
-<text x="108" y="100" class="sb">张力过热 · 方向转负 · 样本不足</text>
-<rect x="108" y="110" width="200" height="8" fill="#1b2723"/>
-<rect x="108" y="110" width="100" height="8" rx="2" fill="#b5452f"/>
-<text x="308" y="120" class="vl" text-anchor="end">3 / 6</text>
-<rect x="114" y="118" width="1" height="22" fill="#24352f"/>
-<text x="10" y="146" class="lb">L2 5 / 24 只</text>
-<text x="108" y="146" class="sb">确定度 · 张力 · 方向 · 实维</text>
-<rect x="108" y="156" width="200" height="8" fill="#1b2723"/>
-<rect x="108" y="156" width="41.6667" height="8" rx="2" fill="#b5452f"/>
-<text x="308" y="166" class="vl" text-anchor="end">5 / 24</text>
-<rect x="114" y="164" width="1" height="22" fill="#24352f"/>
-<text x="10" y="192" class="lb">L3 5 / 5 开窗</text>
-<text x="108" y="192" class="sb">正合同向 · 进≥0 · 守≠−1</text>
-<rect x="108" y="202" width="200" height="8" fill="#1b2723"/>
-<rect x="108" y="202" width="200" height="8" rx="2" fill="#5fa79b"/>
-<text x="308" y="212" class="vl" text-anchor="end">5 / 5</text>
-<rect x="114" y="210" width="1" height="22" fill="#24352f"/>
+<rect x="118" y="72" width="1" height="22" fill="#24352f"/>
+<text x="10" y="100" class="lb">L1 13 / 31 行业</text>
+<text x="112" y="100" class="sb">张力过热 · 方向转负</text>
+<rect x="112" y="110" width="196" height="8" fill="#1b2723"/>
+<rect x="112" y="110" width="82.1935" height="8" rx="2" fill="#b5452f"/>
+<text x="308" y="120" class="vl" text-anchor="end">13 / 31</text>
+<rect x="118" y="118" width="1" height="22" fill="#24352f"/>
+<text x="10" y="146" class="lb">L2 8 / 124 只</text>
+<text x="112" y="146" class="sb">确定度 · 张力 · 方向 · 实维</text>
+<rect x="112" y="156" width="196" height="8" fill="#1b2723"/>
+<rect x="112" y="156" width="12.6452" height="8" rx="2" fill="#b5452f"/>
+<text x="308" y="166" class="vl" text-anchor="end">8 / 124</text>
+<rect x="118" y="164" width="1" height="22" fill="#24352f"/>
+<text x="10" y="192" class="lb">L3 8 / 8 开窗</text>
+<text x="112" y="192" class="sb">正合同向 · 进≥0 · 守≠−1</text>
+<rect x="112" y="202" width="196" height="8" fill="#1b2723"/>
+<rect x="112" y="202" width="196" height="8" rx="2" fill="#5fa79b"/>
+<text x="308" y="212" class="vl" text-anchor="end">8 / 8</text>
+<rect x="118" y="210" width="1" height="22" fill="#24352f"/>
 <text x="10" y="238" class="lb">L4 3 只组合</text>
-<text x="108" y="238" class="sb">同构合并 · 单行业 ≤40%</text>
-<rect x="108" y="248" width="200" height="8" fill="#1b2723"/>
-<rect x="108" y="248" width="120" height="8" rx="2" fill="#5fa79b"/>
-<text x="308" y="258" class="vl" text-anchor="end">3 / 5</text>
+<text x="112" y="238" class="sb">同构合并 · 单行业 ≤40%</text>
+<rect x="112" y="248" width="196" height="8" fill="#1b2723"/>
+<rect x="112" y="248" width="73.5" height="8" rx="2" fill="#5fa79b"/>
+<text x="308" y="258" class="vl" text-anchor="end">3 / 8</text>
 <text x="10" y="282" class="sb">青 = 该层通过　朱 = 有拦截</text>
 </svg>
 <figcaption>先定市场档位，再定行业，再定个股，最后合并成组合。条长是该层保留比例，
-不是收益率。L2 卡在最狠处——24 只只过 5 只。</figcaption>
+不是收益率。L1 与 L2 是两道主要拦截，L3 今天一个都没挡——瓶颈不在时机，在结构。</figcaption>
 </figure>
 
 <h2>一、L0 市场状态：防守</h2>
-<p>两个指数<b>同时空头确立</b>：上证 #186、7/9 确定、张力 0.70；沪深300 #21、5/9、张力 0.63。
-两条都越过 0.65 的防守线——这一层的结论不是"哪个行业好"，而是<b>总仓位压到三成以内</b>，
-只允许结构性机会，不做行业轮动式加仓。</p>
+<p>上证 #4560、多空对峙、7/9、张力 0.70；沪深300 #21、空头确立、
+5/9、张力 0.63。最大张力 0.70 已在 0.65 的防守线之上——这一层的结论不是"哪个行业好"，
+而是<b>总仓位压到 3 成以内</b>，只允许结构性机会，不做行业轮动式加仓。</p>
 <p>顺序不能颠倒。行业分再高，在防守档里也只能小仓试，这是流程与选股清单最大的差别。</p>
 
-<h2>二、L1 行业轮动：六个剩三个</h2>
+<h2>二、L1 行业轮动：31 个剩 13 个</h2>
 <p>每个行业按三件事打分：<b>结构分</b>（确定度均值）、<b>方向分</b>（多头占比减空头占比）、
 <b>松紧分</b>（1 − 中位张力）。加权 0.4／0.4／0.2。任何一项越界就拦截，不看总分排名。</p>
 <table>
 <colgroup><col class="s1"><col class="s2"><col class="s3"><col class="s4"><col class="s5"><col class="s6"><col class="s7"></colgroup>
 <thead><tr><th>行业</th><th>样本</th><th>结构</th><th>方向</th><th>中位张力</th><th>得分</th><th>结论</th></tr></thead>
 <tbody>
-<tr class="cut"><td>公用事业</td><td class="mono">1</td><td class="mono">9.00</td><td class="mono">+1.00</td><td class="mono">0.50</td><td class="mono">0.900</td><td>拦截：样本不足</td></tr>
-<tr><td>保险</td><td class="mono">2</td><td class="mono">7.00</td><td class="mono">+0.50</td><td class="mono">0.50</td><td class="mono">0.711</td><td>候选</td></tr>
-<tr><td>煤炭</td><td class="mono">2</td><td class="mono">6.50</td><td class="mono">+0.50</td><td class="mono">0.50</td><td class="mono">0.689</td><td>候选</td></tr>
+<tr><td>公用事业</td><td class="mono">4</td><td class="mono">8.50</td><td class="mono">+0.75</td><td class="mono">0.47</td><td class="mono">0.834</td><td>候选</td></tr>
+<tr><td>家用电器</td><td class="mono">3</td><td class="mono">6.00</td><td class="mono">+1.00</td><td class="mono">0.38</td><td class="mono">0.790</td><td>候选</td></tr>
+<tr><td>环保</td><td class="mono">3</td><td class="mono">6.67</td><td class="mono">+0.33</td><td class="mono">0.43</td><td class="mono">0.676</td><td>候选</td></tr>
+<tr><td>通信</td><td class="mono">4</td><td class="mono">8.00</td><td class="mono">+0.00</td><td class="mono">0.58</td><td class="mono">0.640</td><td>候选</td></tr>
+<tr><td>煤炭</td><td class="mono">4</td><td class="mono">6.50</td><td class="mono">+0.25</td><td class="mono">0.50</td><td class="mono">0.639</td><td>候选</td></tr>
 <tr><td>银行</td><td class="mono">9</td><td class="mono">5.56</td><td class="mono">+0.33</td><td class="mono">0.40</td><td class="mono">0.634</td><td>候选</td></tr>
-<tr class="cut"><td>石油石化</td><td class="mono">2</td><td class="mono">7.00</td><td class="mono">+0.00</td><td class="mono">0.67</td><td class="mono">0.577</td><td>拦截：张力过热</td></tr>
-<tr class="cut"><td>化工</td><td class="mono">8</td><td class="mono">5.38</td><td class="mono">-0.62</td><td class="mono">0.73</td><td class="mono">0.367</td><td>拦截：张力过热</td></tr>
+<tr><td>食品饮料</td><td class="mono">4</td><td class="mono">6.75</td><td class="mono">+0.00</td><td class="mono">0.50</td><td class="mono">0.600</td><td>候选</td></tr>
+<tr><td>交通运输</td><td class="mono">4</td><td class="mono">5.25</td><td class="mono">+0.00</td><td class="mono">0.43</td><td class="mono">0.547</td><td>候选</td></tr>
+<tr><td>石油石化</td><td class="mono">5</td><td class="mono">6.20</td><td class="mono">-0.20</td><td class="mono">0.53</td><td class="mono">0.529</td><td>候选</td></tr>
+<tr><td>非银金融</td><td class="mono">4</td><td class="mono">5.00</td><td class="mono">+0.00</td><td class="mono">0.50</td><td class="mono">0.522</td><td>候选</td></tr>
+<tr><td>轻工制造</td><td class="mono">3</td><td class="mono">4.67</td><td class="mono">+0.00</td><td class="mono">0.43</td><td class="mono">0.521</td><td>候选</td></tr>
+<tr><td>农林牧渔</td><td class="mono">4</td><td class="mono">4.75</td><td class="mono">+0.00</td><td class="mono">0.50</td><td class="mono">0.511</td><td>候选</td></tr>
+<tr><td>纺织服饰</td><td class="mono">3</td><td class="mono">4.33</td><td class="mono">+0.00</td><td class="mono">0.43</td><td class="mono">0.506</td><td>候选</td></tr>
 </tbody>
 </table>
+<p class="vhead">被拦的 18 个行业</p>
+<div class="veto">
+<span class="vt"><b>建筑材料</b><em>张力过热</em><i>张力 0.70 · 方向 -0.25</i></span>
+<span class="vt"><b>钢铁</b><em>张力过热</em><i>张力 0.69 · 方向 +0.00</i></span>
+<span class="vt"><b>电子</b><em>张力过热</em><i>张力 0.76 · 方向 -0.25</i></span>
+<span class="vt"><b>美容护理</b><em>张力过热</em><i>张力 0.73 · 方向 -1.00</i></span>
+<span class="vt"><b>国防军工</b><em>张力过热</em><i>张力 0.66 · 方向 -0.33</i></span>
+<span class="vt"><b>机械设备</b><em>方向转负</em><i>张力 0.61 · 方向 -0.25</i></span>
+<span class="vt"><b>商贸零售</b><em>张力过热</em><i>张力 0.77 · 方向 -0.75</i></span>
+<span class="vt"><b>社会服务</b><em>张力过热</em><i>张力 0.73 · 方向 -0.67</i></span>
+<span class="vt"><b>计算机</b><em>张力过热</em><i>张力 0.73 · 方向 -0.75</i></span>
+<span class="vt"><b>汽车</b><em>张力过热</em><i>张力 0.65 · 方向 -0.25</i></span>
+<span class="vt"><b>综合</b><em>张力过热</em><i>张力 0.73 · 方向 -1.00</i></span>
+<span class="vt"><b>房地产</b><em>张力过热</em><i>张力 0.70 · 方向 -1.00</i></span>
+<span class="vt"><b>传媒</b><em>张力过热</em><i>张力 0.73 · 方向 -0.75</i></span>
+<span class="vt"><b>基础化工</b><em>张力过热</em><i>张力 0.73 · 方向 -0.67</i></span>
+<span class="vt"><b>有色金属</b><em>张力过热</em><i>张力 0.73 · 方向 -1.00</i></span>
+<span class="vt"><b>医药生物</b><em>方向转负</em><i>张力 0.62 · 方向 -0.75</i></span>
+<span class="vt"><b>建筑装饰</b><em>方向转负</em><i>张力 0.61 · 方向 -0.50</i></span>
+<span class="vt"><b>电力设备</b><em>张力过热</em><i>张力 0.70 · 方向 -1.00</i></span>
+</div>
 <div class="note warn">
-<span class="k">三条拦截理由，各有各的意思</span>
-石油石化中位张力 0.67 —— 不是不涨，是波动已经压不住；化工方向分 −0.62 —— 八只里五只空头确立，
-方向一致朝下；<b>公用事业只有长江电力一只</b> —— 它 9/9 满维、张力 0.50，单看很好，
-但一只代表不了一个行业，样本不足就不入选。这条规则宁可漏，不可错。
+<span class="k">两种拦截理由，意思完全不同</span>
+<b>张力过热</b> —— 不是不涨，是波动已经压不住，涨得越猛越难持有；这类行业里再好的个股也在逆风里。
+<b>方向转负</b> —— 板块内部多数个股已经空头确立，方向一致性朝下，个股再强也难独立。
+两种都拦，但第一种是"等待"，第二种是"离场"，复盘时要分开看。
 </div>
 
-<h2>三、L2 个股初筛：24 只过 5 只</h2>
+<h2>三、L2 个股初筛：124 只过 8 只</h2>
 <p>在候选行业里逐只过四关：<b>确定度 ≥ 5</b>（不足半数维有值就不信）、<b>张力 ≤ 0.55</b>、
 <b>方向</b>（按位置分流，见下）、<b>实维 ≤ 7</b>（8 维以上说明结构已结晶，没有"未定"空间可赚）。</p>
 <div class="note">
 <span class="k">方向这关差点写错</span>
-第一版把「归 = −1」直接当否决项，结果 24 只全灭——因为这些标的都站在 20 日区间 87–100% 分位。
+第一版把「归 = −1」直接当否决项，结果当时 24 只样本全灭——因为这些标的都站在 20 日区间 87–100% 分位。
 上沿不是坏位置，单边上涨的股票永远在上沿。改成<b>分流</b>：位置高（−1）走右侧，要看动量还在（进 ≥ 0）；
 位置低（+1）走左侧，要看均线转同向；中段看合力。同一条数据，换个问法，结论就活了。
 </div>
@@ -155,32 +192,72 @@ td.mono{font-size:11px}
 <colgroup><col class="p1"><col class="p2"><col class="p3"><col class="p4"><col class="p5"><col class="p6"><col class="p7"></colgroup>
 <thead><tr><th>标的</th><th>行业</th><th>确定</th><th>张力</th><th>实维</th><th>四关</th><th>窗口</th></tr></thead>
 <tbody>
+<tr class="hl"><td>川投</td><td>公用事业</td><td class="mono">9/9</td><td class="mono">0.47</td><td class="mono">7</td><td><span class="gy">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gy">实维</span></td><td>开</td></tr>
+<tr class="cut"><td>国投电</td><td>公用事业</td><td class="mono">9/9</td><td class="mono">0.47</td><td class="mono">8</td><td><span class="gy">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gn">实维</span></td><td>关</td></tr>
 <tr class="hl"><td>招商</td><td>银行</td><td class="mono">9/9</td><td class="mono">0.47</td><td class="mono">7</td><td><span class="gy">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gy">实维</span></td><td>开</td></tr>
-<tr class="hl"><td>中国平安</td><td>保险</td><td class="mono">9/9</td><td class="mono">0.50</td><td class="mono">7</td><td><span class="gy">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gy">实维</span></td><td>开</td></tr>
+<tr class="hl"><td>长电</td><td>公用事业</td><td class="mono">9/9</td><td class="mono">0.50</td><td class="mono">7</td><td><span class="gy">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gy">实维</span></td><td>开</td></tr>
 <tr class="hl"><td>工商</td><td>银行</td><td class="mono">9/9</td><td class="mono">0.50</td><td class="mono">6</td><td><span class="gy">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gy">实维</span></td><td>开</td></tr>
+<tr class="hl"><td>茅台</td><td>食品饮料</td><td class="mono">9/9</td><td class="mono">0.50</td><td class="mono">6</td><td><span class="gy">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gy">实维</span></td><td>开</td></tr>
+<tr class="hl"><td>中国平安</td><td>非银金融</td><td class="mono">9/9</td><td class="mono">0.50</td><td class="mono">7</td><td><span class="gy">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gy">实维</span></td><td>开</td></tr>
+<tr class="cut"><td>电信</td><td>通信</td><td class="mono">9/9</td><td class="mono">0.57</td><td class="mono">7</td><td><span class="gy">确定</span><span class="gn">张力</span><span class="gy">方向</span><span class="gy">实维</span></td><td>开</td></tr>
+<tr class="cut"><td>碧水源</td><td>环保</td><td class="mono">9/9</td><td class="mono">0.77</td><td class="mono">8</td><td><span class="gy">确定</span><span class="gn">张力</span><span class="gy">方向</span><span class="gn">实维</span></td><td>关</td></tr>
+<tr class="cut"><td>移动</td><td>通信</td><td class="mono">8/9</td><td class="mono">0.31</td><td class="mono">9</td><td><span class="gy">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gn">实维</span></td><td>开</td></tr>
+<tr class="cut"><td>伊利</td><td>食品饮料</td><td class="mono">8/9</td><td class="mono">0.43</td><td class="mono">8</td><td><span class="gy">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gn">实维</span></td><td>开</td></tr>
 <tr class="cut"><td>兴业</td><td>银行</td><td class="mono">8/9</td><td class="mono">0.47</td><td class="mono">8</td><td><span class="gy">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gn">实维</span></td><td>关</td></tr>
 <tr class="hl"><td>神华</td><td>煤炭</td><td class="mono">8/9</td><td class="mono">0.50</td><td class="mono">7</td><td><span class="gy">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gy">实维</span></td><td>开</td></tr>
+<tr class="cut"><td>中天</td><td>通信</td><td class="mono">8/9</td><td class="mono">0.58</td><td class="mono">9</td><td><span class="gy">确定</span><span class="gn">张力</span><span class="gy">方向</span><span class="gn">实维</span></td><td>关</td></tr>
+<tr class="cut"><td>中海油</td><td>石油石化</td><td class="mono">8/9</td><td class="mono">0.67</td><td class="mono">8</td><td><span class="gy">确定</span><span class="gn">张力</span><span class="gy">方向</span><span class="gn">实维</span></td><td>关</td></tr>
+<tr class="cut"><td>荣盛</td><td>石油石化</td><td class="mono">8/9</td><td class="mono">0.73</td><td class="mono">8</td><td><span class="gy">确定</span><span class="gn">张力</span><span class="gy">方向</span><span class="gn">实维</span></td><td>关</td></tr>
+<tr class="cut"><td>上港</td><td>交通运输</td><td class="mono">7/9</td><td class="mono">0.32</td><td class="mono">8</td><td><span class="gy">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gn">实维</span></td><td>开</td></tr>
+<tr class="cut"><td>海尔</td><td>家用电器</td><td class="mono">7/9</td><td class="mono">0.33</td><td class="mono">9</td><td><span class="gy">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gn">实维</span></td><td>关</td></tr>
+<tr class="cut"><td>华能水电</td><td>公用事业</td><td class="mono">7/9</td><td class="mono">0.40</td><td class="mono">8</td><td><span class="gy">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gn">实维</span></td><td>开</td></tr>
+<tr class="cut"><td>中石化</td><td>石油石化</td><td class="mono">7/9</td><td class="mono">0.42</td><td class="mono">8</td><td><span class="gy">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gn">实维</span></td><td>开</td></tr>
+<tr class="cut"><td>伟明</td><td>环保</td><td class="mono">7/9</td><td class="mono">0.43</td><td class="mono">9</td><td><span class="gy">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gn">实维</span></td><td>关</td></tr>
+<tr class="cut"><td>京沪</td><td>交通运输</td><td class="mono">7/9</td><td class="mono">0.43</td><td class="mono">8</td><td><span class="gy">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gn">实维</span></td><td>关</td></tr>
+<tr class="cut"><td>中煤</td><td>煤炭</td><td class="mono">7/9</td><td class="mono">0.50</td><td class="mono">7</td><td><span class="gy">确定</span><span class="gy">张力</span><span class="gn">方向</span><span class="gy">实维</span></td><td>关</td></tr>
+<tr class="cut"><td>中兴</td><td>通信</td><td class="mono">7/9</td><td class="mono">0.73</td><td class="mono">7</td><td><span class="gy">确定</span><span class="gn">张力</span><span class="gy">方向</span><span class="gy">实维</span></td><td>关</td></tr>
+<tr class="cut"><td>美的</td><td>家用电器</td><td class="mono">6/9</td><td class="mono">0.40</td><td class="mono">8</td><td><span class="gy">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gn">实维</span></td><td>开</td></tr>
 <tr class="cut"><td>浦发</td><td>银行</td><td class="mono">6/9</td><td class="mono">0.40</td><td class="mono">8</td><td><span class="gy">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gn">实维</span></td><td>开</td></tr>
+<tr class="cut"><td>海大</td><td>农林牧渔</td><td class="mono">6/9</td><td class="mono">0.44</td><td class="mono">8</td><td><span class="gy">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gn">实维</span></td><td>开</td></tr>
+<tr class="cut"><td>中石油</td><td>石油石化</td><td class="mono">6/9</td><td class="mono">0.53</td><td class="mono">6</td><td><span class="gy">确定</span><span class="gy">张力</span><span class="gn">方向</span><span class="gy">实维</span></td><td>关</td></tr>
+<tr class="cut"><td>新希望</td><td>农林牧渔</td><td class="mono">6/9</td><td class="mono">0.66</td><td class="mono">8</td><td><span class="gy">确定</span><span class="gn">张力</span><span class="gn">方向</span><span class="gn">实维</span></td><td>关</td></tr>
+<tr class="cut"><td>五粮液</td><td>食品饮料</td><td class="mono">6/9</td><td class="mono">0.67</td><td class="mono">7</td><td><span class="gy">确定</span><span class="gn">张力</span><span class="gn">方向</span><span class="gy">实维</span></td><td>关</td></tr>
+<tr class="cut"><td>华利</td><td>纺织服饰</td><td class="mono">6/9</td><td class="mono">0.69</td><td class="mono">8</td><td><span class="gy">确定</span><span class="gn">张力</span><span class="gn">方向</span><span class="gn">实维</span></td><td>关</td></tr>
+<tr class="cut"><td>欧派</td><td>轻工制造</td><td class="mono">6/9</td><td class="mono">0.73</td><td class="mono">8</td><td><span class="gy">确定</span><span class="gn">张力</span><span class="gy">方向</span><span class="gn">实维</span></td><td>关</td></tr>
+<tr class="cut"><td>兖矿</td><td>煤炭</td><td class="mono">6/9</td><td class="mono">0.75</td><td class="mono">7</td><td><span class="gy">确定</span><span class="gn">张力</span><span class="gy">方向</span><span class="gy">实维</span></td><td>开</td></tr>
 <tr class="cut"><td>陕煤</td><td>煤炭</td><td class="mono">5/9</td><td class="mono">0.36</td><td class="mono">9</td><td><span class="gy">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gn">实维</span></td><td>开</td></tr>
+<tr class="cut"><td>格力</td><td>家用电器</td><td class="mono">5/9</td><td class="mono">0.38</td><td class="mono">9</td><td><span class="gy">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gn">实维</span></td><td>开</td></tr>
 <tr class="cut"><td>北京</td><td>银行</td><td class="mono">5/9</td><td class="mono">0.40</td><td class="mono">8</td><td><span class="gy">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gn">实维</span></td><td>关</td></tr>
 <tr class="hl"><td>平安银行</td><td>银行</td><td class="mono">5/9</td><td class="mono">0.40</td><td class="mono">7</td><td><span class="gy">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gy">实维</span></td><td>开</td></tr>
-<tr class="cut"><td>人寿</td><td>保险</td><td class="mono">5/9</td><td class="mono">0.47</td><td class="mono">8</td><td><span class="gy">确定</span><span class="gy">张力</span><span class="gn">方向</span><span class="gn">实维</span></td><td>关</td></tr>
+<tr class="cut"><td>森马</td><td>纺织服饰</td><td class="mono">5/9</td><td class="mono">0.43</td><td class="mono">8</td><td><span class="gy">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gn">实维</span></td><td>开</td></tr>
+<tr class="cut"><td>人寿</td><td>非银金融</td><td class="mono">5/9</td><td class="mono">0.47</td><td class="mono">8</td><td><span class="gy">确定</span><span class="gy">张力</span><span class="gn">方向</span><span class="gn">实维</span></td><td>关</td></tr>
+<tr class="cut"><td>招轮</td><td>交通运输</td><td class="mono">5/9</td><td class="mono">0.60</td><td class="mono">9</td><td><span class="gy">确定</span><span class="gn">张力</span><span class="gy">方向</span><span class="gn">实维</span></td><td>关</td></tr>
+<tr class="cut"><td>太阳纸</td><td>轻工制造</td><td class="mono">4/9</td><td class="mono">0.35</td><td class="mono">9</td><td><span class="gn">确定</span><span class="gy">张力</span><span class="gn">方向</span><span class="gn">实维</span></td><td>关</td></tr>
+<tr class="cut"><td>瀚蓝</td><td>环保</td><td class="mono">4/9</td><td class="mono">0.39</td><td class="mono">9</td><td><span class="gn">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gn">实维</span></td><td>开</td></tr>
+<tr class="cut"><td>海天</td><td>食品饮料</td><td class="mono">4/9</td><td class="mono">0.40</td><td class="mono">8</td><td><span class="gn">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gn">实维</span></td><td>开</td></tr>
+<tr class="cut"><td>晨光</td><td>轻工制造</td><td class="mono">4/9</td><td class="mono">0.43</td><td class="mono">8</td><td><span class="gn">确定</span><span class="gy">张力</span><span class="gn">方向</span><span class="gn">实维</span></td><td>关</td></tr>
+<tr class="cut"><td>牧原</td><td>农林牧渔</td><td class="mono">4/9</td><td class="mono">0.50</td><td class="mono">7</td><td><span class="gn">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gy">实维</span></td><td>关</td></tr>
+<tr class="cut"><td>中信证</td><td>非银金融</td><td class="mono">4/9</td><td class="mono">0.53</td><td class="mono">6</td><td><span class="gn">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gy">实维</span></td><td>关</td></tr>
 <tr class="cut"><td>华夏</td><td>银行</td><td class="mono">3/9</td><td class="mono">0.38</td><td class="mono">8</td><td><span class="gn">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gn">实维</span></td><td>开</td></tr>
 <tr class="cut"><td>光大</td><td>银行</td><td class="mono">3/9</td><td class="mono">0.40</td><td class="mono">7</td><td><span class="gn">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gy">实维</span></td><td>关</td></tr>
+<tr class="cut"><td>温氏</td><td>农林牧渔</td><td class="mono">3/9</td><td class="mono">0.40</td><td class="mono">9</td><td><span class="gn">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gn">实维</span></td><td>开</td></tr>
+<tr class="cut"><td>海澜</td><td>纺织服饰</td><td class="mono">2/9</td><td class="mono">0.32</td><td class="mono">8</td><td><span class="gn">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gn">实维</span></td><td>开</td></tr>
+<tr class="cut"><td>顺丰</td><td>交通运输</td><td class="mono">2/9</td><td class="mono">0.38</td><td class="mono">8</td><td><span class="gn">确定</span><span class="gy">张力</span><span class="gn">方向</span><span class="gn">实维</span></td><td>关</td></tr>
+<tr class="cut"><td>恒力</td><td>石油石化</td><td class="mono">2/9</td><td class="mono">0.40</td><td class="mono">8</td><td><span class="gn">确定</span><span class="gy">张力</span><span class="gn">方向</span><span class="gn">实维</span></td><td>关</td></tr>
 <tr class="cut"><td>民生</td><td>银行</td><td class="mono">2/9</td><td class="mono">0.43</td><td class="mono">8</td><td><span class="gn">确定</span><span class="gy">张力</span><span class="gy">方向</span><span class="gn">实维</span></td><td>关</td></tr>
+<tr class="cut"><td>东财</td><td>非银金融</td><td class="mono">2/9</td><td class="mono">0.49</td><td class="mono">8</td><td><span class="gn">确定</span><span class="gy">张力</span><span class="gn">方向</span><span class="gn">实维</span></td><td>关</td></tr>
 </tbody>
 </table>
-<p style="color:#87968f;font-size:13px">划掉的关是没过的。兴业、浦发、北京、陕煤都倒在"实维 ≤ 7"——
-它们不是弱，是<b>已经走完</b>，八维全填满，没有可赚的"未定"。</p>
+<p style="color:#87968f;font-size:13px">表里共 54 只候选行业个股，划掉的关是没过的。
+最多的一类死在"实维 ≤ 7"——它们不是弱，是<b>已经走完</b>，八九维全填满，没有可赚的"未定"。</p>
 
-<h2>四、L3 结构确认：过筛的 5 只全部开窗</h2>
+<h2>四、L3 结构确认：8 只过 8 只开窗</h2>
 <p>过了筛还要等窗口——表里未过筛的即使窗口开着也不算候选：<b>正/合同向</b>（均线与动量同向）、<b>进 ≥ 0</b>（5 日动量不为负）、
-<b>守 ≠ −1</b>（当日振幅没放大）。5 只全部满足——说明今天的瓶颈不在时机，在结构。</p>
+<b>守 ≠ −1</b>（当日振幅没放大）。这一层今天一个都没挡——说明瓶颈不在时机，在结构。</p>
 
-<h2>五、L4 组合去重：5 只收成 3 只</h2>
-<p>汉明距离 ≤ 1 的两只视为同构，只留确定度高、张力低的一只。招商、中国平安、长江电力
-三只累积态<b>完全相同</b>（#17312、9/9、0 悬置），只留张力最低的招商；工商 #17311 差一维，一并合并。</p>
-<p>最后剩下 <b>招商、神华、平安银行</b>，跨三个行业，单一行业权重不超过 40%。在防守档里，这就是上限。</p>
+<h2>五、L4 组合去重：8 只收成 3 只</h2>
+<p>汉明距离 ≤ 1 的两只视为同构，只留确定度高、张力低的一只。招商、长电、中国平安 与 川投 九维完全相同（#17312），只留一只；工商（#17311）、茅台（#17311） 只差 1 维，一并并入 川投。
+最后剩下 <b>川投、神华、平安银行</b>，单一行业权重不超过 40%。在防守档里，这就是上限。</p>
 
 <h2>六、L5 退出：三条，任一触发就走</h2>
 <ul>
@@ -199,22 +276,24 @@ td.mono{font-size:11px}
 <li>资金流：北向、融资余额、龙虎榜、大宗 —— 未接入</li>
 <li>盈利预期：分析师上修/下修、业绩预告 —— 未接入</li>
 <li>市场广度：涨跌家数、新高新低、成交额分布 —— L0 只用两大指数代替</li>
-<li>行业覆盖：31 个申万一级行业只取了 6 个，代表股 1–9 只不等</li>
+<li>行业覆盖：31 个申万一级行业已全覆盖，但每个只取 3–9 只代表股，
+覆盖的是<b>行业方向</b>，不是行业全貌</li>
 <li>事件与交易约束：财报窗口、停牌、涨跌停、除权 —— 未处理</li>
 <li>估值：只有 9 只银行有 PB/PE，其余空白</li>
 </ul>
 </div>
-<p>补齐的顺序应该是：先补行业覆盖（把 31 个行业各取 3–5 只代表），再补广度与资金流（L0、L1 才有分母），
-最后才是基本面与预期（L2 才谈得上"好公司"）。跳过前两步直接谈基本面，是把流程当清单用。</p>
+<p>行业覆盖这一格已经补上了 —— 这是让 L0、L1 有分母的前提。下一步是广度与资金流（同一层里加第二类证据），
+最后才是基本面与预期（L2 才谈得上"好公司"）。跳过前三步直接谈基本面，是把流程当清单用。</p>
 
 <div class="foot">
-样本：24 只个股（9 银行 + 8 化工 + 2 保险 + 2 煤炭 + 2 石油石化 + 1 公用事业）+ 上证 + 沪深300，
+样本：124 只个股（覆盖 31 个申万一级行业，每行业 3–9 只代表股）+ 上证 + 沪深300，
 2026-10-16 至 11-20 共 26 根日 K，引擎取 21 个有效状态。行情取自新浪财经日线接口。<br>
+标的清单是 <span class="mono">stock/universe.py</span> 一处，文件名即代码，加一只股票只改那里。<br>
 判据阈值全部写在 <span class="mono">stock/pipeline.py</span> 的 THRESHOLD 里，改一处即改流程。<br>
 本文是结构诊断，不是投资建议。流程能筛掉没有证据的判断，筛不掉基本面风险。<br>
 引擎 repo：<a href="https://github.com/q1z2q3-debug/cognitive-being-v9">cognitive-being-v9</a>
-　·　<a href="./index.html">返回主页</a>　·　<a href="./chem.html">化工读数</a>
-　·　<a href="./rank.html">跨行业排名</a>　·　<a href="./bank-scan.html">同业扫描</a>
+　·　<a href="./index.html">返回主页</a>　·　<a href="./rank.html">跨行业排名</a>
+　·　<a href="./chem.html">化工读数</a>　·　<a href="./bank-scan.html">同业扫描</a>
 </div>
 </div>
 </body>

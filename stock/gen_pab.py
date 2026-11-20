@@ -5,7 +5,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 D = json.loads((ROOT / "out" / "stock_state.json").read_text(encoding="utf-8"))
 PAB = D["平安银行 000001.SZ"]
-IDX = D["上证指数 000001"]
+IDX = D["上证指数 000001.SH"]
 DIMS = PAB["dim_names"]
 
 last = [s for s in PAB["series"] if s["valid"]][-1]
