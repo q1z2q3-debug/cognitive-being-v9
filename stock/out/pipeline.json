@@ -1,0 +1,595 @@
+{
+ "regime": {
+  "level": "防守",
+  "max_tension": 0.699,
+  "indices": [
+   {
+    "key": "上证",
+    "regime": "空头确立",
+    "index": 186,
+    "tension": 0.699,
+    "certain": 7
+   },
+   {
+    "key": "沪深300",
+    "regime": "空头确立",
+    "index": 21,
+    "tension": 0.631,
+    "certain": 5
+   }
+  ],
+  "caps": "3 成以内"
+ },
+ "sectors": [
+  {
+   "sector": "公用事业",
+   "n": 1,
+   "certain": 9.0,
+   "dir": 1.0,
+   "median_tension": 0.5,
+   "loose": 0.5,
+   "score": 0.9,
+   "veto": true,
+   "leader": "长电",
+   "reason": "样本不足"
+  },
+  {
+   "sector": "保险",
+   "n": 2,
+   "certain": 7.0,
+   "dir": 0.5,
+   "median_tension": 0.5,
+   "loose": 0.5,
+   "score": 0.711,
+   "veto": false,
+   "leader": "中国平安",
+   "reason": ""
+  },
+  {
+   "sector": "煤炭",
+   "n": 2,
+   "certain": 6.5,
+   "dir": 0.5,
+   "median_tension": 0.5,
+   "loose": 0.5,
+   "score": 0.689,
+   "veto": false,
+   "leader": "神华",
+   "reason": ""
+  },
+  {
+   "sector": "银行",
+   "n": 9,
+   "certain": 5.56,
+   "dir": 0.33,
+   "median_tension": 0.4,
+   "loose": 0.6,
+   "score": 0.634,
+   "veto": false,
+   "leader": "浦发",
+   "reason": ""
+  },
+  {
+   "sector": "石油石化",
+   "n": 2,
+   "certain": 7.0,
+   "dir": 0.0,
+   "median_tension": 0.671,
+   "loose": 0.329,
+   "score": 0.577,
+   "veto": true,
+   "leader": "中海油",
+   "reason": "张力过热"
+  },
+  {
+   "sector": "化工",
+   "n": 8,
+   "certain": 5.38,
+   "dir": -0.62,
+   "median_tension": 0.733,
+   "loose": 0.267,
+   "score": 0.367,
+   "veto": true,
+   "leader": "兴发",
+   "reason": "张力过热"
+  }
+ ],
+ "picks": [
+  {
+   "name": "招商银行 600036.SH",
+   "short": "招商",
+   "sector": "银行",
+   "state": [
+    1,
+    0,
+    1,
+    1,
+    -1,
+    1,
+    -1,
+    0,
+    1
+   ],
+   "index": 17312,
+   "regime": "多头确立",
+   "tension": 0.467,
+   "certain": 9,
+   "nz": 7,
+   "close": 44.0,
+   "passed": true,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": true,
+    "守≠-1": true
+   },
+   "window": true,
+   "gate": {
+    "certain": true,
+    "tension": true,
+    "方向": true,
+    "nz": true
+   }
+  },
+  {
+   "name": "中国平安 601318.SH",
+   "short": "中国平安",
+   "sector": "保险",
+   "state": [
+    1,
+    0,
+    1,
+    1,
+    -1,
+    1,
+    -1,
+    0,
+    1
+   ],
+   "index": 17312,
+   "regime": "多头确立",
+   "tension": 0.5,
+   "certain": 9,
+   "nz": 7,
+   "close": 55.46,
+   "passed": true,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": true,
+    "守≠-1": true
+   },
+   "window": true,
+   "gate": {
+    "certain": true,
+    "tension": true,
+    "方向": true,
+    "nz": true
+   }
+  },
+  {
+   "name": "工商银行 601398.SH",
+   "short": "工商",
+   "sector": "银行",
+   "state": [
+    1,
+    0,
+    1,
+    1,
+    -1,
+    1,
+    -1,
+    0,
+    0
+   ],
+   "index": 17311,
+   "regime": "弱定向",
+   "tension": 0.5,
+   "certain": 9,
+   "nz": 6,
+   "close": 9.4,
+   "passed": true,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": true,
+    "守≠-1": true
+   },
+   "window": true,
+   "gate": {
+    "certain": true,
+    "tension": true,
+    "方向": true,
+    "nz": true
+   }
+  },
+  {
+   "name": "兴业银行 601166.SH",
+   "short": "兴业",
+   "sector": "银行",
+   "state": [
+    1,
+    0,
+    1,
+    1,
+    -1,
+    1,
+    -1,
+    -1,
+    1
+   ],
+   "index": 17309,
+   "regime": "多空对峙",
+   "tension": 0.467,
+   "certain": 8,
+   "nz": 8,
+   "close": 20.3,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": true,
+    "守≠-1": false
+   },
+   "window": false,
+   "gate": {
+    "certain": true,
+    "tension": true,
+    "方向": true,
+    "nz": false
+   }
+  },
+  {
+   "name": "中国神华 601088.SH",
+   "short": "神华",
+   "sector": "煤炭",
+   "state": [
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    1,
+    -1,
+    0,
+    0
+   ],
+   "index": 15124,
+   "regime": "多空对峙",
+   "tension": 0.5,
+   "certain": 8,
+   "nz": 7,
+   "close": 52.0,
+   "passed": true,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": true,
+    "守≠-1": true
+   },
+   "window": true,
+   "gate": {
+    "certain": true,
+    "tension": true,
+    "方向": true,
+    "nz": true
+   }
+  },
+  {
+   "name": "浦发银行 600000.SH",
+   "short": "浦发",
+   "sector": "银行",
+   "state": [
+    1,
+    1,
+    1,
+    1,
+    -1,
+    1,
+    -1,
+    0,
+    1
+   ],
+   "index": 19499,
+   "regime": "多头确立",
+   "tension": 0.4,
+   "certain": 6,
+   "nz": 8,
+   "close": 10.87,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": true,
+    "守≠-1": true
+   },
+   "window": true,
+   "gate": {
+    "certain": true,
+    "tension": true,
+    "方向": true,
+    "nz": false
+   }
+  },
+  {
+   "name": "陕西煤业 601225.SH",
+   "short": "陕煤",
+   "sector": "煤炭",
+   "state": [
+    1,
+    -1,
+    1,
+    1,
+    1,
+    1,
+    -1,
+    1,
+    1
+   ],
+   "index": 15290,
+   "regime": "多头确立",
+   "tension": 0.363,
+   "certain": 5,
+   "nz": 9,
+   "close": 27.9,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": true,
+    "守≠-1": true
+   },
+   "window": true,
+   "gate": {
+    "certain": true,
+    "tension": true,
+    "方向": true,
+    "nz": false
+   }
+  },
+  {
+   "name": "北京银行 601169.SH",
+   "short": "北京",
+   "sector": "银行",
+   "state": [
+    1,
+    1,
+    0,
+    1,
+    -1,
+    1,
+    -1,
+    -1,
+    1
+   ],
+   "index": 18767,
+   "regime": "多空对峙",
+   "tension": 0.4,
+   "certain": 5,
+   "nz": 8,
+   "close": 6.27,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": true,
+    "守≠-1": false
+   },
+   "window": false,
+   "gate": {
+    "certain": true,
+    "tension": true,
+    "方向": true,
+    "nz": false
+   }
+  },
+  {
+   "name": "平安银行 000001.SZ",
+   "short": "平安银行",
+   "sector": "银行",
+   "state": [
+    1,
+    1,
+    0,
+    1,
+    -1,
+    1,
+    -1,
+    0,
+    1
+   ],
+   "index": 18770,
+   "regime": "多头确立",
+   "tension": 0.4,
+   "certain": 5,
+   "nz": 7,
+   "close": 12.22,
+   "passed": true,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": true,
+    "守≠-1": true
+   },
+   "window": true,
+   "gate": {
+    "certain": true,
+    "tension": true,
+    "方向": true,
+    "nz": true
+   }
+  },
+  {
+   "name": "中国人寿 601628.SH",
+   "short": "人寿",
+   "sector": "保险",
+   "state": [
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    1,
+    -1,
+    0,
+    -1
+   ],
+   "index": 15123,
+   "regime": "多空对峙",
+   "tension": 0.467,
+   "certain": 5,
+   "nz": 8,
+   "close": 35.44,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": false,
+    "守≠-1": true
+   },
+   "window": false,
+   "gate": {
+    "certain": true,
+    "tension": true,
+    "方向": false,
+    "nz": false
+   }
+  },
+  {
+   "name": "华夏银行 600015.SH",
+   "short": "华夏",
+   "sector": "银行",
+   "state": [
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    1,
+    -1,
+    0,
+    1
+   ],
+   "index": 15125,
+   "regime": "多空对峙",
+   "tension": 0.375,
+   "certain": 3,
+   "nz": 8,
+   "close": 6.75,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": true,
+    "守≠-1": true
+   },
+   "window": true,
+   "gate": {
+    "certain": false,
+    "tension": true,
+    "方向": true,
+    "nz": false
+   }
+  },
+  {
+   "name": "光大银行 601818.SH",
+   "short": "光大",
+   "sector": "银行",
+   "state": [
+    1,
+    0,
+    0,
+    1,
+    -1,
+    1,
+    -1,
+    -1,
+    1
+   ],
+   "index": 16580,
+   "regime": "多空对峙",
+   "tension": 0.4,
+   "certain": 3,
+   "nz": 7,
+   "close": 3.25,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": true,
+    "守≠-1": false
+   },
+   "window": false,
+   "gate": {
+    "certain": false,
+    "tension": true,
+    "方向": true,
+    "nz": true
+   }
+  },
+  {
+   "name": "民生银行 600016.SH",
+   "short": "民生",
+   "sector": "银行",
+   "state": [
+    1,
+    0,
+    -1,
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    1
+   ],
+   "index": 15869,
+   "regime": "多空对峙",
+   "tension": 0.433,
+   "certain": 2,
+   "nz": 8,
+   "close": 3.47,
+   "passed": false,
+   "entry": {
+    "正/合同向": true,
+    "进≥0": true,
+    "守≠-1": false
+   },
+   "window": false,
+   "gate": {
+    "certain": false,
+    "tension": true,
+    "方向": true,
+    "nz": false
+   }
+  }
+ ],
+ "portfolio": [
+  {
+   "short": "招商",
+   "sector": "银行",
+   "certain": 9,
+   "tension": 0.467,
+   "index": 17312
+  },
+  {
+   "short": "神华",
+   "sector": "煤炭",
+   "certain": 8,
+   "tension": 0.5,
+   "index": 15124
+  },
+  {
+   "short": "平安银行",
+   "sector": "银行",
+   "certain": 5,
+   "tension": 0.4,
+   "index": 18770
+  }
+ ],
+ "funnel": {
+  "样本": 24,
+  "行业": 3,
+  "个股": 5,
+  "入场": 5,
+  "组合": 3
+ },
+ "threshold": {
+  "L0_defend_tension": 0.65,
+  "L0_attack_tension": 0.5,
+  "L1_veto_tension": 0.65,
+  "L1_min_samples": 2,
+  "L2_certain": 5,
+  "L2_tension": 0.55,
+  "L2_nz": 7,
+  "L4_dup_hamming": 1,
+  "L5_drop_dims": 2
+ }
+}

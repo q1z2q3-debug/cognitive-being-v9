@@ -2,7 +2,7 @@
 <style>.tl{fill:#e8e2d5;font-size:10px}.hd{fill:#87968f;font-size:8.5px}.nm{fill:#c9d1ca;font-size:9px}.tg{fill:#87968f;font-size:8.5px}.pos{fill:#5fa79b}.neg{fill:#b5452f}.neu{fill:#6b7a74}.neu2{fill:#c8a45c}</style>
 <rect width="380" height="364" fill="#0f1a16"/>
 <text x="8" y="16" class="tl">按 19683 态索引升序：左端空头，右端多头</text>
-<text x="8" y="32" class="hd">按索引升序自上而下；化工全挤在上半部，末四行是参照</text>
+<text x="8" y="32" class="hd">按索引升序，索引是坐标不是距离；化工挤在上半部，末四行是参照</text>
 <text x="70.5" y="49" class="hd" text-anchor="middle">天</text>
 <text x="89.5" y="49" class="hd" text-anchor="middle">地</text>
 <text x="108.5" y="49" class="hd" text-anchor="middle">人</text>

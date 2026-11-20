@@ -83,7 +83,7 @@ def make_svg(rows):
         "</style>",
         '<rect width="%d" height="%d" fill="#0f1a16"/>' % (w, h),
         '<text x="8" y="16" class="tl">按 19683 态索引升序：左端空头，右端多头</text>',
-        '<text x="8" y="32" class="hd">按索引升序自上而下；化工全挤在上半部，末四行是参照</text>',
+        '<text x="8" y="32" class="hd">按索引升序，索引是坐标不是距离；化工挤在上半部，末四行是参照</text>',
     ]
     x0 = 62
     cw, gap = 17, 2
@@ -115,6 +115,60 @@ def make_svg(rows):
     return "\n".join(parts)
 
 
+DIST_PICK = ["北京银行 601169.SH", "浦发银行 600000.SH", "招商银行 600036.SH",
+             "工商银行 601398.SH", "兴业银行 601166.SH", "华夏银行 600015.SH",
+             "中国人寿 601628.SH", "恒力石化 600346.SH"]
+SHORT_D = {"北京银行 601169.SH": "北京", "浦发银行 600000.SH": "浦发",
+           "招商银行 600036.SH": "招商", "工商银行 601398.SH": "工商",
+           "兴业银行 601166.SH": "兴业", "华夏银行 600015.SH": "华夏",
+           "中国人寿 601628.SH": "人寿", "恒力石化 600346.SH": "恒力"}
+
+
+def dist_section():
+    from stock import metrics as M
+    import json as _json
+    with open(os.path.join(HERE, "out", "stock_state.json"), encoding="utf-8") as fh:
+        raw = _json.load(fh)
+    ref = [x for x in raw["平安银行 000001.SZ"]["series"] if x["valid"]][-1]
+    ref_v, ref_i = ref["state"], ref["index"]
+    trs = []
+    for name in DIST_PICK:
+        last = [x for x in raw[name]["series"] if x["valid"]][-1]
+        d = M.describe(last["state"], ref_v)
+        trs.append(
+            "<tr><td>%s</td><td class=\"mono\">%d</td><td class=\"mono\">%d</td>"
+            "<td class=\"mono\">%.2f</td><td class=\"mono\">%d / %d</td></tr>"
+            % (SHORT_D[name], abs(last["index"] - ref_i), d["hamming"], d["euclid"],
+               d["flips"], d["missing"]))
+    return DIST_HTML.substitute(rows="\n".join(trs))
+
+
+DIST_HTML = Template("""<h2>四、索引是坐标，不是距离</h2>
+<p>上面的图按索引升序排列。但<b>索引的差值不能当距离</b>——它只是平衡三进制的位置编号。
+北京与平安的索引只差 <b>3</b>，浦发与平安差 <b>729</b>，结构上两者都只差一维；
+兴业索引差 1461、汉明 3，华夏索引差 3645、汉明 2——<b>索引更远的，结构反而更近</b>。</p>
+<p>换成索引差、汉明、欧式、翻转四种口径，答案各不一样：</p>
+<table>
+<colgroup><col class="d1"><col class="d2"><col class="d3"><col class="d4"><col class="d5"></colgroup>
+<thead><tr><th>与平安比</th><th>索引差</th><th>汉明</th><th>欧式</th><th>翻转 / 缺失</th></tr></thead>
+<tbody>
+$rows
+</tbody>
+</table>
+<p style="color:#87968f;font-size:13px">翻转 = 同一维一边 +1 一边 −1；缺失 = 一边有值一边悬置。
+欧式里翻转记 2、缺失记 1。</p>
+<div class="note warn">
+<span class="k">汉明会在这一步给出相反的排序</span>
+华夏汉明 2、工商汉明 3，按汉明华夏更近；欧式给华夏 2.24、工商 1.73，按欧式工商更近。
+原因只有一个：华夏是<b>一维反着走</b>，工商是<b>三维没证据</b>。
+「方向对立」和「证据不足」被汉明记成同一件事，中段排序就会翻。
+顶部不受影响——浦发与北京都是 0 翻转、只缺一维，这才是「离平安最近」这句话站得住的部分。
+</div>
+<p>另有一条更硬的限制：<b>对全 0 的零态，这三种距离是等价的</b>。零态没有符号，
+汉明就等于非零维数，欧式是它的平方根，排序完全一样。
+所以「离零 7 层」并不比「有 7 维非零」多说任何信息——原点是那个方向的极值，不是一把更好用的尺子。</p>
+""")
+
 def make_html(data):
     chem = sorted([data[n] for n in CHEM], key=lambda r: r["index"])
     refs = [data[n] for n in REF]
@@ -134,7 +188,8 @@ def make_html(data):
     bear_names = "、".join(r["short"] for r in bear)
     return TEMPLATE.substitute(
         n=len(chem), nbear=len(bear), med="%.2f" % med, low=min(r["index"] for r in chem),
-        svg=make_svg(rows_all), rows="\n".join(trs), bear_names=bear_names)
+        svg=make_svg(rows_all), rows="\n".join(trs), bear_names=bear_names,
+        dist=dist_section())
 
 
 TEMPLATE = Template("""<!DOCTYPE html>
@@ -171,6 +226,7 @@ figure svg{width:100%;height:auto;display:block;border:1px solid var(--line)}
 figcaption{color:var(--dim);font-size:12.5px;margin-top:10px;line-height:1.7}
 table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;table-layout:fixed}
 .c1{width:19%}.c2{width:13%}.c3{width:15%}.c4{width:19%}.c5{width:10%}.c6{width:12%}.c7{width:12%}
+.d1{width:24%}.d2{width:15%}.d3{width:13%}.d4{width:19%}.d5{width:29%}
 th{color:var(--dim);font-weight:500;font-size:12px;text-align:left;
 padding:8px 6px;border-bottom:1px solid var(--line)}
 td{padding:9px 6px;border-bottom:1px solid #1a2723;color:#c9d1ca}
@@ -188,6 +244,7 @@ a{color:var(--jade);text-decoration:none;border-bottom:1px dotted #2c4740;white-
 .bar{grid-template-columns:1fr 1fr}
 table{font-size:12px}th{font-size:11px}th,td{padding:7px 4px}
 .c1{width:18%}.c2{width:14%}.c3{width:14%}.c4{width:21%}.c5{width:9%}.c6{width:12%}.c7{width:12%}
+.d1{width:26%}.d2{width:15%}.d3{width:12%}.d4{width:19%}.d5{width:28%}
 .mono{font-size:11px}
 }
 </style>
@@ -208,7 +265,7 @@ table{font-size:12px}th{font-size:11px}th,td{padding:7px 4px}
 
 <figure>
 $svg
-<figcaption>九维矩阵。格子颜色标的是<b>整只标的的市场态</b>，不是单个维度的取值——暗格才代表该维为 0。横轴按 19683 态索引升序，不是价格。</figcaption>
+<figcaption>九维矩阵。格子颜色标的是<b>整只标的的市场态</b>，不是单个维度的取值——暗格才代表该维为 0。横轴按 19683 态索引升序——那是坐标，不是距离，两者差值不可当远近读。</figcaption>
 </figure>
 
 <h2>一、全在指数底部，两只完全同态</h2>
@@ -242,14 +299,15 @@ $rows
 <p style="color:#87968f;font-size:13px">实维 = 累积态里非 0 的维度数，等价于「离零态的距离」。
 19683 态空间的重心在 6 层，越接近 6 越中性，越靠 8–9 越结晶。</p>
 
-<h2>四、唯一值得再看的一只：万华化学</h2>
+$dist
+<h2>五、唯一值得再看的一只：万华化学</h2>
 <p>万华化学 #3325、张力 0.652、<b>悬置主导</b>，只有 4 维有值——是八只里唯一没有
 被空头结构锁死的。它的判断不是「有机会」，而是<b>「证据还不够」</b>：
 价格在 67–74 之间来回，均线与量能互相打架，引擎拒绝下结论。</p>
 <p>恒力石化 0.400 张力最低，但 2/9 确定、实维 8——低张力来自「什么都没说」，不是「说得很稳」。
 这两只的区别是：万华是没定，恒力是没看。</p>
 
-<h2>五、这轮该看什么</h2>
+<h2>六、这轮该看什么</h2>
 <ul>
 <li><b>化工暂时不是「找多头」的地方。</b>八只里零只多头确立，五只空头确立，
 方向一致性比银行那头更强——只是一致朝下。</li>

@@ -43,8 +43,18 @@ SHORT = {
     "民生银行 600016.SH": "民生",
     "沪深300 000300": "沪深300",
     "上证指数 000001": "上证",
+    "招商银行 600036.SH": "招商",
+    "工商银行 601398.SH": "工商",
 }
 BASE = "平安银行 000001.SZ"
+
+
+# 本页只扫银行池 + 两大指数。stock_state.json 是全市场样本，
+# 不过滤的话化工等新样本会混进来，"九只银行"的口径就不成立了。
+TARGETS = ("上证指数 000001", "沪深300 000300", "平安银行 000001.SZ",
+           "浦发银行 600000.SH", "华夏银行 600015.SH", "民生银行 600016.SH",
+           "招商银行 600036.SH", "兴业银行 601166.SH", "北京银行 601169.SH",
+           "工商银行 601398.SH", "光大银行 601818.SH")
 
 
 def load():
@@ -53,6 +63,8 @@ def load():
     rows = []
     base_state = None
     for name, v in raw.items():
+        if name not in TARGETS:
+            continue
         last = [x for x in v["series"] if x["valid"]][-1]
         rows.append({
             "name": name,
@@ -303,6 +315,9 @@ table{font-size:12.5px}th{font-size:11px}th,td{padding:7px 4px}
 编码器为固定阈值的九维规则编码（天=MA20 偏离 ±0.5%%、地=量比 1.15/0.85、人=近 3 日 ±1%%、
 正=MA5 抬升、反=创 10 日新高/低、合=均线同向、归=20 日区间分位 0.2/0.8、守=振幅 0.8/1.25、
 进=5 日动量 ±1.5%%），不含任何基本面与消息面输入。<br>
+距离口径：本文用汉明距离。它把「+1 对 −1」的翻转与「有值对悬置」的缺失
+同等记作 1，中段排序会与欧式分歧（华夏 vs 工商即为反例），
+详见<a href="./chem.html">化工页第四节</a>。<br>
 本文是结构诊断，不是投资建议。向量相似不等于收益相似，历史状态不保证未来。<br>
 引擎 repo：<a href="https://github.com/q1z2q3-debug/cognitive-being-v9">cognitive-being-v9</a>
 　·　<a href="./index.html">返回主页</a>　·　<a href="./pa-000001.html">平安个股页</a>　·　<a href="./stock-indices.html">指数页</a>

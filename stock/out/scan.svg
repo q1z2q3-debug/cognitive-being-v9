@@ -69,11 +69,10 @@
 <rect x="284" y="94" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
 <text x="295.25" y="106.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
 <text x="372" y="110" class="dt" text-anchor="end">−1</text>
-<text x="8" y="135" class="mt" fill="#b9c2bc">华夏</text>
+<text x="8" y="135" class="mt" fill="#b9c2bc">招商</text>
 <rect x="80" y="119" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
 <text x="91.25" y="131.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
-<rect x="105.5" y="119" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
-<text x="116.75" y="131.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
+<rect x="105.5" y="119" width="22.5" height="18" rx="2" class="neu" opacity=".30"/>
 <rect x="131" y="119" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
 <text x="142.25" y="131.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
 <rect x="156.5" y="119" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
@@ -88,11 +87,13 @@
 <rect x="284" y="119" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
 <text x="295.25" y="131.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
 <text x="372" y="135" class="dt" text-anchor="end">−2</text>
-<text x="8" y="160" class="mt" fill="#b9c2bc">光大</text>
+<text x="8" y="160" class="mt" fill="#b9c2bc">华夏</text>
 <rect x="80" y="144" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
 <text x="91.25" y="156.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
-<rect x="105.5" y="144" width="22.5" height="18" rx="2" class="neu" opacity=".30"/>
-<rect x="131" y="144" width="22.5" height="18" rx="2" class="neu" opacity=".30"/>
+<rect x="105.5" y="144" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
+<text x="116.75" y="156.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
+<rect x="131" y="144" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
+<text x="142.25" y="156.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
 <rect x="156.5" y="144" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
 <text x="167.75" y="156.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
 <rect x="182" y="144" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
@@ -101,17 +102,15 @@
 <text x="218.75" y="156.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
 <rect x="233" y="144" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
 <text x="244.25" y="156.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
-<rect x="258.5" y="144" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
-<text x="269.75" y="156.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
+<rect x="258.5" y="144" width="22.5" height="18" rx="2" class="neu" opacity=".30"/>
 <rect x="284" y="144" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
 <text x="295.25" y="156.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
 <text x="372" y="160" class="dt" text-anchor="end">−2</text>
-<text x="8" y="185" class="mt" fill="#b9c2bc">兴业</text>
+<text x="8" y="185" class="mt" fill="#b9c2bc">光大</text>
 <rect x="80" y="169" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
 <text x="91.25" y="181.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
 <rect x="105.5" y="169" width="22.5" height="18" rx="2" class="neu" opacity=".30"/>
-<rect x="131" y="169" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
-<text x="142.25" y="181.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
+<rect x="131" y="169" width="22.5" height="18" rx="2" class="neu" opacity=".30"/>
 <rect x="156.5" y="169" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
 <text x="167.75" y="181.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
 <rect x="182" y="169" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
@@ -124,65 +123,101 @@
 <text x="269.75" y="181.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
 <rect x="284" y="169" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
 <text x="295.25" y="181.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
-<text x="372" y="185" class="dt" text-anchor="end">−3</text>
-<text x="8" y="210" class="mt" fill="#b9c2bc">民生</text>
+<text x="372" y="185" class="dt" text-anchor="end">−2</text>
+<text x="8" y="210" class="mt" fill="#b9c2bc">工商</text>
 <rect x="80" y="194" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
 <text x="91.25" y="206.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
 <rect x="105.5" y="194" width="22.5" height="18" rx="2" class="neu" opacity=".30"/>
-<rect x="131" y="194" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
-<text x="142.25" y="206.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
+<rect x="131" y="194" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
+<text x="142.25" y="206.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
 <rect x="156.5" y="194" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
 <text x="167.75" y="206.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
 <rect x="182" y="194" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
 <text x="193.25" y="206.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
 <rect x="207.5" y="194" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
 <text x="218.75" y="206.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
-<rect x="233" y="194" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
-<text x="244.25" y="206.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
-<rect x="258.5" y="194" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
-<text x="269.75" y="206.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
-<rect x="284" y="194" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
-<text x="295.25" y="206.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
-<text x="372" y="210" class="dt" text-anchor="end">−4</text>
-<text x="8" y="235" class="mt" fill="#b9c2bc">沪深300</text>
-<rect x="80" y="219" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
-<text x="91.25" y="231.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
-<rect x="105.5" y="219" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
-<text x="116.75" y="231.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
-<rect x="131" y="219" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
-<text x="142.25" y="231.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
-<rect x="156.5" y="219" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
-<text x="167.75" y="231.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
+<rect x="233" y="194" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
+<text x="244.25" y="206.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
+<rect x="258.5" y="194" width="22.5" height="18" rx="2" class="neu" opacity=".30"/>
+<rect x="284" y="194" width="22.5" height="18" rx="2" class="neu" opacity=".30"/>
+<text x="372" y="210" class="dt" text-anchor="end">−3</text>
+<text x="8" y="235" class="mt" fill="#b9c2bc">兴业</text>
+<rect x="80" y="219" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
+<text x="91.25" y="231.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
+<rect x="105.5" y="219" width="22.5" height="18" rx="2" class="neu" opacity=".30"/>
+<rect x="131" y="219" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
+<text x="142.25" y="231.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
+<rect x="156.5" y="219" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
+<text x="167.75" y="231.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
 <rect x="182" y="219" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
 <text x="193.25" y="231.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
-<rect x="207.5" y="219" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
-<text x="218.75" y="231.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
-<rect x="233" y="219" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
-<text x="244.25" y="231.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
-<rect x="258.5" y="219" width="22.5" height="18" rx="2" class="neu" opacity=".30"/>
-<rect x="284" y="219" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
-<text x="295.25" y="231.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
-<text x="372" y="235" class="dt" text-anchor="end">−7</text>
-<text x="8" y="260" class="mt" fill="#b9c2bc">上证</text>
-<rect x="80" y="244" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
-<text x="91.25" y="256.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
-<rect x="105.5" y="244" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
-<text x="116.75" y="256.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
+<rect x="207.5" y="219" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
+<text x="218.75" y="231.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
+<rect x="233" y="219" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
+<text x="244.25" y="231.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
+<rect x="258.5" y="219" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
+<text x="269.75" y="231.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
+<rect x="284" y="219" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
+<text x="295.25" y="231.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
+<text x="372" y="235" class="dt" text-anchor="end">−3</text>
+<text x="8" y="260" class="mt" fill="#b9c2bc">民生</text>
+<rect x="80" y="244" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
+<text x="91.25" y="256.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
+<rect x="105.5" y="244" width="22.5" height="18" rx="2" class="neu" opacity=".30"/>
 <rect x="131" y="244" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
 <text x="142.25" y="256.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
-<rect x="156.5" y="244" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
-<text x="167.75" y="256.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
-<rect x="182" y="244" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
-<text x="193.25" y="256.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
-<rect x="207.5" y="244" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
-<text x="218.75" y="256.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
+<rect x="156.5" y="244" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
+<text x="167.75" y="256.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
+<rect x="182" y="244" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
+<text x="193.25" y="256.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
+<rect x="207.5" y="244" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
+<text x="218.75" y="256.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
 <rect x="233" y="244" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
 <text x="244.25" y="256.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
-<rect x="258.5" y="244" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
-<text x="269.75" y="256.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
-<rect x="284" y="244" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
-<text x="295.25" y="256.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
-<text x="372" y="260" class="dt" text-anchor="end">−9</text>
-<text x="8" y="283" class="hd">青 = +1 成立　朱 = −1 反证　暗 = 0 悬置</text>
-<text x="8" y="297" class="hd">距 1 的两只只差一维：北京差「守」，浦发差「人」</text>
+<rect x="258.5" y="244" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
+<text x="269.75" y="256.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
+<rect x="284" y="244" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
+<text x="295.25" y="256.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
+<text x="372" y="260" class="dt" text-anchor="end">−4</text>
+<text x="8" y="285" class="mt" fill="#b9c2bc">沪深300</text>
+<rect x="80" y="269" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
+<text x="91.25" y="281.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
+<rect x="105.5" y="269" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
+<text x="116.75" y="281.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
+<rect x="131" y="269" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
+<text x="142.25" y="281.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
+<rect x="156.5" y="269" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
+<text x="167.75" y="281.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
+<rect x="182" y="269" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
+<text x="193.25" y="281.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
+<rect x="207.5" y="269" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
+<text x="218.75" y="281.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
+<rect x="233" y="269" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
+<text x="244.25" y="281.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
+<rect x="258.5" y="269" width="22.5" height="18" rx="2" class="neu" opacity=".30"/>
+<rect x="284" y="269" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
+<text x="295.25" y="281.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
+<text x="372" y="285" class="dt" text-anchor="end">−7</text>
+<text x="8" y="310" class="mt" fill="#b9c2bc">上证</text>
+<rect x="80" y="294" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
+<text x="91.25" y="306.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
+<rect x="105.5" y="294" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
+<text x="116.75" y="306.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
+<rect x="131" y="294" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
+<text x="142.25" y="306.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
+<rect x="156.5" y="294" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
+<text x="167.75" y="306.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
+<rect x="182" y="294" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
+<text x="193.25" y="306.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
+<rect x="207.5" y="294" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
+<text x="218.75" y="306.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
+<rect x="233" y="294" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
+<text x="244.25" y="306.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
+<rect x="258.5" y="294" width="22.5" height="18" rx="2" class="pos" opacity=".95"/>
+<text x="269.75" y="306.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">+</text>
+<rect x="284" y="294" width="22.5" height="18" rx="2" class="neg" opacity=".95"/>
+<text x="295.25" y="306.5" font-size="8" fill="#0b1210" text-anchor="middle" font-family="monospace">−</text>
+<text x="372" y="310" class="dt" text-anchor="end">−9</text>
+<text x="8" y="333" class="hd">青 = +1 成立　朱 = −1 反证　暗 = 0 悬置</text>
+<text x="8" y="347" class="hd">距 1 的两只只差一维：北京差「守」，浦发差「人」</text>
 </svg>
