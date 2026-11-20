@@ -137,6 +137,14 @@ def main():
     ntotal = len(res["sectors"])
     port = "、".join(k["short"] for k in res["portfolio"])
     npick = f["个股"]
+    cr = res["crowding"]
+    _reg = {r["regime"]: r for r in cr["regimes"]}
+    _bul, _bea = _reg["多头确立"], _reg["空头确立"]
+    nzero = sum(1 for x in cr["sectors"] if x["dup"] == 0)
+    ntop = sum(a["count"] for a in cr["attractors"])
+    nreach = len(set().union(*[set(a["sectors"]) for a in cr["attractors"]]))
+    ngrp = cr["pool"]["independent"]
+    rate = round(100 * ngrp / max(1, cr["pool"]["nominal"]))
     t = Template(TPL).substitute(
         level=res["regime"]["level"], cap=res["regime"]["caps"],
         nsec=nsec, ntotal=ntotal,
@@ -149,7 +157,11 @@ def main():
         nlist=len(res["picks"]),
         svg=stage_svg(res), sec_rows=sec_rows(res), veto_html=veto_html(res),
         pick_rows=pick_rows(res), dup=dup_pairs(res),
-        port=port or "空仓")
+        port=port or "空仓",
+        nzero=nzero, nidx=cr["distinct_indices"], ntop=ntop, nreach=nreach,
+        nbul=_bul["n"], nbulidx=_bul["indices"], hbul="%.3f" % _bul["hhi"],
+        nbea=_bea["n"], nbeaidx=_bea["indices"], hbea="%.3f" % _bea["hhi"],
+        ngrp=ngrp, rate=rate)
     for path in (os.path.join(HERE, "pipeline_report.html"), os.path.join(DOCS, "pipeline.html")):
         with open(path, "w", encoding="utf-8") as fh:
             fh.write(t)
@@ -292,15 +304,21 @@ $pick_rows
 <p style="color:#87968f;font-size:13px">表里共 $nlist 只候选行业个股，划掉的关是没过的。
 最多的一类死在"实维 ≤ 7"——它们不是弱，是<b>已经走完</b>，八九维全填满，没有可赚的"未定"。</p>
 
-<h2>四、L3 结构确认：$npick 只过 $nwin 只开窗</h2>
+<h2>四、L1.5 拥挤度：不改结论，只报独立信号数</h2>
+<p>L1 给行业打分，L2 给行业内个股排序，两层都默认样本彼此独立。这一层只量化三件事：行业内 dup、索引跨行业 reach、候选池名义数与独立想法数之比。<b>31 个行业里 $nzero 个的 dup 恰好为 0</b>——同行业个股没有一只共用索引，L2 的组内比较确实有信息量。上一轮猜的「行业内部塌成一团」，数据说没有。</p>
+<p>真正集中的是索引空间：$nsample 只落到 $nidx 个索引，两个模板吃掉 $ntop 只、横跨 $nreach 个行业（#183 常量破位 9 只、#186 缩量破位 8 只，只差「守」一维）。更反直觉的是<b>多头 $nbul 只只用 $nbulidx 个形态（HHI $hbul），空头 $nbea 只用了 $nbeaidx 个（HHI $hbea）</b>——涨比跌更同构。</p>
+<p>八只名义候选按汉明 ≤1 做全图聚类，压成<b>$ngrp 组、独立信号率 $rate%</b>。L4 的贪心去重得 $nport 只：前者是这批候选的思想密度，后者是实际持仓数，两个数都该看。</p>
+<p style="color:#87968f;font-size:13px">这一层刻意不做拦截——多头形态重复也可能是同一个逻辑在多只股票上兑现，在价格行为上无法与拥挤区分。分不开就只标注。<a href="crowding.html">完整读数在这里</a>。</p>
+
+<h2>五、L3 结构确认：$npick 只过 $nwin 只开窗</h2>
 <p>过了筛还要等窗口——表里未过筛的即使窗口开着也不算候选：<b>正/合同向</b>（均线与动量同向）、<b>进 ≥ 0</b>（5 日动量不为负）、
 <b>守 ≠ −1</b>（当日振幅没放大）。这一层今天一个都没挡——说明瓶颈不在时机，在结构。</p>
 
-<h2>五、L4 组合去重：$npick 只收成 $nport 只</h2>
+<h2>六、L4 组合去重：$npick 只收成 $nport 只</h2>
 <p>汉明距离 ≤ 1 的两只视为同构，只留确定度高、张力低的一只。$dup。
 最后剩下 <b>$port</b>，单一行业权重不超过 40%。在防守档里，这就是上限。</p>
 
-<h2>六、L5 退出：三条，任一触发就走</h2>
+<h2>七、L5 退出：三条，任一触发就走</h2>
 <ul>
 <li><b>掉维。</b>确定度一次降 2 维及以上——证据在散，不是价格在跌。</li>
 <li><b>张力破 0.65。</b>波动负荷与跌破深度同时咬住，结构已经不可维持。</li>
@@ -308,7 +326,7 @@ $pick_rows
 </ul>
 <p>退出条件写在选股之前，是流程和"看情况再说"的分界线。</p>
 
-<h2>七、这套流程缺什么</h2>
+<h2>八、这套流程缺什么</h2>
 <div class="note warn">
 <span class="k">只覆盖了一条轴，说清楚免得误用</span>
 五层的骨架是完整的，但引擎只吃价格行为这一条轴。下面这些全部空缺，<b>流程里没有任何一步替它们做判断</b>：

@@ -38,6 +38,8 @@ THRESHOLD = {
     "L2_nz": 7,                    # 实维上限,8 以上算结晶
     "L4_dup_hamming": 1,           # 汉明 <=1 视为同构
     "L5_drop_dims": 2,             # 一次掉 2 维即退出
+    "L15_public_reach": 6,         # 索引横跨 >=6 个行业算公共形态
+    "L15_eps": 1,                  # 候选池聚类用的汉明阈值
 }
 
 from stock.universe import UNIVERSE, INDEX   # noqa: E402
@@ -119,6 +121,29 @@ def l1(rows):
     return out
 
 
+def l15(rows, picks):
+    """L1.5 拥挤度度量：不加拦截，只报「这批样本彼此独立吗」。
+
+    L1 的行业得分和 L2 的个股排序都默认样本互不相同。如果十只股票是同一个形态，
+    排序就是在给重复样本排名。这一层量化三件事，不改漏斗数字：
+      行业内 dup、索引跨行业 reach、候选池名义数 vs 独立想法数。
+    刻意不做成否决条件——数据不支持「拥挤就该卖」这个强判断，做成拦截会凭空删真信号。
+    """
+    from stock.crowding import global_map, sectors as csec, regimes as creg, pool
+    stocks = {r["name"]: {"index": r["index"], "regime": r["regime"]}
+              for r in rows if r["sector"] not in ("指数", "—")}
+    count, secs = global_map(stocks)
+    return {
+        "sectors": csec(stocks, count, secs),
+        "regimes": creg(stocks),
+        "pool": pool([(p["short"], p["index"]) for p in picks if p["passed"]]),
+        "attractors": [{"index": i, "count": c, "reach": len(secs[i]),
+                        "sectors": sorted(secs[i])}
+                       for i, c in count.most_common(6) if len(secs[i]) >= THRESHOLD["L15_public_reach"]],
+        "distinct_indices": len(count),
+    }
+
+
 def l2(rows, sectors):
     picks = []
     for s in sectors:
@@ -175,6 +200,7 @@ def main():
     sectors = l1(rows)
     picks = l3(l2(rows, sectors))
     keep = l4(picks)
+    crowd = l15(rows, picks)
     res = {
         "regime": reg,
         "sectors": sectors,
@@ -189,6 +215,7 @@ def main():
             "入场": len([p for p in picks if p["passed"] and p["window"]]),
             "组合": len(keep),
         },
+        "crowding": crowd,
         "threshold": THRESHOLD,
     }
     with open(os.path.join(HERE, "out", "pipeline.json"), "w", encoding="utf-8") as f:
@@ -209,6 +236,10 @@ def main():
         print("   %-8s %-6s %d/9 T=%.2f 实维%d 闸口%s 过筛%s 窗口%s"
               % (p["short"], p["sector"], p["certain"], p["tension"], p["nz"], g,
                  "是" if p["passed"] else "否", "是" if p["window"] else "否"))
+    print("\nL1.5 拥挤度：%d 只 / %d 个索引" % (crowd["pool"]["nominal"], crowd["distinct_indices"]))
+    for a in crowd["attractors"]:
+        print("   公共形态 #%-6d %2d 只 reach=%d" % (a["index"], a["count"], a["reach"]))
+    print("   候选池 %d 只 -> %d 个独立想法" % (crowd["pool"]["nominal"], crowd["pool"]["independent"]))
     print("\nL4 组合：%s" % (", ".join(k["short"] for k in keep) or "空仓"))
     print("漏斗：%s" % res["funnel"])
 

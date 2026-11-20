@@ -2316,6 +2316,637 @@
   "入场": 8,
   "组合": 3
  },
+ "crowding": {
+  "sectors": [
+   {
+    "sector": "轻工制造",
+    "n": 3,
+    "mode_index": 183,
+    "mode_str": "[-1,-1,-1,-1,1,-1,1,0,-1]",
+    "mode_n": 1,
+    "mode_reach": 8,
+    "dup": 0.0,
+    "contagion": 0.33,
+    "indices": [
+     183,
+     14397,
+     15288
+    ],
+    "flag": "公共形态"
+   },
+   {
+    "sector": "基础化工",
+    "n": 6,
+    "mode_index": 183,
+    "mode_str": "[-1,-1,-1,-1,1,-1,1,0,-1]",
+    "mode_n": 2,
+    "mode_reach": 8,
+    "dup": 0.167,
+    "contagion": 0.33,
+    "indices": [
+     183,
+     3325,
+     915,
+     174,
+     7323,
+     183
+    ],
+    "flag": "公共形态"
+   },
+   {
+    "sector": "电力设备",
+    "n": 4,
+    "mode_index": 183,
+    "mode_str": "[-1,-1,-1,-1,1,-1,1,0,-1]",
+    "mode_n": 1,
+    "mode_reach": 8,
+    "dup": 0.0,
+    "contagion": 0.25,
+    "indices": [
+     183,
+     177,
+     96,
+     105
+    ],
+    "flag": "公共形态"
+   },
+   {
+    "sector": "房地产",
+    "n": 4,
+    "mode_index": 186,
+    "mode_str": "[-1,-1,-1,-1,1,-1,1,1,-1]",
+    "mode_n": 2,
+    "mode_reach": 7,
+    "dup": 0.25,
+    "contagion": 0.75,
+    "indices": [
+     186,
+     186,
+     24,
+     183
+    ],
+    "flag": "公共形态"
+   },
+   {
+    "sector": "通信",
+    "n": 4,
+    "mode_index": 186,
+    "mode_str": "[-1,-1,-1,-1,1,-1,1,1,-1]",
+    "mode_n": 1,
+    "mode_reach": 7,
+    "dup": 0.0,
+    "contagion": 0.25,
+    "indices": [
+     186,
+     19502,
+     17312,
+     2358
+    ],
+    "flag": "公共形态"
+   },
+   {
+    "sector": "美容护理",
+    "n": 3,
+    "mode_index": 180,
+    "mode_str": "[-1,-1,-1,-1,1,-1,1,-1,-1]",
+    "mode_n": 1,
+    "mode_reach": 4,
+    "dup": 0.0,
+    "contagion": 0.33,
+    "indices": [
+     180,
+     912,
+     183
+    ],
+    "flag": "有区分度"
+   },
+   {
+    "sector": "综合",
+    "n": 3,
+    "mode_index": 180,
+    "mode_str": "[-1,-1,-1,-1,1,-1,1,-1,-1]",
+    "mode_n": 1,
+    "mode_reach": 4,
+    "dup": 0.0,
+    "contagion": 0.33,
+    "indices": [
+     180,
+     96,
+     186
+    ],
+    "flag": "有区分度"
+   },
+   {
+    "sector": "钢铁",
+    "n": 4,
+    "mode_index": 17315,
+    "mode_str": "[1,0,1,1,-1,1,-1,1,1]",
+    "mode_n": 1,
+    "mode_reach": 4,
+    "dup": 0.0,
+    "contagion": 0.25,
+    "indices": [
+     17315,
+     17309,
+     186,
+     3501
+    ],
+    "flag": "有区分度"
+   },
+   {
+    "sector": "石油石化",
+    "n": 5,
+    "mode_index": 15127,
+    "mode_str": "[1,-1,1,1,-1,1,-1,1,0]",
+    "mode_n": 1,
+    "mode_reach": 4,
+    "dup": 0.0,
+    "contagion": 0.0,
+    "indices": [
+     15127,
+     13425,
+     915,
+     8527,
+     2367
+    ],
+    "flag": "有区分度"
+   },
+   {
+    "sector": "环保",
+    "n": 3,
+    "mode_index": 19502,
+    "mode_str": "[1,1,1,1,-1,1,-1,1,1]",
+    "mode_n": 1,
+    "mode_reach": 4,
+    "dup": 0.0,
+    "contagion": 0.0,
+    "indices": [
+     19502,
+     19658,
+     2367
+    ],
+    "flag": "有区分度"
+   },
+   {
+    "sector": "纺织服饰",
+    "n": 3,
+    "mode_index": 15127,
+    "mode_str": "[1,-1,1,1,-1,1,-1,1,0]",
+    "mode_n": 1,
+    "mode_reach": 4,
+    "dup": 0.0,
+    "contagion": 0.0,
+    "indices": [
+     15127,
+     17315,
+     735
+    ],
+    "flag": "有区分度"
+   },
+   {
+    "sector": "公用事业",
+    "n": 4,
+    "mode_index": 17312,
+    "mode_str": "[1,0,1,1,-1,1,-1,0,1]",
+    "mode_n": 2,
+    "mode_reach": 4,
+    "dup": 0.25,
+    "contagion": 0.0,
+    "indices": [
+     15125,
+     17312,
+     19577,
+     17312
+    ],
+    "flag": "有区分度"
+   },
+   {
+    "sector": "建筑材料",
+    "n": 4,
+    "mode_index": 915,
+    "mode_str": "[-1,-1,0,-1,1,-1,1,1,-1]",
+    "mode_n": 1,
+    "mode_reach": 3,
+    "dup": 0.0,
+    "contagion": 0.25,
+    "indices": [
+     915,
+     15208,
+     102,
+     186
+    ],
+    "flag": "有区分度"
+   },
+   {
+    "sector": "交通运输",
+    "n": 4,
+    "mode_index": 15125,
+    "mode_str": "[1,-1,1,1,-1,1,-1,0,1]",
+    "mode_n": 1,
+    "mode_reach": 3,
+    "dup": 0.0,
+    "contagion": 0.0,
+    "indices": [
+     15125,
+     18767,
+     1644,
+     17313
+    ],
+    "flag": "有区分度"
+   },
+   {
+    "sector": "食品饮料",
+    "n": 4,
+    "mode_index": 17311,
+    "mode_str": "[1,0,1,1,-1,1,-1,0,0]",
+    "mode_n": 1,
+    "mode_reach": 3,
+    "dup": 0.0,
+    "contagion": 0.0,
+    "indices": [
+     17311,
+     17315,
+     15127,
+     732
+    ],
+    "flag": "有区分度"
+   },
+   {
+    "sector": "机械设备",
+    "n": 4,
+    "mode_index": 19496,
+    "mode_str": "[1,1,1,1,-1,1,-1,-1,1]",
+    "mode_n": 1,
+    "mode_reach": 2,
+    "dup": 0.0,
+    "contagion": 0.25,
+    "indices": [
+     19496,
+     14154,
+     996,
+     186
+    ],
+    "flag": "有区分度"
+   },
+   {
+    "sector": "传媒",
+    "n": 4,
+    "mode_index": 14399,
+    "mode_str": "[1,-1,0,1,-1,1,-1,1,1]",
+    "mode_n": 1,
+    "mode_reach": 2,
+    "dup": 0.0,
+    "contagion": 0.25,
+    "indices": [
+     14399,
+     183,
+     180,
+     114
+    ],
+    "flag": "有区分度"
+   },
+   {
+    "sector": "银行",
+    "n": 9,
+    "mode_index": 19499,
+    "mode_str": "[1,1,1,1,-1,1,-1,0,1]",
+    "mode_n": 1,
+    "mode_reach": 2,
+    "dup": 0.0,
+    "contagion": 0.0,
+    "indices": [
+     19499,
+     15125,
+     15869,
+     17312,
+     17309,
+     18767,
+     17311,
+     16580,
+     18770
+    ],
+    "flag": "有区分度"
+   },
+   {
+    "sector": "商贸零售",
+    "n": 4,
+    "mode_index": 14399,
+    "mode_str": "[1,-1,0,1,-1,1,-1,1,1]",
+    "mode_n": 1,
+    "mode_reach": 2,
+    "dup": 0.0,
+    "contagion": 0.0,
+    "indices": [
+     14399,
+     120,
+     2367,
+     180
+    ],
+    "flag": "有区分度"
+   },
+   {
+    "sector": "家用电器",
+    "n": 3,
+    "mode_index": 19496,
+    "mode_str": "[1,1,1,1,-1,1,-1,-1,1]",
+    "mode_n": 1,
+    "mode_reach": 2,
+    "dup": 0.0,
+    "contagion": 0.0,
+    "indices": [
+     19496,
+     19499,
+     19502
+    ],
+    "flag": "有区分度"
+   },
+   {
+    "sector": "计算机",
+    "n": 4,
+    "mode_index": 87,
+    "mode_str": "[-1,-1,-1,-1,0,-1,-1,1,-1]",
+    "mode_n": 1,
+    "mode_reach": 1,
+    "dup": 0.0,
+    "contagion": 0.5,
+    "indices": [
+     87,
+     186,
+     2127,
+     183
+    ],
+    "flag": "半公共"
+   },
+   {
+    "sector": "社会服务",
+    "n": 3,
+    "mode_index": 14152,
+    "mode_str": "[1,-1,0,0,-1,1,-1,0,0]",
+    "mode_n": 1,
+    "mode_reach": 1,
+    "dup": 0.0,
+    "contagion": 0.33,
+    "indices": [
+     14152,
+     93,
+     183
+    ],
+    "flag": "有区分度"
+   },
+   {
+    "sector": "非银金融",
+    "n": 4,
+    "mode_index": 2839,
+    "mode_str": "[-1,0,-1,1,1,-1,-1,0,0]",
+    "mode_n": 1,
+    "mode_reach": 1,
+    "dup": 0.0,
+    "contagion": 0.0,
+    "indices": [
+     2839,
+     17312,
+     15123,
+     489
+    ],
+    "flag": "有区分度"
+   },
+   {
+    "sector": "汽车",
+    "n": 4,
+    "mode_index": 2124,
+    "mode_str": "[-1,-1,1,1,1,-1,1,-1,-1]",
+    "mode_n": 1,
+    "mode_reach": 1,
+    "dup": 0.0,
+    "contagion": 0.0,
+    "indices": [
+     2124,
+     19502,
+     1638,
+     102
+    ],
+    "flag": "有区分度"
+   },
+   {
+    "sector": "煤炭",
+    "n": 4,
+    "mode_index": 184,
+    "mode_str": "[-1,-1,-1,-1,1,-1,1,0,0]",
+    "mode_n": 1,
+    "mode_reach": 1,
+    "dup": 0.0,
+    "contagion": 0.0,
+    "indices": [
+     184,
+     15124,
+     15290,
+     12980
+    ],
+    "flag": "有区分度"
+   },
+   {
+    "sector": "医药生物",
+    "n": 4,
+    "mode_index": 0,
+    "mode_str": "[-1,-1,-1,-1,-1,-1,-1,-1,-1]",
+    "mode_n": 1,
+    "mode_reach": 1,
+    "dup": 0.0,
+    "contagion": 0.0,
+    "indices": [
+     0,
+     6591,
+     96,
+     15127
+    ],
+    "flag": "有区分度"
+   },
+   {
+    "sector": "国防军工",
+    "n": 3,
+    "mode_index": 99,
+    "mode_str": "[-1,-1,-1,-1,0,-1,1,-1,-1]",
+    "mode_n": 1,
+    "mode_reach": 1,
+    "dup": 0.0,
+    "contagion": 0.0,
+    "indices": [
+     99,
+     2373,
+     14236
+    ],
+    "flag": "有区分度"
+   },
+   {
+    "sector": "建筑装饰",
+    "n": 4,
+    "mode_index": 426,
+    "mode_str": "[-1,-1,-1,0,1,-1,1,0,-1]",
+    "mode_n": 1,
+    "mode_reach": 1,
+    "dup": 0.0,
+    "contagion": 0.0,
+    "indices": [
+     426,
+     17311,
+     6336,
+     831
+    ],
+    "flag": "有区分度"
+   },
+   {
+    "sector": "电子",
+    "n": 4,
+    "mode_index": 6702,
+    "mode_str": "[0,-1,-1,-1,0,1,-1,1,-1]",
+    "mode_n": 1,
+    "mode_reach": 1,
+    "dup": 0.0,
+    "contagion": 0.0,
+    "indices": [
+     6702,
+     4072,
+     15128,
+     93
+    ],
+    "flag": "有区分度"
+   },
+   {
+    "sector": "农林牧渔",
+    "n": 4,
+    "mode_index": 189,
+    "mode_str": "[-1,-1,-1,-1,1,0,-1,-1,-1]",
+    "mode_n": 1,
+    "mode_reach": 1,
+    "dup": 0.0,
+    "contagion": 0.0,
+    "indices": [
+     189,
+     17315,
+     13180,
+     15128
+    ],
+    "flag": "有区分度"
+   },
+   {
+    "sector": "有色金属",
+    "n": 4,
+    "mode_index": 2370,
+    "mode_str": "[-1,0,-1,-1,1,-1,1,0,-1]",
+    "mode_n": 2,
+    "mode_reach": 1,
+    "dup": 0.25,
+    "contagion": 0.0,
+    "indices": [
+     174,
+     4554,
+     2370,
+     2370
+    ],
+    "flag": "有区分度"
+   }
+  ],
+  "regimes": [
+   {
+    "regime": "空头确立",
+    "n": 59,
+    "indices": 33,
+    "max_share": 15.3,
+    "hhi": 0.063,
+    "diversity": 0.56
+   },
+   {
+    "regime": "多空对峙",
+    "n": 30,
+    "indices": 20,
+    "max_share": 13.3,
+    "hhi": 0.067,
+    "diversity": 0.67
+   },
+   {
+    "regime": "多头确立",
+    "n": 26,
+    "indices": 13,
+    "max_share": 19.2,
+    "hhi": 0.112,
+    "diversity": 0.5
+   },
+   {
+    "regime": "弱定向",
+    "n": 8,
+    "indices": 6,
+    "max_share": 37.5,
+    "hhi": 0.219,
+    "diversity": 0.75
+   },
+   {
+    "regime": "悬置主导",
+    "n": 1,
+    "indices": 1,
+    "max_share": 100.0,
+    "hhi": 1.0,
+    "diversity": 1.0
+   }
+  ],
+  "pool": {
+   "nominal": 8,
+   "independent": 2,
+   "groups": [
+    {
+     "members": [
+      "川投",
+      "招商",
+      "长电",
+      "工商",
+      "茅台",
+      "中国平安",
+      "神华"
+     ],
+     "index": 17312,
+     "hamming_in_group": 2
+    },
+    {
+     "members": [
+      "平安银行"
+     ],
+     "index": 18770,
+     "hamming_in_group": 0
+    }
+   ]
+  },
+  "attractors": [
+   {
+    "index": 183,
+    "count": 9,
+    "reach": 8,
+    "sectors": [
+     "传媒",
+     "基础化工",
+     "房地产",
+     "电力设备",
+     "社会服务",
+     "美容护理",
+     "计算机",
+     "轻工制造"
+    ]
+   },
+   {
+    "index": 186,
+    "count": 8,
+    "reach": 7,
+    "sectors": [
+     "建筑材料",
+     "房地产",
+     "机械设备",
+     "综合",
+     "计算机",
+     "通信",
+     "钢铁"
+    ]
+   }
+  ],
+  "distinct_indices": 73
+ },
  "threshold": {
   "L0_defend_tension": 0.65,
   "L0_attack_tension": 0.5,
@@ -2325,6 +2956,8 @@
   "L2_tension": 0.55,
   "L2_nz": 7,
   "L4_dup_hamming": 1,
-  "L5_drop_dims": 2
+  "L5_drop_dims": 2,
+  "L15_public_reach": 6,
+  "L15_eps": 1
  }
 }
