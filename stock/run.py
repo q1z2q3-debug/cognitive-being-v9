@@ -27,6 +27,18 @@ from cognitive_being.cognitive_guard import CognitiveGuard  # noqa: E402
 from stock.encode import DIMS, encode_day, load_ohlc  # noqa: E402
 
 DATA = Path(__file__).resolve().parent / "data"
+
+NAME_MAP = {
+    "sh000001.csv": "上证指数 000001",
+    "sh000300.csv": "沪深300 000300",
+    "sz000001_pab.csv": "平安银行 000001.SZ",
+    "sh601166_xy.csv": "兴业银行 601166.SH",
+    "sh600000_pf.csv": "浦发银行 600000.SH",
+    "sh600016_ms.csv": "民生银行 600016.SH",
+    "sh601818_gd.csv": "光大银行 601818.SH",
+    "sh600015_hx.csv": "华夏银行 600015.SH",
+    "sh601169_bj.csv": "北京银行 601169.SH",
+}
 OUT = Path(__file__).resolve().parent / "out"
 
 PHASE_CN = {
@@ -190,15 +202,11 @@ def run_symbol(name: str, csv_path: Path, warmup: int = 5) -> Dict:
 
 def main() -> None:
     OUT.mkdir(exist_ok=True)
-    target_files = [
-        ("上证指数 000001", "sh000001.csv"),
-        ("沪深300 000300", "sh000300.csv"),
-        ("平安银行 000001.SZ", "sz000001_pab.csv"),
-    ]
     wanted = sys.argv[1:]
     targets = [
-        (name, DATA / fn) for name, fn in target_files
-        if not wanted or fn in wanted or fn.split(".")[0] in wanted
+        (NAME_MAP.get(f.name, f.stem), f)
+        for f in sorted(DATA.glob("*.csv"))
+        if not wanted or f.name in wanted or f.stem in wanted
     ]
     results = {}
 
