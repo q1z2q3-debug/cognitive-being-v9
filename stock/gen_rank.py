@@ -30,6 +30,14 @@ SECTOR = {
     "长江电力 600900.SH": "公用事业",
     "中国人寿 601628.SH": "保险",
     "中国平安 601318.SH": "保险",
+    "万华化学 600309.SH": "化工",
+    "华鲁恒升 600426.SH": "化工",
+    "卫星化学 002648.SZ": "化工",
+    "龙佰集团 002601.SZ": "化工",
+    "兴发集团 600141.SH": "化工",
+    "恒力石化 600346.SH": "化工",
+    "荣盛石化 002493.SZ": "化工",
+    "扬农化工 600486.SH": "化工",
 }
 SHORT = {
     "上证指数 000001": "上证",
@@ -50,6 +58,14 @@ SHORT = {
     "长江电力 600900.SH": "长电",
     "中国人寿 601628.SH": "人寿",
     "中国平安 601318.SH": "中国平安",
+    "万华化学 600309.SH": "万华",
+    "华鲁恒升 600426.SH": "华鲁",
+    "卫星化学 002648.SZ": "卫星",
+    "龙佰集团 002601.SZ": "龙佰",
+    "兴发集团 600141.SH": "兴发",
+    "恒力石化 600346.SH": "恒力",
+    "荣盛石化 002493.SZ": "荣盛",
+    "扬农化工 600486.SH": "扬农",
 }
 VOL15 = {"浦发银行 600000.SH": (6.99, 0.477), "华夏银行 600015.SH": (4.48, 0.331),
          "民生银行 600016.SH": (5.77, 0.264), "招商银行 600036.SH": (7.26, 0.939),
@@ -94,7 +110,7 @@ def make_svg(rows):
     h = top + len(rows) * rh + 34
     parts = [
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" role="img" '
-        'aria-label="18 个标的的九维确定度排序，按维度填满程度由高到低">' % (w, h),
+        'aria-label="26 个标的的九维确定度排序，按维度填满程度由高到低">' % (w, h),
         "<style>"
         ".tl{fill:#e8e2d5;font-size:10.5px}"
         ".hd{fill:#87968f;font-size:9px}"
@@ -134,8 +150,9 @@ def make_svg(rows):
                      % (y + 12, tag))
     parts.append('<text x="10" y="%g" class="hd">青 = 多头确立　灰 = 多空对峙　朱 = 空头确立</text>'
                  % (top + len(rows) * rh + 16))
-    parts.append('<text x="10" y="%g" class="hd">高亮行为九维全满（0 悬置），共 4 只</text>'
-                 % (top + len(rows) * rh + 30))
+    nf = len([r for r in rows if r["certain"] == 9])
+    parts.append('<text x="10" y="%g" class="hd">高亮行为九维全满（0 悬置），共 %d 只</text>'
+                 % (top + len(rows) * rh + 30, nf))
     parts.append("</svg>")
     return "\n".join(parts)
 
@@ -190,6 +207,7 @@ figure{margin:26px 0;max-width:640px}
 figure svg{width:100%;height:auto;display:block;border:1px solid var(--line)}
 figcaption{color:var(--dim);font-size:12.5px;margin-top:10px;line-height:1.7}
 table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;table-layout:fixed}
+.c1{width:18%}.c2{width:12%}.c3{width:15%}.c4{width:20%}.c5{width:10%}.c6{width:12%}.c7{width:13%}
 col{width:auto}
 th{color:var(--dim);font-weight:500;font-size:12px;text-align:left;
 padding:8px 6px;border-bottom:1px solid var(--line)}
@@ -205,6 +223,8 @@ padding-top:20px;margin-top:44px}
 a{color:var(--jade);text-decoration:none;border-bottom:1px dotted #2c4740;white-space:nowrap}
 @media(max-width:860px){
 .wrap{padding:40px 18px 60px}h1{font-size:26px}
+table{font-size:12px}.c1{width:18%}.c2{width:12%}.c3{width:15%}.c4{width:21%}.c5{width:10%}.c6{width:12%}.c7{width:12%}
+.mono{font-size:11px}
 .bar{grid-template-columns:1fr 1fr}
 table{font-size:12.5px}th{font-size:11px}th,td{padding:7px 4px}
 }
@@ -214,7 +234,7 @@ table{font-size:12.5px}th{font-size:11px}th,td{padding:7px 4px}
 <div class="wrap">
 <div class="eyebrow">润泽说 · 认知生命体 v9 · 引擎读数</div>
 <h1>维度最佳的四只</h1>
-<p class="lead">把 18 个标的——9 只银行、2 只保险、2 只煤炭、2 只石油石化、1 只公用事业，加两大指数——
+<p class="lead">把 26 个标的——9 只银行、8 只化工、2 只保险、2 只煤炭、2 只石油石化、1 只公用事业，加两大指数——
 塞进同一把九维尺子。不看行业，只看谁能把九个格子全部填满。</p>
 
 <div class="bar">
@@ -251,8 +271,9 @@ $full_names。</p>
 而是谁的每一个判断都有证据。
 </div>
 
-<h2>三、18 个标的的九维读数</h2>
+<h2>三、26 个标的的九维读数</h2>
 <table>
+<colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"><col class="c6"><col class="c7"></colgroup>
 <thead><tr><th>标的</th><th>行业</th><th>索引</th><th>市场态</th><th>确定</th><th>张力</th><th>PE</th></tr></thead>
 <tbody>
 $rows
@@ -263,11 +284,11 @@ $rows
 
 <h2>四、满维不等于安全</h2>
 <ul>
-<li><b>三只满维的张力都在 0.467–0.50。</b>填满九格的意思是「每一维都有依据」，
+<li><b>四只满维的张力都在 0.467–0.50。</b>填满九格的意思是「每一维都有依据」，
 不是「没有风险」。张力过 0.45 说明波动负荷或跌破深度已经在咬。</li>
 <li><b>中国海油 8/9 却落在空头结构 #915、张力 0.671</b>：确定度高，方向向下，
 这是最该躲的一种形态——维度和方向是两件事。</li>
-<li><b>陕西煤业张力 0.363，全场最低</b>，但只有 5/9：判断轻，因为证据少。</li>
+<li><b>化工八只是这一轮的反面样本</b>：零只多头确立、五只空头确立，确定 8/9 的三只（兴发、卫星、荣盛）全部朝下。<li><b>陕西煤业张力 0.363，全场最低</b>，但只有 5/9：判断轻，因为证据少。</li>
 <li><b>中国石油 #8527</b>：六维确定，但地、合两维为 −1，处在量价背离里。</li>
 </ul>
 <div class="note warn">
@@ -288,7 +309,7 @@ $rows
 </ul>
 
 <div class="foot">
-样本：18 个标的（9 银行 + 2 保险 + 2 煤炭 + 2 石油石化 + 1 公用事业 + 上证 + 沪深300），
+样本：26 个标的（9 银行 + 8 化工 + 2 保险 + 2 煤炭 + 2 石油石化 + 1 公用事业 + 上证 + 沪深300），
 2026-10-16 至 11-20 共 26 根日 K，引擎取 21 个有效状态。新增标的行情取自新浪财经日线接口，
 成交额按「成交量 × 收盘价」估算，量比口径与真实成交额一致，绝对额仅供参照。<br>
 行业涨幅引自 2026-11-20 收盘的申万一级行业口径（粤开市场日报／新浪财经收盘稿）。<br>

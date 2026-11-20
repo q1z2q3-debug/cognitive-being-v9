@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 422" role="img" aria-label="18 个标的的九维确定度排序，按维度填满程度由高到低">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 574" role="img" aria-label="26 个标的的九维确定度排序，按维度填满程度由高到低">
 <style>.tl{fill:#e8e2d5;font-size:10.5px}.hd{fill:#87968f;font-size:9px}.nm{fill:#c9d1ca;font-size:9.5px}.tg{fill:#87968f;font-size:9px}.pos{fill:#5fa79b}.neg{fill:#b5452f}.neu{fill:#6b7a74}</style>
-<rect width="380" height="422" fill="#0f1a16"/>
+<rect width="380" height="574" fill="#0f1a16"/>
 <text x="10" y="18" class="tl">九维确定度（填满 9 格 = 每一维都有依据）</text>
 <text x="78" y="34" class="hd">1</text>
 <text x="272" y="34" class="hd" text-anchor="end">9</text>
@@ -94,7 +94,7 @@
 <rect x="254" y="162" width="20" height="12" rx="1.5" fill="#1b2723"/>
 <text x="316" y="172" class="tg" text-anchor="end">0.67</text>
 <text x="372" y="172" class="tg" text-anchor="end">对峙</text>
-<text x="8" y="191" class="nm" fill="#b9c2bc">上证</text>
+<text x="8" y="191" class="nm" fill="#b9c2bc">兴发</text>
 <rect x="78" y="181" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
 <rect x="100" y="181" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
 <rect x="122" y="181" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
@@ -102,130 +102,226 @@
 <rect x="166" y="181" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
 <rect x="188" y="181" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
 <rect x="210" y="181" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
-<rect x="232" y="181" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="232" y="181" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
 <rect x="254" y="181" width="20" height="12" rx="1.5" fill="#1b2723"/>
-<text x="316" y="191" class="tg" text-anchor="end">0.70</text>
+<text x="316" y="191" class="tg" text-anchor="end">0.73</text>
 <text x="372" y="191" class="tg" text-anchor="end">空头</text>
-<text x="8" y="210" class="nm" fill="#b9c2bc">浦发</text>
-<rect x="78" y="200" width="20" height="12" rx="1.5" class="pos" opacity=".85"/>
-<rect x="100" y="200" width="20" height="12" rx="1.5" class="pos" opacity=".85"/>
-<rect x="122" y="200" width="20" height="12" rx="1.5" class="pos" opacity=".85"/>
-<rect x="144" y="200" width="20" height="12" rx="1.5" class="pos" opacity=".85"/>
-<rect x="166" y="200" width="20" height="12" rx="1.5" class="pos" opacity=".85"/>
-<rect x="188" y="200" width="20" height="12" rx="1.5" class="pos" opacity=".85"/>
-<rect x="210" y="200" width="20" height="12" rx="1.5" fill="#1b2723"/>
-<rect x="232" y="200" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<text x="8" y="210" class="nm" fill="#b9c2bc">荣盛</text>
+<rect x="78" y="200" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="100" y="200" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="122" y="200" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="144" y="200" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="166" y="200" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="188" y="200" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="210" y="200" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="232" y="200" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
 <rect x="254" y="200" width="20" height="12" rx="1.5" fill="#1b2723"/>
-<text x="316" y="210" class="tg" text-anchor="end">0.40</text>
-<text x="372" y="210" class="tg" text-anchor="end">多头</text>
-<text x="8" y="229" class="nm" fill="#b9c2bc">中石油</text>
-<rect x="78" y="219" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
-<rect x="100" y="219" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
-<rect x="122" y="219" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
-<rect x="144" y="219" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
-<rect x="166" y="219" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
-<rect x="188" y="219" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
-<rect x="210" y="219" width="20" height="12" rx="1.5" fill="#1b2723"/>
-<rect x="232" y="219" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<text x="316" y="210" class="tg" text-anchor="end">0.73</text>
+<text x="372" y="210" class="tg" text-anchor="end">空头</text>
+<text x="8" y="229" class="nm" fill="#b9c2bc">扬农</text>
+<rect x="78" y="219" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="100" y="219" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="122" y="219" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="144" y="219" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="166" y="219" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="188" y="219" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="210" y="219" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="232" y="219" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
 <rect x="254" y="219" width="20" height="12" rx="1.5" fill="#1b2723"/>
-<text x="316" y="229" class="tg" text-anchor="end">0.53</text>
-<text x="372" y="229" class="tg" text-anchor="end">对峙</text>
-<text x="8" y="248" class="nm" fill="#b9c2bc">陕煤</text>
-<rect x="78" y="238" width="20" height="12" rx="1.5" class="pos" opacity=".85"/>
-<rect x="100" y="238" width="20" height="12" rx="1.5" class="pos" opacity=".85"/>
-<rect x="122" y="238" width="20" height="12" rx="1.5" class="pos" opacity=".85"/>
-<rect x="144" y="238" width="20" height="12" rx="1.5" class="pos" opacity=".85"/>
-<rect x="166" y="238" width="20" height="12" rx="1.5" class="pos" opacity=".85"/>
-<rect x="188" y="238" width="20" height="12" rx="1.5" fill="#1b2723"/>
-<rect x="210" y="238" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<text x="316" y="229" class="tg" text-anchor="end">0.80</text>
+<text x="372" y="229" class="tg" text-anchor="end">空头</text>
+<text x="8" y="248" class="nm" fill="#b9c2bc">上证</text>
+<rect x="78" y="238" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="100" y="238" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="122" y="238" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="144" y="238" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="166" y="238" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="188" y="238" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="210" y="238" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
 <rect x="232" y="238" width="20" height="12" rx="1.5" fill="#1b2723"/>
 <rect x="254" y="238" width="20" height="12" rx="1.5" fill="#1b2723"/>
-<text x="316" y="248" class="tg" text-anchor="end">0.36</text>
-<text x="372" y="248" class="tg" text-anchor="end">多头</text>
-<text x="8" y="267" class="nm" fill="#b9c2bc">北京</text>
-<rect x="78" y="257" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
-<rect x="100" y="257" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
-<rect x="122" y="257" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
-<rect x="144" y="257" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
-<rect x="166" y="257" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
-<rect x="188" y="257" width="20" height="12" rx="1.5" fill="#1b2723"/>
-<rect x="210" y="257" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<text x="316" y="248" class="tg" text-anchor="end">0.70</text>
+<text x="372" y="248" class="tg" text-anchor="end">空头</text>
+<text x="8" y="267" class="nm" fill="#b9c2bc">卫星</text>
+<rect x="78" y="257" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="100" y="257" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="122" y="257" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="144" y="257" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="166" y="257" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="188" y="257" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="210" y="257" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
 <rect x="232" y="257" width="20" height="12" rx="1.5" fill="#1b2723"/>
 <rect x="254" y="257" width="20" height="12" rx="1.5" fill="#1b2723"/>
-<text x="316" y="267" class="tg" text-anchor="end">0.40</text>
-<text x="372" y="267" class="tg" text-anchor="end">对峙</text>
-<text x="8" y="286" class="nm" fill="#b9c2bc">平安银行</text>
+<text x="316" y="267" class="tg" text-anchor="end">0.80</text>
+<text x="372" y="267" class="tg" text-anchor="end">空头</text>
+<text x="8" y="286" class="nm" fill="#b9c2bc">浦发</text>
 <rect x="78" y="276" width="20" height="12" rx="1.5" class="pos" opacity=".85"/>
 <rect x="100" y="276" width="20" height="12" rx="1.5" class="pos" opacity=".85"/>
 <rect x="122" y="276" width="20" height="12" rx="1.5" class="pos" opacity=".85"/>
 <rect x="144" y="276" width="20" height="12" rx="1.5" class="pos" opacity=".85"/>
 <rect x="166" y="276" width="20" height="12" rx="1.5" class="pos" opacity=".85"/>
-<rect x="188" y="276" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="188" y="276" width="20" height="12" rx="1.5" class="pos" opacity=".85"/>
 <rect x="210" y="276" width="20" height="12" rx="1.5" fill="#1b2723"/>
 <rect x="232" y="276" width="20" height="12" rx="1.5" fill="#1b2723"/>
 <rect x="254" y="276" width="20" height="12" rx="1.5" fill="#1b2723"/>
 <text x="316" y="286" class="tg" text-anchor="end">0.40</text>
 <text x="372" y="286" class="tg" text-anchor="end">多头</text>
-<text x="8" y="305" class="nm" fill="#b9c2bc">人寿</text>
+<text x="8" y="305" class="nm" fill="#b9c2bc">中石油</text>
 <rect x="78" y="295" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
 <rect x="100" y="295" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
 <rect x="122" y="295" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
 <rect x="144" y="295" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
 <rect x="166" y="295" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
-<rect x="188" y="295" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="188" y="295" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
 <rect x="210" y="295" width="20" height="12" rx="1.5" fill="#1b2723"/>
 <rect x="232" y="295" width="20" height="12" rx="1.5" fill="#1b2723"/>
 <rect x="254" y="295" width="20" height="12" rx="1.5" fill="#1b2723"/>
-<text x="316" y="305" class="tg" text-anchor="end">0.47</text>
+<text x="316" y="305" class="tg" text-anchor="end">0.53</text>
 <text x="372" y="305" class="tg" text-anchor="end">对峙</text>
-<text x="8" y="324" class="nm" fill="#b9c2bc">沪深300</text>
-<rect x="78" y="314" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
-<rect x="100" y="314" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
-<rect x="122" y="314" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
-<rect x="144" y="314" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
-<rect x="166" y="314" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<text x="8" y="324" class="nm" fill="#b9c2bc">陕煤</text>
+<rect x="78" y="314" width="20" height="12" rx="1.5" class="pos" opacity=".85"/>
+<rect x="100" y="314" width="20" height="12" rx="1.5" class="pos" opacity=".85"/>
+<rect x="122" y="314" width="20" height="12" rx="1.5" class="pos" opacity=".85"/>
+<rect x="144" y="314" width="20" height="12" rx="1.5" class="pos" opacity=".85"/>
+<rect x="166" y="314" width="20" height="12" rx="1.5" class="pos" opacity=".85"/>
 <rect x="188" y="314" width="20" height="12" rx="1.5" fill="#1b2723"/>
 <rect x="210" y="314" width="20" height="12" rx="1.5" fill="#1b2723"/>
 <rect x="232" y="314" width="20" height="12" rx="1.5" fill="#1b2723"/>
 <rect x="254" y="314" width="20" height="12" rx="1.5" fill="#1b2723"/>
-<text x="316" y="324" class="tg" text-anchor="end">0.63</text>
-<text x="372" y="324" class="tg" text-anchor="end">空头</text>
-<text x="8" y="343" class="nm" fill="#b9c2bc">华夏</text>
+<text x="316" y="324" class="tg" text-anchor="end">0.36</text>
+<text x="372" y="324" class="tg" text-anchor="end">多头</text>
+<text x="8" y="343" class="nm" fill="#b9c2bc">北京</text>
 <rect x="78" y="333" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
 <rect x="100" y="333" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
 <rect x="122" y="333" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
-<rect x="144" y="333" width="20" height="12" rx="1.5" fill="#1b2723"/>
-<rect x="166" y="333" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="144" y="333" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
+<rect x="166" y="333" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
 <rect x="188" y="333" width="20" height="12" rx="1.5" fill="#1b2723"/>
 <rect x="210" y="333" width="20" height="12" rx="1.5" fill="#1b2723"/>
 <rect x="232" y="333" width="20" height="12" rx="1.5" fill="#1b2723"/>
 <rect x="254" y="333" width="20" height="12" rx="1.5" fill="#1b2723"/>
-<text x="316" y="343" class="tg" text-anchor="end">0.38</text>
+<text x="316" y="343" class="tg" text-anchor="end">0.40</text>
 <text x="372" y="343" class="tg" text-anchor="end">对峙</text>
-<text x="8" y="362" class="nm" fill="#b9c2bc">光大</text>
-<rect x="78" y="352" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
-<rect x="100" y="352" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
-<rect x="122" y="352" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
-<rect x="144" y="352" width="20" height="12" rx="1.5" fill="#1b2723"/>
-<rect x="166" y="352" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<text x="8" y="362" class="nm" fill="#b9c2bc">平安银行</text>
+<rect x="78" y="352" width="20" height="12" rx="1.5" class="pos" opacity=".85"/>
+<rect x="100" y="352" width="20" height="12" rx="1.5" class="pos" opacity=".85"/>
+<rect x="122" y="352" width="20" height="12" rx="1.5" class="pos" opacity=".85"/>
+<rect x="144" y="352" width="20" height="12" rx="1.5" class="pos" opacity=".85"/>
+<rect x="166" y="352" width="20" height="12" rx="1.5" class="pos" opacity=".85"/>
 <rect x="188" y="352" width="20" height="12" rx="1.5" fill="#1b2723"/>
 <rect x="210" y="352" width="20" height="12" rx="1.5" fill="#1b2723"/>
 <rect x="232" y="352" width="20" height="12" rx="1.5" fill="#1b2723"/>
 <rect x="254" y="352" width="20" height="12" rx="1.5" fill="#1b2723"/>
 <text x="316" y="362" class="tg" text-anchor="end">0.40</text>
-<text x="372" y="362" class="tg" text-anchor="end">对峙</text>
-<text x="8" y="381" class="nm" fill="#b9c2bc">民生</text>
+<text x="372" y="362" class="tg" text-anchor="end">多头</text>
+<text x="8" y="381" class="nm" fill="#b9c2bc">人寿</text>
 <rect x="78" y="371" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
 <rect x="100" y="371" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
-<rect x="122" y="371" width="20" height="12" rx="1.5" fill="#1b2723"/>
-<rect x="144" y="371" width="20" height="12" rx="1.5" fill="#1b2723"/>
-<rect x="166" y="371" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="122" y="371" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
+<rect x="144" y="371" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
+<rect x="166" y="371" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
 <rect x="188" y="371" width="20" height="12" rx="1.5" fill="#1b2723"/>
 <rect x="210" y="371" width="20" height="12" rx="1.5" fill="#1b2723"/>
 <rect x="232" y="371" width="20" height="12" rx="1.5" fill="#1b2723"/>
 <rect x="254" y="371" width="20" height="12" rx="1.5" fill="#1b2723"/>
-<text x="316" y="381" class="tg" text-anchor="end">0.43</text>
+<text x="316" y="381" class="tg" text-anchor="end">0.47</text>
 <text x="372" y="381" class="tg" text-anchor="end">对峙</text>
-<text x="10" y="404" class="hd">青 = 多头确立　灰 = 多空对峙　朱 = 空头确立</text>
-<text x="10" y="418" class="hd">高亮行为九维全满（0 悬置），共 4 只</text>
+<text x="8" y="400" class="nm" fill="#b9c2bc">沪深300</text>
+<rect x="78" y="390" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="100" y="390" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="122" y="390" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="144" y="390" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="166" y="390" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="188" y="390" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="210" y="390" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="232" y="390" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="254" y="390" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<text x="316" y="400" class="tg" text-anchor="end">0.63</text>
+<text x="372" y="400" class="tg" text-anchor="end">空头</text>
+<text x="8" y="419" class="nm" fill="#b9c2bc">万华</text>
+<rect x="78" y="409" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
+<rect x="100" y="409" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
+<rect x="122" y="409" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
+<rect x="144" y="409" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
+<rect x="166" y="409" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="188" y="409" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="210" y="409" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="232" y="409" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="254" y="409" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<text x="316" y="419" class="tg" text-anchor="end">0.65</text>
+<text x="372" y="419" class="tg" text-anchor="end">对峙</text>
+<text x="8" y="438" class="nm" fill="#b9c2bc">龙佰</text>
+<rect x="78" y="428" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="100" y="428" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="122" y="428" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="144" y="428" width="20" height="12" rx="1.5" class="neg" opacity=".85"/>
+<rect x="166" y="428" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="188" y="428" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="210" y="428" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="232" y="428" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="254" y="428" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<text x="316" y="438" class="tg" text-anchor="end">0.70</text>
+<text x="372" y="438" class="tg" text-anchor="end">空头</text>
+<text x="8" y="457" class="nm" fill="#b9c2bc">华夏</text>
+<rect x="78" y="447" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
+<rect x="100" y="447" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
+<rect x="122" y="447" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
+<rect x="144" y="447" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="166" y="447" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="188" y="447" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="210" y="447" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="232" y="447" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="254" y="447" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<text x="316" y="457" class="tg" text-anchor="end">0.38</text>
+<text x="372" y="457" class="tg" text-anchor="end">对峙</text>
+<text x="8" y="476" class="nm" fill="#b9c2bc">光大</text>
+<rect x="78" y="466" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
+<rect x="100" y="466" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
+<rect x="122" y="466" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
+<rect x="144" y="466" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="166" y="466" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="188" y="466" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="210" y="466" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="232" y="466" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="254" y="466" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<text x="316" y="476" class="tg" text-anchor="end">0.40</text>
+<text x="372" y="476" class="tg" text-anchor="end">对峙</text>
+<text x="8" y="495" class="nm" fill="#b9c2bc">恒力</text>
+<rect x="78" y="485" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
+<rect x="100" y="485" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
+<rect x="122" y="485" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="144" y="485" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="166" y="485" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="188" y="485" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="210" y="485" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="232" y="485" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="254" y="485" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<text x="316" y="495" class="tg" text-anchor="end">0.40</text>
+<text x="372" y="495" class="tg" text-anchor="end">对峙</text>
+<text x="8" y="514" class="nm" fill="#b9c2bc">民生</text>
+<rect x="78" y="504" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
+<rect x="100" y="504" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
+<rect x="122" y="504" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="144" y="504" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="166" y="504" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="188" y="504" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="210" y="504" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="232" y="504" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="254" y="504" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<text x="316" y="514" class="tg" text-anchor="end">0.43</text>
+<text x="372" y="514" class="tg" text-anchor="end">对峙</text>
+<text x="8" y="533" class="nm" fill="#b9c2bc">华鲁</text>
+<rect x="78" y="523" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
+<rect x="100" y="523" width="20" height="12" rx="1.5" class="neu" opacity=".85"/>
+<rect x="122" y="523" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="144" y="523" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="166" y="523" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="188" y="523" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="210" y="523" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="232" y="523" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<rect x="254" y="523" width="20" height="12" rx="1.5" fill="#1b2723"/>
+<text x="316" y="533" class="tg" text-anchor="end">0.66</text>
+<text x="372" y="533" class="tg" text-anchor="end">对峙</text>
+<text x="10" y="556" class="hd">青 = 多头确立　灰 = 多空对峙　朱 = 空头确立</text>
+<text x="10" y="570" class="hd">高亮行为九维全满（0 悬置），共 4 只</text>
 </svg>

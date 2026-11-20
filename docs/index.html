@@ -220,6 +220,12 @@ section{padding:clamp(56px,8vw,92px) 0}
 
 /* ---------- market ---------- */
 .mk-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.mk-card.wide{grid-column:1/-1;display:grid;
+grid-template-columns:minmax(190px,auto) 1fr auto;gap:8px 26px;align-items:center;padding:18px 24px}
+.mk-card.wide .wk-l{display:flex;flex-direction:column;gap:5px}
+.mk-card.wide .wk-l .mk-t{margin:0;font-size:19px}
+.mk-card.wide .wk-m{font-size:13px;line-height:1.75;color:var(--paper-dim)}
+.mk-card.wide .mk-go{margin:0;white-space:nowrap}
 .mk-card{display:block;border:1px solid var(--line);background:var(--ink-2);padding:22px 24px;
 text-decoration:none;color:var(--paper);transition:border-color .22s ease,transform .22s ease}
 .mk-card:hover{border-color:var(--celadon-deep);transform:translateY(-2px)}
@@ -227,12 +233,14 @@ text-decoration:none;color:var(--paper);transition:border-color .22s ease,transf
 .mk-k{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--muted)}
 .mk-idx{font-family:var(--mono);font-size:12px;color:var(--gold)}
 .mk-t{font-family:var(--serif);font-size:20px;margin:10px 0 5px;letter-spacing:.01em}
-.mk-s{display:flex;align-items:baseline;gap:9px;font-size:12.5px;color:var(--muted);margin-bottom:12px}
+.mk-s{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 9px;font-size:12.5px;color:var(--muted);margin-bottom:12px}
 .mk-s b{font-family:var(--mono);font-size:13px;color:var(--celadon);font-weight:500}
 .mk-s.bear b{color:var(--cinnabar)}
 .mk-p{font-size:13px;line-height:1.78;color:var(--paper-dim);margin:0}
 .mk-go{margin-top:15px;font-family:var(--mono);font-size:11.5px;color:var(--celadon);letter-spacing:.04em}
-@media(max-width:980px){.mk-grid{grid-template-columns:1fr}}
+@media(max-width:980px){.mk-grid{grid-template-columns:1fr}
+.mk-card.wide{grid-template-columns:1fr;gap:10px;align-items:start}
+.mk-s{flex-direction:column;align-items:flex-start}}
 
 /* ---------- footer ---------- */
 footer{border-top:1px solid var(--line);padding:34px 0 44px;margin-top:0}
@@ -639,11 +647,20 @@ python examples/demo.py</pre>
       </a>
 
       <a class="mk-card" href="rank.html">
-        <div class="mk-top"><span class="mk-k">跨行业 · 18 个标的</span><span class="mk-idx">维度排名</span></div>
+        <div class="mk-top"><span class="mk-k">跨行业 · 26 个标的</span><span class="mk-idx">维度排名</span></div>
         <div class="mk-t">九维全满的四只</div>
         <div class="mk-s"><b>招商 / 长电 / 中国平安</b><span>同一索引 #17312 · 0 悬置</span></div>
-        <p class="mk-p">9 银行、2 保险、2 煤炭、2 石油、1 公用加两大指数各排一遍。今日 31 个申万行业只有 4 个收红，银行 +1.29% 是唯一有幅度的；个股里三只落进同一状态。</p>
+        <p class="mk-p">9 银行、8 化工、2 保险、2 煤炭、2 石油、1 公用加两大指数各排一遍。今日 31 个申万行业只有 4 个收红，银行 +1.29% 是唯一有幅度的；个股里三只落进同一状态。</p>
         <div class="mk-go">打开排名 ↗</div>
+      </a>
+      <a class="mk-card wide" href="chem.html">
+        <div class="wk-l">
+          <span class="mk-k">化工 · 8 只样本 · 10/16 – 11/20</span>
+          <span class="mk-t">五只空头确立，零只多头</span>
+        </div>
+        <div class="wk-m">兴发 #183、卫星 #183 与上证 #186 只差「守」一格，两只九维完全相同。
+        扬农 #174 更低。张力中位 0.73，是这一轮最紧的一组。</div>
+        <div class="mk-go">打开化工读数 ↗</div>
       </a>
 
     </div>

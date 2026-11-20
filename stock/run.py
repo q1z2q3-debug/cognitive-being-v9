@@ -47,6 +47,15 @@ NAME_MAP = {
     "sh600036_zsyh.csv": "招商银行 600036.SH",
     "sh601398_gsyh.csv": "工商银行 601398.SH",
     "sh601318_zgpa.csv": "中国平安 601318.SH",
+    "sh600309_whhx.csv": "万华化学 600309.SH",
+    "sh600426_hlhs.csv": "华鲁恒升 600426.SH",
+    "sz002648_wxhx.csv": "卫星化学 002648.SZ",
+    "sz002601_lbjt.csv": "龙佰集团 002601.SZ",
+    "sh600141_xfjt.csv": "兴发集团 600141.SH",
+    "sh600346_hlsh.csv": "恒力石化 600346.SH",
+    "sz002493_rs.csv": "荣盛石化 002493.SZ",
+    "sh600486_ynhg.csv": "扬农化工 600486.SH",
+
 
 }
 OUT = Path(__file__).resolve().parent / "out"
