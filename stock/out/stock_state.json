@@ -1,0 +1,3428 @@
+{
+  "上证指数 000001": {
+    "symbol": "上证指数 000001",
+    "bars": 24,
+    "effective_bars": 19,
+    "warmup_bars": 5,
+    "dim_names": [
+      "天",
+      "地",
+      "人",
+      "正",
+      "反",
+      "合",
+      "归",
+      "守",
+      "进"
+    ],
+    "series": [
+      {
+        "date": "20261019",
+        "close": 3730.92,
+        "valid": false,
+        "obs": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "obs_str": "warmup",
+        "state": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "state_str": "[0,0,0,0,0,0,0,0,0]",
+        "index": 9841,
+        "regime": "悬置主导",
+        "phase": "transform_a",
+        "phase_cn": "转化A",
+        "group27": [
+          0,
+          0,
+          0
+        ],
+        "hamming_step": 0,
+        "flips": 0,
+        "tension": {
+          "task_load": 1.0,
+          "context_pressure": 0.0,
+          "stability_flux": 0.0,
+          "T": 0.4
+        },
+        "diag": {
+          "allowed": true,
+          "violation": null,
+          "conservation_ok": true
+        },
+        "why": {
+          "天": "偏离MA20 +0.00%",
+          "地": "成交额为20日均额 1.00x",
+          "人": "近3日 +0.00%",
+          "正": "收盘<MA5，MA5下压",
+          "反": "10日区间 3692–3744",
+          "合": "MA5<MA20",
+          "归": "区间分位 75%",
+          "守": "振幅为常态 1.00x",
+          "进": "近5日 +0.00%"
+        }
+      },
+      {
+        "date": "20261020",
+        "close": 3735.3704,
+        "valid": false,
+        "obs": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0
+        ],
+        "obs_str": "warmup",
+        "state": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "state_str": "[0,0,0,0,0,0,0,0,0]",
+        "index": 9841,
+        "regime": "悬置主导",
+        "phase": "transform_a",
+        "phase_cn": "转化A",
+        "group27": [
+          0,
+          0,
+          0
+        ],
+        "hamming_step": 0,
+        "flips": 0,
+        "tension": {
+          "task_load": 1.0,
+          "context_pressure": 0.0,
+          "stability_flux": 0.0,
+          "T": 0.4
+        },
+        "diag": {
+          "allowed": true,
+          "violation": null,
+          "conservation_ok": true
+        },
+        "why": {
+          "天": "偏离MA20 +0.06%",
+          "地": "成交额为20日均额 1.01x",
+          "人": "近3日 +0.00%",
+          "正": "收盘>MA5，MA5下压",
+          "反": "10日区间 3692–3744",
+          "合": "MA5<MA20",
+          "归": "区间分位 84%",
+          "守": "振幅为常态 1.00x",
+          "进": "近5日 +0.00%"
+        }
+      },
+      {
+        "date": "20261022",
+        "close": 3658.0256,
+        "valid": false,
+        "obs": [
+          -1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          -1,
+          0
+        ],
+        "obs_str": "warmup",
+        "state": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "state_str": "[0,0,0,0,0,0,0,0,0]",
+        "index": 9841,
+        "regime": "悬置主导",
+        "phase": "transform_a",
+        "phase_cn": "转化A",
+        "group27": [
+          0,
+          0,
+          0
+        ],
+        "hamming_step": 0,
+        "flips": 0,
+        "tension": {
+          "task_load": 1.0,
+          "context_pressure": 0.45,
+          "stability_flux": 0.0,
+          "T": 0.535
+        },
+        "diag": {
+          "allowed": true,
+          "violation": null,
+          "conservation_ok": true
+        },
+        "why": {
+          "天": "偏离MA20 -1.35%",
+          "地": "成交额为20日均额 1.01x",
+          "人": "近3日 +0.00%",
+          "正": "收盘<MA5，MA5下压",
+          "反": "10日区间 3692–3744",
+          "合": "MA5<MA20",
+          "归": "区间分位 9%",
+          "守": "振幅为常态 1.26x",
+          "进": "近5日 +0.00%"
+        }
+      },
+      {
+        "date": "20261023",
+        "close": 3690.4753,
+        "valid": false,
+        "obs": [
+          0,
+          1,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0
+        ],
+        "obs_str": "warmup",
+        "state": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "state_str": "[0,0,0,0,0,0,0,0,0]",
+        "index": 9841,
+        "regime": "悬置主导",
+        "phase": "transform_a",
+        "phase_cn": "转化A",
+        "group27": [
+          0,
+          0,
+          0
+        ],
+        "hamming_step": 0,
+        "flips": 0,
+        "tension": {
+          "task_load": 1.0,
+          "context_pressure": 0.119,
+          "stability_flux": 0.0,
+          "T": 0.436
+        },
+        "diag": {
+          "allowed": true,
+          "violation": null,
+          "conservation_ok": true
+        },
+        "why": {
+          "天": "偏离MA20 -0.36%",
+          "地": "成交额为20日均额 1.20x",
+          "人": "近3日 -1.08%",
+          "正": "收盘<MA5，MA5下压",
+          "反": "10日区间 3650–3744",
+          "合": "MA5<MA20",
+          "归": "区间分位 69%",
+          "守": "振幅为常态 1.85x",
+          "进": "近5日 +0.00%"
+        }
+      },
+      {
+        "date": "20261026",
+        "close": 3697.5199,
+        "valid": false,
+        "obs": [
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "obs_str": "warmup",
+        "state": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "state_str": "[0,0,0,0,0,0,0,0,0]",
+        "index": 9841,
+        "regime": "悬置主导",
+        "phase": "transform_a",
+        "phase_cn": "转化A",
+        "group27": [
+          0,
+          0,
+          0
+        ],
+        "hamming_step": 0,
+        "flips": 0,
+        "tension": {
+          "task_load": 0.536,
+          "context_pressure": 0.044,
+          "stability_flux": 0.0,
+          "T": 0.228
+        },
+        "diag": {
+          "allowed": true,
+          "violation": null,
+          "conservation_ok": true
+        },
+        "why": {
+          "天": "偏离MA20 -0.13%",
+          "地": "成交额为20日均额 1.00x",
+          "人": "近3日 -1.01%",
+          "正": "收盘<MA5，MA5下压",
+          "反": "10日区间 3574–3744",
+          "合": "MA5<MA20",
+          "归": "区间分位 73%",
+          "守": "振幅为常态 0.68x",
+          "进": "近5日 +0.00%"
+        }
+      },
+      {
+        "date": "20261027",
+        "close": 3648.301,
+        "valid": true,
+        "obs": [
+          -1,
+          0,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          0,
+          -1
+        ],
+        "obs_str": "[-1,0,0,-1,0,-1,0,0,-1]",
+        "state": [
+          -1,
+          0,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          0,
+          -1
+        ],
+        "state_str": "[-1,0,0,-1,0,-1,0,0,-1]",
+        "index": 3009,
+        "regime": "悬置主导",
+        "phase": "transform_a",
+        "phase_cn": "转化A",
+        "group27": [
+          -1,
+          -1,
+          -1
+        ],
+        "hamming_step": 4,
+        "flips": 0,
+        "tension": {
+          "task_load": 1.0,
+          "context_pressure": 0.407,
+          "stability_flux": 0.444,
+          "T": 0.656
+        },
+        "diag": {
+          "allowed": false,
+          "violation": "conservation",
+          "conservation_ok": false
+        },
+        "why": {
+          "天": "偏离MA20 -1.22%",
+          "地": "成交额为20日均额 0.91x",
+          "人": "近3日 -0.27%",
+          "正": "收盘<MA5，MA5下压",
+          "反": "10日区间 3574–3744",
+          "合": "MA5<MA20",
+          "归": "区间分位 44%",
+          "守": "振幅为常态 1.00x",
+          "进": "近5日 -2.21%"
+        }
+      },
+      {
+        "date": "20261028",
+        "close": 3681.4691,
+        "valid": true,
+        "obs": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          1,
+          0
+        ],
+        "obs_str": "[0,0,0,0,0,-1,0,1,0]",
+        "state": [
+          -1,
+          0,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          1,
+          -1
+        ],
+        "state_str": "[-1,0,0,-1,0,-1,0,1,-1]",
+        "index": 3012,
+        "regime": "弱定向",
+        "phase": "transform_a",
+        "phase_cn": "转化A",
+        "group27": [
+          -1,
+          -1,
+          0
+        ],
+        "hamming_step": 1,
+        "flips": 0,
+        "tension": {
+          "task_load": 0.544,
+          "context_pressure": 0.093,
+          "stability_flux": 0.111,
+          "T": 0.279
+        },
+        "diag": {
+          "allowed": false,
+          "violation": "conservation",
+          "conservation_ok": false
+        },
+        "why": {
+          "天": "偏离MA20 -0.28%",
+          "地": "成交额为20日均额 1.02x",
+          "人": "近3日 -0.24%",
+          "正": "收盘>MA5，MA5下压",
+          "反": "10日区间 3574–3744",
+          "合": "MA5<MA20",
+          "归": "区间分位 63%",
+          "守": "振幅为常态 0.67x",
+          "进": "近5日 -1.44%"
+        }
+      },
+      {
+        "date": "20261029",
+        "close": 3651.4337,
+        "valid": true,
+        "obs": [
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          0,
+          0,
+          0
+        ],
+        "obs_str": "[-1,0,-1,-1,0,-1,0,0,0]",
+        "state": [
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          0,
+          1,
+          -1
+        ],
+        "state_str": "[-1,0,-1,-1,0,-1,0,1,-1]",
+        "index": 2283,
+        "regime": "空头确立",
+        "phase": "transform_a",
+        "phase_cn": "转化A",
+        "group27": [
+          -1,
+          -1,
+          0
+        ],
+        "hamming_step": 1,
+        "flips": 0,
+        "tension": {
+          "task_load": 0.894,
+          "context_pressure": 0.319,
+          "stability_flux": 0.111,
+          "T": 0.487
+        },
+        "diag": {
+          "allowed": false,
+          "violation": "conservation",
+          "conservation_ok": false
+        },
+        "why": {
+          "天": "偏离MA20 -0.96%",
+          "地": "成交额为20日均额 0.97x",
+          "人": "近3日 -1.25%",
+          "正": "收盘<MA5，MA5下压",
+          "反": "10日区间 3574–3744",
+          "合": "MA5<MA20",
+          "归": "区间分位 46%",
+          "守": "振幅为常态 0.89x",
+          "进": "近5日 -0.18%"
+        }
+      },
+      {
+        "date": "20261030",
+        "close": 3599.0166,
+        "valid": true,
+        "obs": [
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          -1,
+          -1
+        ],
+        "obs_str": "[-1,0,-1,-1,0,-1,1,-1,-1]",
+        "state": [
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          0,
+          -1
+        ],
+        "state_str": "[-1,0,-1,-1,0,-1,1,0,-1]",
+        "index": 2289,
+        "regime": "空头确立",
+        "phase": "transform_a",
+        "phase_cn": "转化A",
+        "group27": [
+          -1,
+          -1,
+          0
+        ],
+        "hamming_step": 2,
+        "flips": 0,
+        "tension": {
+          "task_load": 1.0,
+          "context_pressure": 0.706,
+          "stability_flux": 0.222,
+          "T": 0.679
+        },
+        "diag": {
+          "allowed": true,
+          "violation": null,
+          "conservation_ok": true
+        },
+        "why": {
+          "天": "偏离MA20 -2.12%",
+          "地": "成交额为20日均额 1.04x",
+          "人": "近3日 -1.35%",
+          "正": "收盘<MA5，MA5下压",
+          "反": "10日区间 3574–3744",
+          "合": "MA5<MA20",
+          "归": "区间分位 15%",
+          "守": "振幅为常态 1.35x",
+          "进": "近5日 -2.48%"
+        }
+      },
+      {
+        "date": "20261102",
+        "close": 3638.031,
+        "valid": true,
+        "obs": [
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          0,
+          0,
+          -1
+        ],
+        "obs_str": "[-1,0,-1,-1,0,-1,0,0,-1]",
+        "state": [
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          0,
+          -1
+        ],
+        "state_str": "[-1,0,-1,-1,0,-1,1,0,-1]",
+        "index": 2289,
+        "regime": "空头确立",
+        "phase": "transform_a",
+        "phase_cn": "转化A",
+        "group27": [
+          -1,
+          -1,
+          0
+        ],
+        "hamming_step": 0,
+        "flips": 0,
+        "tension": {
+          "task_load": 1.0,
+          "context_pressure": 0.318,
+          "stability_flux": 0.0,
+          "T": 0.495
+        },
+        "diag": {
+          "allowed": true,
+          "violation": null,
+          "conservation_ok": true
+        },
+        "why": {
+          "天": "偏离MA20 -0.95%",
+          "地": "成交额为20日均额 1.13x",
+          "人": "近3日 -1.18%",
+          "正": "收盘<MA5，MA5下压",
+          "反": "10日区间 3574–3744",
+          "合": "MA5<MA20",
+          "归": "区间分位 38%",
+          "守": "振幅为常态 1.00x",
+          "进": "近5日 -1.61%"
+        }
+      },
+      {
+        "date": "20261103",
+        "close": 3608.0976,
+        "valid": true,
+        "obs": [
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          0,
+          0
+        ],
+        "obs_str": "[-1,0,-1,-1,0,-1,1,0,0]",
+        "state": [
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          0,
+          -1
+        ],
+        "state_str": "[-1,0,-1,-1,0,-1,1,0,-1]",
+        "index": 2289,
+        "regime": "空头确立",
+        "phase": "transform_a",
+        "phase_cn": "转化A",
+        "group27": [
+          -1,
+          -1,
+          0
+        ],
+        "hamming_step": 0,
+        "flips": 0,
+        "tension": {
+          "task_load": 0.819,
+          "context_pressure": 0.537,
+          "stability_flux": 0.0,
+          "T": 0.489
+        },
+        "diag": {
+          "allowed": true,
+          "violation": null,
+          "conservation_ok": true
+        },
+        "why": {
+          "天": "偏离MA20 -1.61%",
+          "地": "成交额为20日均额 1.07x",
+          "人": "近3日 -1.19%",
+          "正": "收盘<MA5，MA5下压",
+          "反": "10日区间 3574–3744",
+          "合": "MA5<MA20",
+          "归": "区间分位 20%",
+          "守": "振幅为常态 0.90x",
+          "进": "近5日 -1.10%"
+        }
+      },
+      {
+        "date": "20261104",
+        "close": 3686.1725,
+        "valid": true,
+        "obs": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          -1,
+          0
+        ],
+        "obs_str": "[0,1,1,1,0,0,0,-1,0]",
+        "state": [
+          -1,
+          1,
+          0,
+          0,
+          0,
+          -1,
+          1,
+          -1,
+          -1
+        ],
+        "state_str": "[-1,1,0,0,0,-1,1,-1,-1]",
+        "index": 5445,
+        "regime": "弱定向",
+        "phase": "accumulate",
+        "phase_cn": "积聚",
+        "group27": [
+          0,
+          -1,
+          -1
+        ],
+        "hamming_step": 4,
+        "flips": 2,
+        "tension": {
+          "task_load": 1.0,
+          "context_pressure": 0.0,
+          "stability_flux": 0.444,
+          "T": 0.533
+        },
+        "diag": {
+          "allowed": false,
+          "violation": "conservation",
+          "conservation_ok": false
+        },
+        "why": {
+          "天": "偏离MA20 +0.48%",
+          "地": "成交额为20日均额 1.24x",
+          "人": "近3日 +2.42%",
+          "正": "收盘>MA5，MA5抬升",
+          "反": "10日区间 3574–3740",
+          "合": "MA5<MA20",
+          "归": "区间分位 66%",
+          "守": "振幅为常态 1.78x",
+          "进": "近5日 +0.13%"
+        }
+      },
+      {
+        "date": "20261105",
+        "close": 3689.9109,
+        "valid": true,
+        "obs": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "obs_str": "[1,1,1,1,0,0,0,0,0]",
+        "state": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          -1,
+          1,
+          -1,
+          -1
+        ],
+        "state_str": "[0,1,1,1,0,-1,1,-1,-1]",
+        "index": 12978,
+        "regime": "多空对峙",
+        "phase": "accumulate",
+        "phase_cn": "积聚",
+        "group27": [
+          1,
+          0,
+          -1
+        ],
+        "hamming_step": 3,
+        "flips": 0,
+        "tension": {
+          "task_load": 1.0,
+          "context_pressure": 0.0,
+          "stability_flux": 0.333,
+          "T": 0.5
+        },
+        "diag": {
+          "allowed": false,
+          "violation": "conservation",
+          "conservation_ok": false
+        },
+        "why": {
+          "天": "偏离MA20 +0.53%",
+          "地": "成交额为20日均额 1.24x",
+          "人": "近3日 +1.43%",
+          "正": "收盘>MA5，MA5抬升",
+          "反": "10日区间 3574–3714",
+          "合": "MA5<MA20",
+          "归": "区间分位 68%",
+          "守": "振幅为常态 1.00x",
+          "进": "近5日 +1.05%"
+        }
+      },
+      {
+        "date": "20261106",
+        "close": 3649.1774,
+        "valid": true,
+        "obs": [
+          -1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "obs_str": "[-1,0,1,0,0,0,0,0,0]",
+        "state": [
+          -1,
+          1,
+          1,
+          1,
+          0,
+          -1,
+          1,
+          -1,
+          -1
+        ],
+        "state_str": "[-1,1,1,1,0,-1,1,-1,-1]",
+        "index": 6417,
+        "regime": "多空对峙",
+        "phase": "accumulate",
+        "phase_cn": "积聚",
+        "group27": [
+          1,
+          0,
+          -1
+        ],
+        "hamming_step": 1,
+        "flips": 1,
+        "tension": {
+          "task_load": 0.919,
+          "context_pressure": 0.179,
+          "stability_flux": 0.111,
+          "T": 0.455
+        },
+        "diag": {
+          "allowed": false,
+          "violation": "conservation",
+          "conservation_ok": false
+        },
+        "why": {
+          "天": "偏离MA20 -0.54%",
+          "地": "成交额为20日均额 0.98x",
+          "人": "近3日 +1.14%",
+          "正": "收盘<MA5，MA5抬升",
+          "反": "10日区间 3574–3708",
+          "合": "MA5<MA20",
+          "归": "区间分位 44%",
+          "守": "振幅为常态 0.92x",
+          "进": "近5日 +1.39%"
+        }
+      },
+      {
+        "date": "20261109",
+        "close": 3660.7917,
+        "valid": true,
+        "obs": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "obs_str": "[0,0,0,1,0,0,0,1,0]",
+        "state": [
+          -1,
+          1,
+          1,
+          1,
+          0,
+          -1,
+          1,
+          0,
+          -1
+        ],
+        "state_str": "[-1,1,1,1,0,-1,1,0,-1]",
+        "index": 6420,
+        "regime": "多空对峙",
+        "phase": "accumulate",
+        "phase_cn": "积聚",
+        "group27": [
+          1,
+          0,
+          0
+        ],
+        "hamming_step": 1,
+        "flips": 0,
+        "tension": {
+          "task_load": 0.481,
+          "context_pressure": 0.068,
+          "stability_flux": 0.111,
+          "T": 0.246
+        },
+        "diag": {
+          "allowed": false,
+          "violation": "conservation",
+          "conservation_ok": false
+        },
+        "why": {
+          "天": "偏离MA20 -0.21%",
+          "地": "成交额为20日均额 0.88x",
+          "人": "近3日 -0.69%",
+          "正": "收盘>MA5，MA5抬升",
+          "反": "10日区间 3580–3708",
+          "合": "MA5<MA20",
+          "归": "区间分位 51%",
+          "守": "振幅为常态 0.50x",
+          "进": "近5日 +0.63%"
+        }
+      },
+      {
+        "date": "20261110",
+        "close": 3663.7235,
+        "valid": true,
+        "obs": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "obs_str": "[0,0,0,0,0,1,0,1,0]",
+        "state": [
+          -1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          -1
+        ],
+        "state_str": "[-1,1,1,1,0,0,1,1,-1]",
+        "index": 6450,
+        "regime": "多头确立",
+        "phase": "accumulate",
+        "phase_cn": "积聚",
+        "group27": [
+          1,
+          1,
+          1
+        ],
+        "hamming_step": 2,
+        "flips": 0,
+        "tension": {
+          "task_load": 0.461,
+          "context_pressure": 0.039,
+          "stability_flux": 0.222,
+          "T": 0.263
+        },
+        "diag": {
+          "allowed": false,
+          "violation": "conservation",
+          "conservation_ok": false
+        },
+        "why": {
+          "天": "偏离MA20 -0.12%",
+          "地": "成交额为20日均额 0.87x",
+          "人": "近3日 -0.71%",
+          "正": "收盘<MA5，MA5抬升",
+          "反": "10日区间 3580–3708",
+          "合": "MA5>MA20",
+          "归": "区间分位 53%",
+          "守": "振幅为常态 0.46x",
+          "进": "近5日 +1.54%"
+        }
+      },
+      {
+        "date": "20261111",
+        "close": 3680.6428,
+        "valid": true,
+        "obs": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "obs_str": "[0,0,0,0,0,0,0,0,0]",
+        "state": [
+          -1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          -1
+        ],
+        "state_str": "[-1,1,1,1,0,0,1,1,-1]",
+        "index": 6450,
+        "regime": "多头确立",
+        "phase": "accumulate",
+        "phase_cn": "积聚",
+        "group27": [
+          1,
+          1,
+          1
+        ],
+        "hamming_step": 0,
+        "flips": 0,
+        "tension": {
+          "task_load": 0.788,
+          "context_pressure": 0.0,
+          "stability_flux": 0.0,
+          "T": 0.315
+        },
+        "diag": {
+          "allowed": true,
+          "violation": null,
+          "conservation_ok": true
+        },
+        "why": {
+          "天": "偏离MA20 +0.32%",
+          "地": "成交额为20日均额 0.96x",
+          "人": "近3日 +0.86%",
+          "正": "收盘>MA5，MA5下压",
+          "反": "10日区间 3580–3702",
+          "合": "MA5>MA20",
+          "归": "区间分位 63%",
+          "守": "振幅为常态 0.83x",
+          "进": "近5日 -0.15%"
+        }
+      },
+      {
+        "date": "20261112",
+        "close": 3655.8295,
+        "valid": true,
+        "obs": [
+          0,
+          0,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          0,
+          0
+        ],
+        "obs_str": "[0,0,0,-1,0,-1,0,0,0]",
+        "state": [
+          -1,
+          1,
+          1,
+          0,
+          0,
+          -1,
+          1,
+          1,
+          -1
+        ],
+        "state_str": "[-1,1,1,0,0,-1,1,1,-1]",
+        "index": 6180,
+        "regime": "多空对峙",
+        "phase": "accumulate",
+        "phase_cn": "积聚",
+        "group27": [
+          1,
+          -1,
+          1
+        ],
+        "hamming_step": 2,
+        "flips": 0,
+        "tension": {
+          "task_load": 1.0,
+          "context_pressure": 0.111,
+          "stability_flux": 0.222,
+          "T": 0.5
+        },
+        "diag": {
+          "allowed": false,
+          "violation": "conservation",
+          "conservation_ok": false
+        },
+        "why": {
+          "天": "偏离MA20 -0.33%",
+          "地": "成交额为20日均额 1.13x",
+          "人": "近3日 -0.14%",
+          "正": "收盘<MA5，MA5下压",
+          "反": "10日区间 3580–3702",
+          "合": "MA5<MA20",
+          "归": "区间分位 48%",
+          "守": "振幅为常态 1.04x",
+          "进": "近5日 -0.92%"
+        }
+      },
+      {
+        "date": "20261113",
+        "close": 3634.353,
+        "valid": true,
+        "obs": [
+          -1,
+          0,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          0,
+          0
+        ],
+        "obs_str": "[-1,0,0,-1,0,-1,0,0,0]",
+        "state": [
+          -1,
+          1,
+          1,
+          -1,
+          0,
+          -1,
+          1,
+          1,
+          -1
+        ],
+        "state_str": "[-1,1,1,-1,0,-1,1,1,-1]",
+        "index": 5937,
+        "regime": "多空对峙",
+        "phase": "accumulate",
+        "phase_cn": "积聚",
+        "group27": [
+          1,
+          -1,
+          1
+        ],
+        "hamming_step": 1,
+        "flips": 0,
+        "tension": {
+          "task_load": 0.915,
+          "context_pressure": 0.29,
+          "stability_flux": 0.111,
+          "T": 0.486
+        },
+        "diag": {
+          "allowed": false,
+          "violation": "conservation",
+          "conservation_ok": false
+        },
+        "why": {
+          "天": "偏离MA20 -0.87%",
+          "地": "成交额为20日均额 0.99x",
+          "人": "近3日 -0.80%",
+          "正": "收盘<MA5，MA5下压",
+          "反": "10日区间 3580–3702",
+          "合": "MA5<MA20",
+          "归": "区间分位 35%",
+          "守": "振幅为常态 0.96x",
+          "进": "近5日 -0.41%"
+        }
+      },
+      {
+        "date": "20261116",
+        "close": 3602.5698,
+        "valid": true,
+        "obs": [
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          0,
+          -1
+        ],
+        "obs_str": "[-1,0,-1,-1,0,-1,1,0,-1]",
+        "state": [
+          -1,
+          1,
+          0,
+          -1,
+          0,
+          -1,
+          1,
+          1,
+          -1
+        ],
+        "state_str": "[-1,1,0,-1,0,-1,1,1,-1]",
+        "index": 5208,
+        "regime": "多空对峙",
+        "phase": "accumulate",
+        "phase_cn": "积聚",
+        "group27": [
+          0,
+          -1,
+          1
+        ],
+        "hamming_step": 1,
+        "flips": 0,
+        "tension": {
+          "task_load": 0.806,
+          "context_pressure": 0.551,
+          "stability_flux": 0.111,
+          "T": 0.521
+        },
+        "diag": {
+          "allowed": false,
+          "violation": "conservation",
+          "conservation_ok": false
+        },
+        "why": {
+          "天": "偏离MA20 -1.65%",
+          "地": "成交额为20日均额 0.91x",
+          "人": "近3日 -2.12%",
+          "正": "收盘<MA5，MA5下压",
+          "反": "10日区间 3580–3702",
+          "合": "MA5<MA20",
+          "归": "区间分位 17%",
+          "守": "振幅为常态 0.81x",
+          "进": "近5日 -1.59%"
+        }
+      },
+      {
+        "date": "20261117",
+        "close": 3584.5794,
+        "valid": true,
+        "obs": [
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          0,
+          -1
+        ],
+        "obs_str": "[-1,0,-1,-1,0,-1,1,0,-1]",
+        "state": [
+          -1,
+          1,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          1,
+          -1
+        ],
+        "state_str": "[-1,1,-1,-1,0,-1,1,1,-1]",
+        "index": 4479,
+        "regime": "多空对峙",
+        "phase": "accumulate",
+        "phase_cn": "积聚",
+        "group27": [
+          -1,
+          -1,
+          1
+        ],
+        "hamming_step": 1,
+        "flips": 0,
+        "tension": {
+          "task_load": 0.877,
+          "context_pressure": 0.649,
+          "stability_flux": 0.111,
+          "T": 0.579
+        },
+        "diag": {
+          "allowed": false,
+          "violation": "conservation",
+          "conservation_ok": false
+        },
+        "why": {
+          "天": "偏离MA20 -1.95%",
+          "地": "成交额为20日均额 0.89x",
+          "人": "近3日 -1.95%",
+          "正": "收盘<MA5，MA5下压",
+          "反": "10日区间 3580–3702",
+          "合": "MA5<MA20",
+          "归": "区间分位 11%",
+          "守": "振幅为常态 0.89x",
+          "进": "近5日 -2.16%"
+        }
+      },
+      {
+        "date": "20261118",
+        "close": 3587.8317,
+        "valid": true,
+        "obs": [
+          -1,
+          -1,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          0,
+          -1
+        ],
+        "obs_str": "[-1,-1,-1,-1,0,-1,1,0,-1]",
+        "state": [
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          1,
+          -1
+        ],
+        "state_str": "[-1,0,-1,-1,0,-1,1,1,-1]",
+        "index": 2292,
+        "regime": "空头确立",
+        "phase": "transform_a",
+        "phase_cn": "转化A",
+        "group27": [
+          -1,
+          -1,
+          1
+        ],
+        "hamming_step": 1,
+        "flips": 0,
+        "tension": {
+          "task_load": 0.807,
+          "context_pressure": 0.553,
+          "stability_flux": 0.111,
+          "T": 0.522
+        },
+        "diag": {
+          "allowed": false,
+          "violation": "conservation",
+          "conservation_ok": false
+        },
+        "why": {
+          "天": "偏离MA20 -1.66%",
+          "地": "成交额为20日均额 0.84x",
+          "人": "近3日 -1.28%",
+          "正": "收盘<MA5，MA5下压",
+          "反": "10日区间 3566–3702",
+          "合": "MA5<MA20",
+          "归": "区间分位 18%",
+          "守": "振幅为常态 0.82x",
+          "进": "近5日 -2.52%"
+        }
+      },
+      {
+        "date": "20261119",
+        "close": 3577.6174,
+        "valid": true,
+        "obs": [
+          -1,
+          -1,
+          0,
+          -1,
+          0,
+          -1,
+          1,
+          0,
+          -1
+        ],
+        "obs_str": "[-1,-1,0,-1,0,-1,1,0,-1]",
+        "state": [
+          -1,
+          -1,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          1,
+          -1
+        ],
+        "state_str": "[-1,-1,-1,-1,0,-1,1,1,-1]",
+        "index": 105,
+        "regime": "空头确立",
+        "phase": "accumulate",
+        "phase_cn": "积聚",
+        "group27": [
+          -1,
+          -1,
+          1
+        ],
+        "hamming_step": 1,
+        "flips": 0,
+        "tension": {
+          "task_load": 0.834,
+          "context_pressure": 0.611,
+          "stability_flux": 0.111,
+          "T": 0.55
+        },
+        "diag": {
+          "allowed": false,
+          "violation": "conservation",
+          "conservation_ok": false
+        },
+        "why": {
+          "天": "偏离MA20 -1.83%",
+          "地": "成交额为20日均额 0.83x",
+          "人": "近3日 -0.69%",
+          "正": "收盘<MA5，MA5下压",
+          "反": "10日区间 3560–3702",
+          "合": "MA5<MA20",
+          "归": "区间分位 19%",
+          "守": "振幅为常态 0.88x",
+          "进": "近5日 -2.14%"
+        }
+      },
+      {
+        "date": "20261120",
+        "close": 3533.7929,
+        "valid": true,
+        "obs": [
+          -1,
+          0,
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          0,
+          -1
+        ],
+        "obs_str": "[-1,0,-1,-1,1,-1,1,0,-1]",
+        "state": [
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          1,
+          -1
+        ],
+        "state_str": "[-1,-1,-1,-1,1,-1,1,1,-1]",
+        "index": 186,
+        "regime": "空头确立",
+        "phase": "accumulate",
+        "phase_cn": "积聚",
+        "group27": [
+          -1,
+          -1,
+          1
+        ],
+        "hamming_step": 1,
+        "flips": 0,
+        "tension": {
+          "task_load": 0.957,
+          "context_pressure": 0.942,
+          "stability_flux": 0.111,
+          "T": 0.699
+        },
+        "diag": {
+          "allowed": false,
+          "violation": "conservation",
+          "conservation_ok": false
+        },
+        "why": {
+          "天": "偏离MA20 -2.83%",
+          "地": "成交额为20日均额 0.93x",
+          "人": "近3日 -1.42%",
+          "正": "收盘<MA5，MA5下压",
+          "反": "10日区间 3548–3700",
+          "合": "MA5<MA20",
+          "归": "区间分位 16%",
+          "守": "振幅为常态 0.97x",
+          "进": "近5日 -2.77%"
+        }
+      }
+    ],
+    "summary": {
+      "first_date": "20261027",
+      "last_date": "20261120",
+      "first_close": 3648.301,
+      "last_close": 3533.7929,
+      "period_return_pct": -3.14,
+      "last_obs": [
+        -1,
+        0,
+        -1,
+        -1,
+        1,
+        -1,
+        1,
+        0,
+        -1
+      ],
+      "last_obs_str": "[-1,0,-1,-1,1,-1,1,0,-1]",
+      "last_state": [
+        -1,
+        -1,
+        -1,
+        -1,
+        1,
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "last_state_str": "[-1,-1,-1,-1,1,-1,1,1,-1]",
+      "last_index": 186,
+      "last_regime": "空头确立",
+      "last_phase": "积聚",
+      "last_group27": [
+        -1,
+        -1,
+        1
+      ],
+      "tension": {
+        "task_load": 0.957,
+        "context_pressure": 0.942,
+        "stability_flux": 0.111,
+        "T": 0.699
+      },
+      "determined_dims": 7,
+      "suspended_dims": 2,
+      "obs_direct_flips": 3,
+      "state_direct_flips": 0,
+      "conservation_breaks": 15,
+      "regime_path": [
+        {
+          "date": "20261027",
+          "regime": "悬置主导"
+        },
+        {
+          "date": "20261028",
+          "regime": "弱定向"
+        },
+        {
+          "date": "20261029",
+          "regime": "空头确立"
+        },
+        {
+          "date": "20261030",
+          "regime": "空头确立"
+        },
+        {
+          "date": "20261102",
+          "regime": "空头确立"
+        },
+        {
+          "date": "20261103",
+          "regime": "空头确立"
+        },
+        {
+          "date": "20261104",
+          "regime": "弱定向"
+        },
+        {
+          "date": "20261105",
+          "regime": "多空对峙"
+        },
+        {
+          "date": "20261106",
+          "regime": "多空对峙"
+        },
+        {
+          "date": "20261109",
+          "regime": "多空对峙"
+        },
+        {
+          "date": "20261110",
+          "regime": "多头确立"
+        },
+        {
+          "date": "20261111",
+          "regime": "多头确立"
+        },
+        {
+          "date": "20261112",
+          "regime": "多空对峙"
+        },
+        {
+          "date": "20261113",
+          "regime": "多空对峙"
+        },
+        {
+          "date": "20261116",
+          "regime": "多空对峙"
+        },
+        {
+          "date": "20261117",
+          "regime": "多空对峙"
+        },
+        {
+          "date": "20261118",
+          "regime": "空头确立"
+        },
+        {
+          "date": "20261119",
+          "regime": "空头确立"
+        },
+        {
+          "date": "20261120",
+          "regime": "空头确立"
+        }
+      ],
+      "tension_path": [
+        {
+          "date": "20261027",
+          "T": 0.656
+        },
+        {
+          "date": "20261028",
+          "T": 0.279
+        },
+        {
+          "date": "20261029",
+          "T": 0.487
+        },
+        {
+          "date": "20261030",
+          "T": 0.679
+        },
+        {
+          "date": "20261102",
+          "T": 0.495
+        },
+        {
+          "date": "20261103",
+          "T": 0.489
+        },
+        {
+          "date": "20261104",
+          "T": 0.533
+        },
+        {
+          "date": "20261105",
+          "T": 0.5
+        },
+        {
+          "date": "20261106",
+          "T": 0.455
+        },
+        {
+          "date": "20261109",
+          "T": 0.246
+        },
+        {
+          "date": "20261110",
+          "T": 0.263
+        },
+        {
+          "date": "20261111",
+          "T": 0.315
+        },
+        {
+          "date": "20261112",
+          "T": 0.5
+        },
+        {
+          "date": "20261113",
+          "T": 0.486
+        },
+        {
+          "date": "20261116",
+          "T": 0.521
+        },
+        {
+          "date": "20261117",
+          "T": 0.579
+        },
+        {
+          "date": "20261118",
+          "T": 0.522
+        },
+        {
+          "date": "20261119",
+          "T": 0.55
+        },
+        {
+          "date": "20261120",
+          "T": 0.699
+        }
+      ]
+    }
+  },
+  "沪深300 000300": {
+    "symbol": "沪深300 000300",
+    "bars": 24,
+    "effective_bars": 19,
+    "warmup_bars": 5,
+    "dim_names": [
+      "天",
+      "地",
+      "人",
+      "正",
+      "反",
+      "合",
+      "归",
+      "守",
+      "进"
+    ],
+    "series": [
+      {
+        "date": "20261019",
+        "close": 4174.5349,
+        "valid": false,
+        "obs": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "obs_str": "warmup",
+        "state": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "state_str": "[0,0,0,0,0,0,0,0,0]",
+        "index": 9841,
+        "regime": "悬置主导",
+        "phase": "transform_a",
+        "phase_cn": "转化A",
+        "group27": [
+          0,
+          0,
+          0
+        ],
+        "hamming_step": 0,
+        "flips": 0,
+        "tension": {
+          "task_load": 1.0,
+          "context_pressure": 0.0,
+          "stability_flux": 0.0,
+          "T": 0.4
+        },
+        "diag": {
+          "allowed": true,
+          "violation": null,
+          "conservation_ok": true
+        },
+        "why": {
+          "天": "偏离MA20 +0.00%",
+          "地": "成交额为20日均额 1.00x",
+          "人": "近3日 +0.00%",
+          "正": "收盘<MA5，MA5下压",
+          "反": "10日区间 4144–4192",
+          "合": "MA5<MA20",
+          "归": "区间分位 64%",
+          "守": "振幅为常态 1.00x",
+          "进": "近5日 +0.00%"
+        }
+      },
+      {
+        "date": "20261020",
+        "close": 4152.1076,
+        "valid": false,
+        "obs": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "obs_str": "warmup",
+        "state": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "state_str": "[0,0,0,0,0,0,0,0,0]",
+        "index": 9841,
+        "regime": "悬置主导",
+        "phase": "transform_a",
+        "phase_cn": "转化A",
+        "group27": [
+          0,
+          0,
+          0
+        ],
+        "hamming_step": 0,
+        "flips": 0,
+        "tension": {
+          "task_load": 1.0,
+          "context_pressure": 0.09,
+          "stability_flux": 0.0,
+          "T": 0.427
+        },
+        "diag": {
+          "allowed": true,
+          "violation": null,
+          "conservation_ok": true
+        },
+        "why": {
+          "天": "偏离MA20 -0.27%",
+          "地": "成交额为20日均额 1.04x",
+          "人": "近3日 +0.00%",
+          "正": "收盘<MA5，MA5下压",
+          "反": "10日区间 4144–4192",
+          "合": "MA5<MA20",
+          "归": "区间分位 49%",
+          "守": "振幅为常态 1.00x",
+          "进": "近5日 +0.00%"
+        }
+      },
+      {
+        "date": "20261022",
+        "close": 4036.2966,
+        "valid": false,
+        "obs": [
+          -1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "obs_str": "warmup",
+        "state": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "state_str": "[0,0,0,0,0,0,0,0,0]",
+        "index": 9841,
+        "regime": "悬置主导",
+        "phase": "transform_a",
+        "phase_cn": "转化A",
+        "group27": [
+          0,
+          0,
+          0
+        ],
+        "hamming_step": 0,
+        "flips": 0,
+        "tension": {
+          "task_load": 1.0,
+          "context_pressure": 0.685,
+          "stability_flux": 0.0,
+          "T": 0.605
+        },
+        "diag": {
+          "allowed": true,
+          "violation": null,
+          "conservation_ok": true
+        },
+        "why": {
+          "天": "偏离MA20 -2.05%",
+          "地": "成交额为20日均额 1.09x",
+          "人": "近3日 +0.00%",
+          "正": "收盘<MA5，MA5下压",
+          "反": "10日区间 4113–4192",
+          "合": "MA5<MA20",
+          "归": "区间分位 8%",
+          "守": "振幅为常态 1.17x",
+          "进": "近5日 +0.00%"
+        }
+      },
+      {
+        "date": "20261023",
+        "close": 4105.3286,
+        "valid": false,
+        "obs": [
+          0,
+          1,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0
+        ],
+        "obs_str": "warmup",
+        "state": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "state_str": "[0,0,0,0,0,0,0,0,0]",
+        "index": 9841,
+        "regime": "悬置主导",
+        "phase": "transform_a",
+        "phase_cn": "转化A",
+        "group27": [
+          0,
+          0,
+          0
+        ],
+        "hamming_step": 0,
+        "flips": 0,
+        "tension": {
+          "task_load": 1.0,
+          "context_pressure": 0.095,
+          "stability_flux": 0.0,
+          "T": 0.429
+        },
+        "diag": {
+          "allowed": true,
+          "violation": null,
+          "conservation_ok": true
+        },
+        "why": {
+          "天": "偏离MA20 -0.29%",
+          "地": "成交额为20日均额 1.27x",
+          "人": "近3日 -1.66%",
+          "正": "收盘<MA5，MA5下压",
+          "反": "10日区间 4023–4192",
+          "合": "MA5<MA20",
+          "归": "区间分位 63%",
+          "守": "振幅为常态 1.77x",
+          "进": "近5日 +0.00%"
+        }
+      },
+      {
+        "date": "20261026",
+        "close": 4103.5432,
+        "valid": false,
+        "obs": [
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "obs_str": "warmup",
+        "state": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "state_str": "[0,0,0,0,0,0,0,0,0]",
+        "index": 9841,
+        "regime": "悬置主导",
+        "phase": "transform_a",
+        "phase_cn": "转化A",
+        "group27": [
+          0,
+          0,
+          0
+        ],
+        "hamming_step": 0,
+        "flips": 0,
+        "tension": {
+          "task_load": 0.579,
+          "context_pressure": 0.088,
+          "stability_flux": 0.0,
+          "T": 0.258
+        },
+        "diag": {
+          "allowed": true,
+          "violation": null,
+          "conservation_ok": true
+        },
+        "why": {
+          "天": "偏离MA20 -0.26%",
+          "地": "成交额为20日均额 1.03x",
+          "人": "近3日 -1.17%",
+          "正": "收盘<MA5，MA5下压",
+          "反": "10日区间 3958–4192",
+          "合": "MA5<MA20",
+          "归": "区间分位 62%",
+          "守": "振幅为常态 0.68x",
+          "进": "近5日 +0.00%"
+        }
+      },
+      {
+        "date": "20261027",
+        "close": 4049.5516,
+        "valid": true,
+        "obs": [
+          -1,
+          0,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          0,
+          -1
+        ],
+        "obs_str": "[-1,0,0,-1,0,-1,0,0,-1]",
+        "state": [
+          -1,
+          0,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          0,
+          -1
+        ],
+        "state_str": "[-1,0,0,-1,0,-1,0,0,-1]",
+        "index": 3009,
+        "regime": "悬置主导",
+        "phase": "transform_a",
+        "phase_cn": "转化A",
+        "group27": [
+          -1,
+          -1,
+          -1
+        ],
+        "hamming_step": 4,
+        "flips": 0,
+        "tension": {
+          "task_load": 0.991,
+          "context_pressure": 0.439,
+          "stability_flux": 0.444,
+          "T": 0.661
+        },
+        "diag": {
+          "allowed": false,
+          "violation": "conservation",
+          "conservation_ok": false
+        },
+        "why": {
+          "天": "偏离MA20 -1.32%",
+          "地": "成交额为20日均额 0.89x",
+          "人": "近3日 +0.33%",
+          "正": "收盘<MA5，MA5下压",
+          "反": "10日区间 3958–4192",
+          "合": "MA5<MA20",
+          "归": "区间分位 39%",
+          "守": "振幅为常态 0.99x",
+          "进": "近5日 -2.99%"
+        }
+      },
+      {
+        "date": "20261028",
+        "close": 4083.8702,
+        "valid": true,
+        "obs": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          1,
+          -1
+        ],
+        "obs_str": "[0,0,0,0,0,-1,0,1,-1]",
+        "state": [
+          -1,
+          0,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          1,
+          -1
+        ],
+        "state_str": "[-1,0,0,-1,0,-1,0,1,-1]",
+        "index": 3012,
+        "regime": "弱定向",
+        "phase": "transform_a",
+        "phase_cn": "转化A",
+        "group27": [
+          -1,
+          -1,
+          0
+        ],
+        "hamming_step": 1,
+        "flips": 0,
+        "tension": {
+          "task_load": 0.563,
+          "context_pressure": 0.137,
+          "stability_flux": 0.111,
+          "T": 0.3
+        },
+        "diag": {
+          "allowed": false,
+          "violation": "conservation",
+          "conservation_ok": false
+        },
+        "why": {
+          "天": "偏离MA20 -0.41%",
+          "地": "成交额为20日均额 0.97x",
+          "人": "近3日 -0.52%",
+          "正": "收盘>MA5，MA5下压",
+          "反": "10日区间 3958–4192",
+          "合": "MA5<MA20",
+          "归": "区间分位 54%",
+          "守": "振幅为常态 0.57x",
+          "进": "近5日 -1.64%"
+        }
+      },
+      {
+        "date": "20261029",
+        "close": 4041.8376,
+        "valid": true,
+        "obs": [
+          -1,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "obs_str": "[-1,0,-1,0,0,0,0,1,0]",
+        "state": [
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          0,
+          1,
+          -1
+        ],
+        "state_str": "[-1,0,-1,-1,0,-1,0,1,-1]",
+        "index": 2283,
+        "regime": "空头确立",
+        "phase": "transform_a",
+        "phase_cn": "转化A",
+        "group27": [
+          -1,
+          -1,
+          0
+        ],
+        "hamming_step": 1,
+        "flips": 0,
+        "tension": {
+          "task_load": 0.752,
+          "context_pressure": 0.42,
+          "stability_flux": 0.111,
+          "T": 0.46
+        },
+        "diag": {
+          "allowed": false,
+          "violation": "conservation",
+          "conservation_ok": false
+        },
+        "why": {
+          "天": "偏离MA20 -1.26%",
+          "地": "成交额为20日均额 0.96x",
+          "人": "近3日 -1.50%",
+          "正": "收盘<MA5，MA5抬升",
+          "反": "10日区间 3958–4192",
+          "合": "MA5<MA20",
+          "归": "区间分位 36%",
+          "守": "振幅为常态 0.75x",
+          "进": "近5日 +0.14%"
+        }
+      },
+      {
+        "date": "20261030",
+        "close": 3985.501,
+        "valid": true,
+        "obs": [
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          -1,
+          -1
+        ],
+        "obs_str": "[-1,0,-1,-1,0,-1,1,-1,-1]",
+        "state": [
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          0,
+          -1
+        ],
+        "state_str": "[-1,0,-1,-1,0,-1,1,0,-1]",
+        "index": 2289,
+        "regime": "空头确立",
+        "phase": "transform_a",
+        "phase_cn": "转化A",
+        "group27": [
+          -1,
+          -1,
+          0
+        ],
+        "hamming_step": 2,
+        "flips": 1,
+        "tension": {
+          "task_load": 1.0,
+          "context_pressure": 0.783,
+          "stability_flux": 0.222,
+          "T": 0.702
+        },
+        "diag": {
+          "allowed": true,
+          "violation": null,
+          "conservation_ok": true
+        },
+        "why": {
+          "天": "偏离MA20 -2.35%",
+          "地": "成交额为20日均额 1.06x",
+          "人": "近3日 -1.58%",
+          "正": "收盘<MA5，MA5下压",
+          "反": "10日区间 3958–4192",
+          "合": "MA5<MA20",
+          "归": "区间分位 12%",
+          "守": "振幅为常态 1.30x",
+          "进": "近5日 -2.92%"
+        }
+      },
+      {
+        "date": "20261102",
+        "close": 4016.9179,
+        "valid": true,
+        "obs": [
+          -1,
+          1,
+          -1,
+          -1,
+          0,
+          -1,
+          0,
+          0,
+          -1
+        ],
+        "obs_str": "[-1,1,-1,-1,0,-1,0,0,-1]",
+        "state": [
+          -1,
+          1,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          0,
+          -1
+        ],
+        "state_str": "[-1,1,-1,-1,0,-1,1,0,-1]",
+        "index": 4476,
+        "regime": "空头确立",
+        "phase": "accumulate",
+        "phase_cn": "积聚",
+        "group27": [
+          -1,
+          -1,
+          0
+        ],
+        "hamming_step": 1,
+        "flips": 0,
+        "tension": {
+          "task_load": 0.863,
+          "context_pressure": 0.475,
+          "stability_flux": 0.111,
+          "T": 0.521
+        },
+        "diag": {
+          "allowed": false,
+          "violation": "conservation",
+          "conservation_ok": false
+        },
+        "why": {
+          "天": "偏离MA20 -1.42%",
+          "地": "成交额为20日均额 1.20x",
+          "人": "近3日 -1.64%",
+          "正": "收盘<MA5，MA5下压",
+          "反": "10日区间 3958–4192",
+          "合": "MA5<MA20",
+          "归": "区间分位 25%",
+          "守": "振幅为常态 0.86x",
+          "进": "近5日 -2.11%"
+        }
+      },
+      {
+        "date": "20261103",
+        "close": 4008.8748,
+        "valid": true,
+        "obs": [
+          -1,
+          1,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          0,
+          0
+        ],
+        "obs_str": "[-1,1,0,-1,0,-1,0,0,0]",
+        "state": [
+          -1,
+          1,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          0,
+          -1
+        ],
+        "state_str": "[-1,1,-1,-1,0,-1,1,0,-1]",
+        "index": 4476,
+        "regime": "空头确立",
+        "phase": "accumulate",
+        "phase_cn": "积聚",
+        "group27": [
+          -1,
+          -1,
+          0
+        ],
+        "hamming_step": 0,
+        "flips": 0,
+        "tension": {
+          "task_load": 1.0,
+          "context_pressure": 0.492,
+          "stability_flux": 0.0,
+          "T": 0.548
+        },
+        "diag": {
+          "allowed": true,
+          "violation": null,
+          "conservation_ok": true
+        },
+        "why": {
+          "天": "偏离MA20 -1.48%",
+          "地": "成交额为20日均额 1.23x",
+          "人": "近3日 -0.82%",
+          "正": "收盘<MA5，MA5下压",
+          "反": "10日区间 3958–4192",
+          "合": "MA5<MA20",
+          "归": "区间分位 22%",
+          "守": "振幅为常态 1.00x",
+          "进": "近5日 -1.00%"
+        }
+      },
+      {
+        "date": "20261104",
+        "close": 4101.335,
+        "valid": true,
+        "obs": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          -1,
+          0
+        ],
+        "obs_str": "[1,1,1,1,0,0,0,-1,0]",
+        "state": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          -1,
+          1,
+          -1,
+          -1
+        ],
+        "state_str": "[0,1,0,0,0,-1,1,-1,-1]",
+        "index": 12006,
+        "regime": "弱定向",
+        "phase": "transform_a",
+        "phase_cn": "转化A",
+        "group27": [
+          1,
+          -1,
+          -1
+        ],
+        "hamming_step": 4,
+        "flips": 2,
+        "tension": {
+          "task_load": 1.0,
+          "context_pressure": 0.0,
+          "stability_flux": 0.444,
+          "T": 0.533
+        },
+        "diag": {
+          "allowed": false,
+          "violation": "conservation",
+          "conservation_ok": false
+        },
+        "why": {
+          "天": "偏离MA20 +0.73%",
+          "地": "成交额为20日均额 1.29x",
+          "人": "近3日 +2.91%",
+          "正": "收盘>MA5，MA5抬升",
+          "反": "10日区间 3958–4175",
+          "合": "MA5<MA20",
+          "归": "区间分位 61%",
+          "守": "振幅为常态 2.01x",
+          "进": "近5日 +0.43%"
+        }
+      },
+      {
+        "date": "20261105",
+        "close": 4113.4112,
+        "valid": true,
+        "obs": [
+          1,
+          1,
+          1,
+          1,
+          -1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "obs_str": "[1,1,1,1,-1,0,0,0,1]",
+        "state": [
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          0
+        ],
+        "state_str": "[1,1,1,1,-1,-1,1,-1,0]",
+        "index": 19459,
+        "regime": "多空对峙",
+        "phase": "accumulate",
+        "phase_cn": "积聚",
+        "group27": [
+          1,
+          -1,
+          0
+        ],
+        "hamming_step": 5,
+        "flips": 0,
+        "tension": {
+          "task_load": 1.0,
+          "context_pressure": 0.0,
+          "stability_flux": 0.556,
+          "T": 0.567
+        },
+        "diag": {
+          "allowed": false,
+          "violation": "conservation",
+          "conservation_ok": false
+        },
+        "why": {
+          "天": "偏离MA20 +0.95%",
+          "地": "成交额为20日均额 1.31x",
+          "人": "近3日 +2.40%",
+          "正": "收盘>MA5，MA5抬升",
+          "反": "10日区间 3958–4111",
+          "合": "MA5<MA20",
+          "归": "区间分位 66%",
+          "守": "振幅为常态 1.17x",
+          "进": "近5日 +1.77%"
+        }
+      },
+      {
+        "date": "20261106",
+        "close": 4054.2769,
+        "valid": true,
+        "obs": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "obs_str": "[0,0,1,0,0,0,0,0,1]",
+        "state": [
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          1
+        ],
+        "state_str": "[1,1,1,1,-1,-1,1,-1,1]",
+        "index": 19460,
+        "regime": "多头确立",
+        "phase": "accumulate",
+        "phase_cn": "积聚",
+        "group27": [
+          1,
+          -1,
+          1
+        ],
+        "hamming_step": 1,
+        "flips": 0,
+        "tension": {
+          "task_load": 0.912,
+          "context_pressure": 0.156,
+          "stability_flux": 0.111,
+          "T": 0.445
+        },
+        "diag": {
+          "allowed": false,
+          "violation": "conservation",
+          "conservation_ok": false
+        },
+        "why": {
+          "天": "偏离MA20 -0.47%",
+          "地": "成交额为20日均额 1.01x",
+          "人": "近3日 +1.13%",
+          "正": "收盘<MA5，MA5抬升",
+          "反": "10日区间 3958–4137",
+          "合": "MA5<MA20",
+          "归": "区间分位 41%",
+          "守": "振幅为常态 0.91x",
+          "进": "近5日 +1.73%"
+        }
+      },
+      {
+        "date": "20261109",
+        "close": 4056.1081,
+        "valid": true,
+        "obs": [
+          0,
+          -1,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "obs_str": "[0,-1,-1,0,0,0,0,1,0]",
+        "state": [
+          1,
+          0,
+          0,
+          1,
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "state_str": "[1,0,0,1,-1,-1,1,0,1]",
+        "index": 16547,
+        "regime": "弱定向",
+        "phase": "accumulate",
+        "phase_cn": "积聚",
+        "group27": [
+          1,
+          -1,
+          1
+        ],
+        "hamming_step": 3,
+        "flips": 1,
+        "tension": {
+          "task_load": 0.453,
+          "context_pressure": 0.132,
+          "stability_flux": 0.333,
+          "T": 0.321
+        },
+        "diag": {
+          "allowed": false,
+          "violation": "conservation",
+          "conservation_ok": false
+        },
+        "why": {
+          "天": "偏离MA20 -0.40%",
+          "地": "成交额为20日均额 0.84x",
+          "人": "近3日 -1.10%",
+          "正": "收盘<MA5，MA5抬升",
+          "反": "10日区间 3969–4137",
+          "合": "MA5<MA20",
+          "归": "区间分位 42%",
+          "守": "振幅为常态 0.45x",
+          "进": "近5日 +0.98%"
+        }
+      },
+      {
+        "date": "20261110",
+        "close": 4059.1105,
+        "valid": true,
+        "obs": [
+          0,
+          -1,
+          -1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "obs_str": "[0,-1,-1,0,0,1,0,1,0]",
+        "state": [
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          0,
+          1,
+          1,
+          1
+        ],
+        "state_str": "[1,-1,-1,1,-1,0,1,1,1]",
+        "index": 13661,
+        "regime": "多空对峙",
+        "phase": "accumulate",
+        "phase_cn": "积聚",
+        "group27": [
+          -1,
+          0,
+          1
+        ],
+        "hamming_step": 4,
+        "flips": 0,
+        "tension": {
+          "task_load": 0.598,
+          "context_pressure": 0.101,
+          "stability_flux": 0.444,
+          "T": 0.403
+        },
+        "diag": {
+          "allowed": false,
+          "violation": "conservation",
+          "conservation_ok": false
+        },
+        "why": {
+          "天": "偏离MA20 -0.30%",
+          "地": "成交额为20日均额 0.82x",
+          "人": "近3日 -1.32%",
+          "正": "收盘<MA5，MA5抬升",
+          "反": "10日区间 3969–4137",
+          "合": "MA5>MA20",
+          "归": "区间分位 43%",
+          "守": "振幅为常态 0.60x",
+          "进": "近5日 +1.25%"
+        }
+      },
+      {
+        "date": "20261111",
+        "close": 4075.7093,
+        "valid": true,
+        "obs": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "obs_str": "[0,0,0,0,0,0,0,0,0]",
+        "state": [
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          0,
+          1,
+          1,
+          1
+        ],
+        "state_str": "[1,-1,-1,1,-1,0,1,1,1]",
+        "index": 13661,
+        "regime": "多空对峙",
+        "phase": "accumulate",
+        "phase_cn": "积聚",
+        "group27": [
+          -1,
+          0,
+          1
+        ],
+        "hamming_step": 0,
+        "flips": 0,
+        "tension": {
+          "task_load": 0.829,
+          "context_pressure": 0.0,
+          "stability_flux": 0.0,
+          "T": 0.332
+        },
+        "diag": {
+          "allowed": true,
+          "violation": null,
+          "conservation_ok": true
+        },
+        "why": {
+          "天": "偏离MA20 +0.10%",
+          "地": "成交额为20日均额 0.95x",
+          "人": "近3日 +0.53%",
+          "正": "收盘>MA5，MA5下压",
+          "反": "10日区间 3969–4137",
+          "合": "MA5>MA20",
+          "归": "区间分位 50%",
+          "守": "振幅为常态 0.87x",
+          "进": "近5日 -0.62%"
+        }
+      },
+      {
+        "date": "20261112",
+        "close": 4043.9254,
+        "valid": true,
+        "obs": [
+          -1,
+          0,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          0,
+          -1
+        ],
+        "obs_str": "[-1,0,0,-1,0,-1,0,0,-1]",
+        "state": [
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          -1,
+          1,
+          1,
+          0
+        ],
+        "state_str": "[0,-1,-1,0,-1,-1,1,1,0]",
+        "index": 6829,
+        "regime": "弱定向",
+        "phase": "accumulate",
+        "phase_cn": "积聚",
+        "group27": [
+          -1,
+          -1,
+          1
+        ],
+        "hamming_step": 4,
+        "flips": 0,
+        "tension": {
+          "task_load": 1.0,
+          "context_pressure": 0.215,
+          "stability_flux": 0.444,
+          "T": 0.598
+        },
+        "diag": {
+          "allowed": false,
+          "violation": "conservation",
+          "conservation_ok": false
+        },
+        "why": {
+          "天": "偏离MA20 -0.64%",
+          "地": "成交额为20日均额 1.09x",
+          "人": "近3日 -0.30%",
+          "正": "收盘<MA5，MA5下压",
+          "反": "10日区间 3969–4137",
+          "合": "MA5<MA20",
+          "归": "区间分位 37%",
+          "守": "振幅为常态 1.09x",
+          "进": "近5日 -1.69%"
+        }
+      },
+      {
+        "date": "20261113",
+        "close": 4016.2897,
+        "valid": true,
+        "obs": [
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          0,
+          0,
+          0
+        ],
+        "obs_str": "[-1,0,-1,-1,0,-1,0,0,0]",
+        "state": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          0
+        ],
+        "state_str": "[-1,-1,-1,-1,-1,-1,1,1,0]",
+        "index": 25,
+        "regime": "空头确立",
+        "phase": "accumulate",
+        "phase_cn": "积聚",
+        "group27": [
+          -1,
+          -1,
+          1
+        ],
+        "hamming_step": 2,
+        "flips": 0,
+        "tension": {
+          "task_load": 0.798,
+          "context_pressure": 0.418,
+          "stability_flux": 0.222,
+          "T": 0.511
+        },
+        "diag": {
+          "allowed": false,
+          "violation": "conservation",
+          "conservation_ok": false
+        },
+        "why": {
+          "天": "偏离MA20 -1.25%",
+          "地": "成交额为20日均额 0.99x",
+          "人": "近3日 -1.05%",
+          "正": "收盘<MA5，MA5下压",
+          "反": "10日区间 3969–4137",
+          "合": "MA5<MA20",
+          "归": "区间分位 25%",
+          "守": "振幅为常态 0.83x",
+          "进": "近5日 -0.94%"
+        }
+      },
+      {
+        "date": "20261116",
+        "close": 3979.8035,
+        "valid": true,
+        "obs": [
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          1,
+          -1
+        ],
+        "obs_str": "[-1,0,-1,-1,0,-1,1,1,-1]",
+        "state": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          -1
+        ],
+        "state_str": "[-1,-1,-1,-1,-1,-1,1,1,-1]",
+        "index": 24,
+        "regime": "空头确立",
+        "phase": "accumulate",
+        "phase_cn": "积聚",
+        "group27": [
+          -1,
+          -1,
+          1
+        ],
+        "hamming_step": 1,
+        "flips": 0,
+        "tension": {
+          "task_load": 0.694,
+          "context_pressure": 0.682,
+          "stability_flux": 0.111,
+          "T": 0.516
+        },
+        "diag": {
+          "allowed": false,
+          "violation": "conservation",
+          "conservation_ok": false
+        },
+        "why": {
+          "天": "偏离MA20 -2.05%",
+          "地": "成交额为20日均额 0.93x",
+          "人": "近3日 -2.35%",
+          "正": "收盘<MA5，MA5下压",
+          "反": "10日区间 3970–4137",
+          "合": "MA5<MA20",
+          "归": "区间分位 9%",
+          "守": "振幅为常态 0.69x",
+          "进": "近5日 -1.88%"
+        }
+      },
+      {
+        "date": "20261117",
+        "close": 3976.4629,
+        "valid": true,
+        "obs": [
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          0,
+          -1
+        ],
+        "obs_str": "[-1,0,-1,-1,0,-1,1,0,-1]",
+        "state": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          -1
+        ],
+        "state_str": "[-1,-1,-1,-1,-1,-1,1,1,-1]",
+        "index": 24,
+        "regime": "空头确立",
+        "phase": "accumulate",
+        "phase_cn": "积聚",
+        "group27": [
+          -1,
+          -1,
+          1
+        ],
+        "hamming_step": 0,
+        "flips": 0,
+        "tension": {
+          "task_load": 0.815,
+          "context_pressure": 0.63,
+          "stability_flux": 0.0,
+          "T": 0.515
+        },
+        "diag": {
+          "allowed": true,
+          "violation": null,
+          "conservation_ok": true
+        },
+        "why": {
+          "天": "偏离MA20 -1.89%",
+          "地": "成交额为20日均额 0.88x",
+          "人": "近3日 -1.67%",
+          "正": "收盘<MA5，MA5下压",
+          "反": "10日区间 3960–4137",
+          "合": "MA5<MA20",
+          "归": "区间分位 15%",
+          "守": "振幅为常态 0.84x",
+          "进": "近5日 -2.04%"
+        }
+      },
+      {
+        "date": "20261118",
+        "close": 3983.7667,
+        "valid": true,
+        "obs": [
+          -1,
+          -1,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          0,
+          -1
+        ],
+        "obs_str": "[-1,-1,0,-1,0,-1,0,0,-1]",
+        "state": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          -1
+        ],
+        "state_str": "[-1,-1,-1,-1,-1,-1,1,1,-1]",
+        "index": 24,
+        "regime": "空头确立",
+        "phase": "accumulate",
+        "phase_cn": "积聚",
+        "group27": [
+          -1,
+          -1,
+          1
+        ],
+        "hamming_step": 0,
+        "flips": 0,
+        "tension": {
+          "task_load": 0.844,
+          "context_pressure": 0.501,
+          "stability_flux": 0.0,
+          "T": 0.488
+        },
+        "diag": {
+          "allowed": true,
+          "violation": null,
+          "conservation_ok": true
+        },
+        "why": {
+          "天": "偏离MA20 -1.50%",
+          "地": "成交额为20日均额 0.84x",
+          "人": "近3日 -0.81%",
+          "正": "收盘<MA5，MA5下压",
+          "反": "10日区间 3942–4137",
+          "合": "MA5<MA20",
+          "归": "区间分位 21%",
+          "守": "振幅为常态 0.86x",
+          "进": "近5日 -2.26%"
+        }
+      },
+      {
+        "date": "20261119",
+        "close": 3984.8399,
+        "valid": true,
+        "obs": [
+          -1,
+          0,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          0,
+          0
+        ],
+        "obs_str": "[-1,0,0,-1,0,-1,0,0,0]",
+        "state": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          -1
+        ],
+        "state_str": "[-1,-1,-1,-1,-1,-1,1,1,-1]",
+        "index": 24,
+        "regime": "空头确立",
+        "phase": "accumulate",
+        "phase_cn": "积聚",
+        "group27": [
+          -1,
+          -1,
+          1
+        ],
+        "hamming_step": 0,
+        "flips": 0,
+        "tension": {
+          "task_load": 1.0,
+          "context_pressure": 0.472,
+          "stability_flux": 0.0,
+          "T": 0.541
+        },
+        "diag": {
+          "allowed": true,
+          "violation": null,
+          "conservation_ok": true
+        },
+        "why": {
+          "天": "偏离MA20 -1.41%",
+          "地": "成交额为20日均额 0.85x",
+          "人": "近3日 +0.13%",
+          "正": "收盘<MA5，MA5下压",
+          "反": "10日区间 3942–4137",
+          "合": "MA5<MA20",
+          "归": "区间分位 24%",
+          "守": "振幅为常态 1.16x",
+          "进": "近5日 -1.46%"
+        }
+      },
+      {
+        "date": "20261120",
+        "close": 3954.565,
+        "valid": true,
+        "obs": [
+          -1,
+          0,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          -1,
+          -1
+        ],
+        "obs_str": "[-1,0,0,-1,0,-1,0,-1,-1]",
+        "state": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          0,
+          -1
+        ],
+        "state_str": "[-1,-1,-1,-1,-1,-1,1,0,-1]",
+        "index": 21,
+        "regime": "空头确立",
+        "phase": "accumulate",
+        "phase_cn": "积聚",
+        "group27": [
+          -1,
+          -1,
+          0
+        ],
+        "hamming_step": 1,
+        "flips": 0,
+        "tension": {
+          "task_load": 1.0,
+          "context_pressure": 0.66,
+          "stability_flux": 0.111,
+          "T": 0.631
+        },
+        "diag": {
+          "allowed": false,
+          "violation": "conservation",
+          "conservation_ok": false
+        },
+        "why": {
+          "天": "偏离MA20 -1.98%",
+          "地": "成交额为20日均额 0.96x",
+          "人": "近3日 -0.55%",
+          "正": "收盘<MA5，MA5下压",
+          "反": "10日区间 3938–4100",
+          "合": "MA5<MA20",
+          "归": "区间分位 25%",
+          "守": "振幅为常态 1.34x",
+          "进": "近5日 -1.54%"
+        }
+      }
+    ],
+    "summary": {
+      "first_date": "20261027",
+      "last_date": "20261120",
+      "first_close": 4049.5516,
+      "last_close": 3954.565,
+      "period_return_pct": -2.35,
+      "last_obs": [
+        -1,
+        0,
+        0,
+        -1,
+        0,
+        -1,
+        0,
+        -1,
+        -1
+      ],
+      "last_obs_str": "[-1,0,0,-1,0,-1,0,-1,-1]",
+      "last_state": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        1,
+        0,
+        -1
+      ],
+      "last_state_str": "[-1,-1,-1,-1,-1,-1,1,0,-1]",
+      "last_index": 21,
+      "last_regime": "空头确立",
+      "last_phase": "积聚",
+      "last_group27": [
+        -1,
+        -1,
+        0
+      ],
+      "tension": {
+        "task_load": 1.0,
+        "context_pressure": 0.66,
+        "stability_flux": 0.111,
+        "T": 0.631
+      },
+      "determined_dims": 5,
+      "suspended_dims": 4,
+      "obs_direct_flips": 4,
+      "state_direct_flips": 0,
+      "conservation_breaks": 13,
+      "regime_path": [
+        {
+          "date": "20261027",
+          "regime": "悬置主导"
+        },
+        {
+          "date": "20261028",
+          "regime": "弱定向"
+        },
+        {
+          "date": "20261029",
+          "regime": "空头确立"
+        },
+        {
+          "date": "20261030",
+          "regime": "空头确立"
+        },
+        {
+          "date": "20261102",
+          "regime": "空头确立"
+        },
+        {
+          "date": "20261103",
+          "regime": "空头确立"
+        },
+        {
+          "date": "20261104",
+          "regime": "弱定向"
+        },
+        {
+          "date": "20261105",
+          "regime": "多空对峙"
+        },
+        {
+          "date": "20261106",
+          "regime": "多头确立"
+        },
+        {
+          "date": "20261109",
+          "regime": "弱定向"
+        },
+        {
+          "date": "20261110",
+          "regime": "多空对峙"
+        },
+        {
+          "date": "20261111",
+          "regime": "多空对峙"
+        },
+        {
+          "date": "20261112",
+          "regime": "弱定向"
+        },
+        {
+          "date": "20261113",
+          "regime": "空头确立"
+        },
+        {
+          "date": "20261116",
+          "regime": "空头确立"
+        },
+        {
+          "date": "20261117",
+          "regime": "空头确立"
+        },
+        {
+          "date": "20261118",
+          "regime": "空头确立"
+        },
+        {
+          "date": "20261119",
+          "regime": "空头确立"
+        },
+        {
+          "date": "20261120",
+          "regime": "空头确立"
+        }
+      ],
+      "tension_path": [
+        {
+          "date": "20261027",
+          "T": 0.661
+        },
+        {
+          "date": "20261028",
+          "T": 0.3
+        },
+        {
+          "date": "20261029",
+          "T": 0.46
+        },
+        {
+          "date": "20261030",
+          "T": 0.702
+        },
+        {
+          "date": "20261102",
+          "T": 0.521
+        },
+        {
+          "date": "20261103",
+          "T": 0.548
+        },
+        {
+          "date": "20261104",
+          "T": 0.533
+        },
+        {
+          "date": "20261105",
+          "T": 0.567
+        },
+        {
+          "date": "20261106",
+          "T": 0.445
+        },
+        {
+          "date": "20261109",
+          "T": 0.321
+        },
+        {
+          "date": "20261110",
+          "T": 0.403
+        },
+        {
+          "date": "20261111",
+          "T": 0.332
+        },
+        {
+          "date": "20261112",
+          "T": 0.598
+        },
+        {
+          "date": "20261113",
+          "T": 0.511
+        },
+        {
+          "date": "20261116",
+          "T": 0.516
+        },
+        {
+          "date": "20261117",
+          "T": 0.515
+        },
+        {
+          "date": "20261118",
+          "T": 0.488
+        },
+        {
+          "date": "20261119",
+          "T": 0.541
+        },
+        {
+          "date": "20261120",
+          "T": 0.631
+        }
+      ]
+    }
+  }
+}

@@ -12,3 +12,6 @@ venv/
 
 # 页面自检截图（本地校验产物，不入库）
 docs/_shots/
+
+# 股票模块自检截图
+stock/_shots/
