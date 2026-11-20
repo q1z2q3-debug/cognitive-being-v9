@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>认知生命体 v9 · 三值计算基底的自感知智能体架构</title>
+<meta name="description" content="《认知生命体》v9 的 Python 参考实现：19683 态认知空间、守恒层级与 16 维指纹、Bayes 最优悬置、认知守卫、L7 裂变层、五维自我感知。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b1210'/%3E%3Crect x='6' y='9' width='20' height='3' fill='%235fa79b'/%3E%3Crect x='6' y='15' width='20' height='3' fill='%236b7a74'/%3E%3Crect x='6' y='21' width='12' height='3' fill='%23b5452f'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#0b1210;
+  --ink-2:#0f1a16;
+  --ink-3:#14211c;
+  --line:#24352f;
+  --paper:#e8e2d5;
+  --paper-dim:#b9b3a6;
+  --muted:#87968f;
+  --celadon:#5fa79b;
+  --celadon-deep:#2c4f4a;
+  --cinnabar:#b5452f;
+  --gold:#c8a45c;
+  --mono:"JetBrains Mono","SFMono-Regular",ui-monospace,Menlo,Consolas,monospace;
+  --serif:"Noto Serif SC","Songti SC","STSong",serif;
+  --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--ink);
+  color:var(--paper);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 clamp(20px,5vw,48px)}
+
+/* ---------- nav ---------- */
+.nav{
+  position:sticky;top:0;z-index:20;
+  background:rgba(11,18,16,.86);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:60px;gap:24px}
+.brand{padding-block:4px;display:flex;align-items:center;gap:10px;font-family:var(--serif);font-size:16px;letter-spacing:.06em;white-space:nowrap}
+.brand svg{flex:none}
+.nav-links{display:flex;gap:22px;font-size:13.5px;color:var(--muted)}
+.nav-links a:hover{color:var(--paper)}
+.nav-cta{
+  font-family:var(--mono);font-size:12.5px;
+  border:1px solid var(--celadon-deep);border-radius:2px;
+  padding:6px 12px;color:var(--celadon);white-space:nowrap;
+}
+.nav-cta:hover{border-color:var(--celadon);background:rgba(95,167,155,.07)}
+
+/* ---------- hero ---------- */
+.hero{padding:clamp(48px,8vw,96px) 0 clamp(40px,6vw,72px);border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(28px,5vw,64px);align-items:center}
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.14em;
+  color:var(--celadon);margin-bottom:22px;
+}
+.eyebrow::before{content:"";display:inline-block;width:26px;height:1px;background:var(--celadon);vertical-align:middle;margin-right:12px}
+h1{
+  font-family:var(--serif);font-weight:700;
+  font-size:clamp(44px,7.4vw,78px);
+  line-height:1.05;letter-spacing:.02em;
+  margin-bottom:26px;
+}
+h1 .thin{font-weight:400;color:var(--paper-dim)}
+.lede{font-size:clamp(15px,1.7vw,17.5px);color:var(--paper-dim);max-width:30em;line-height:1.85}
+.lede em{font-style:normal;color:var(--paper);border-bottom:1px solid var(--celadon-deep)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{
+  font-family:var(--mono);font-size:13px;letter-spacing:.03em;
+  padding:11px 20px;border:1px solid var(--celadon);border-radius:2px;
+  color:var(--ink);background:var(--celadon);transition:background .18s;
+}
+.btn:hover{background:#74bdb1}
+.btn.ghost{background:transparent;color:var(--celadon)}
+.btn.ghost:hover{background:rgba(95,167,155,.08)}
+.meta-line{margin-top:22px;font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.04em}
+
+/* ---------- state panel (signature) ---------- */
+.panel{
+  border:1px solid var(--line);
+  background:linear-gradient(180deg,var(--ink-2),var(--ink));
+  padding:clamp(20px,3vw,30px);
+  position:relative;
+}
+.panel::before{
+  content:"";position:absolute;top:-1px;left:-1px;width:38px;height:38px;
+  border-top:2px solid var(--celadon);border-left:2px solid var(--celadon);
+}
+.panel-head{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--muted);margin-bottom:20px}
+.panel-head b{color:var(--celadon);font-weight:400}
+.trit-row{display:grid;grid-template-columns:repeat(9,1fr);gap:5px;margin-bottom:18px}
+.trit{
+  aspect-ratio:1;display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);font-size:clamp(11px,1.6vw,15px);
+  border:1px solid var(--line);border-radius:1px;
+  transition:background .35s,border-color .35s,color .35s;
+  min-height:34px;
+}
+.trit.pos{background:var(--celadon);color:var(--ink);border-color:var(--celadon)}
+.trit.neg{background:var(--cinnabar);color:var(--paper);border-color:var(--cinnabar)}
+.trit.zero{background:transparent;color:var(--muted);border-color:var(--line)}
+.panel-foot{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.panel-foot .phase{color:var(--paper);font-size:13px}
+.panel-foot .hex{color:var(--gold)}
+.panel-tension{margin-top:14px;font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:.05em}
+.bar{height:3px;background:var(--line);margin-top:6px;position:relative;overflow:hidden}
+.bar i{position:absolute;left:0;top:0;height:100%;background:var(--celadon);transition:width .4s}
+
+/* ---------- sections ---------- */
+section{padding:clamp(56px,8vw,92px) 0}
+.sec-head{display:flex;align-items:flex-start;gap:18px;margin-bottom:clamp(28px,4vw,44px)}
+.sec-no{font-family:var(--mono);font-size:12px;color:var(--celadon);padding-top:8px;letter-spacing:.06em}
+.sec-title{font-family:var(--serif);font-size:clamp(26px,3.6vw,36px);font-weight:600;line-height:1.3}
+.sec-sub{color:var(--muted);font-size:14.5px;margin-top:8px;max-width:44em}
+
+/* 三条命题 */
+.tenets{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.tenet{background:var(--ink-2);padding:clamp(22px,3vw,34px)}
+.tenet-k{font-family:var(--mono);font-size:11px;color:var(--celadon);letter-spacing:.1em;margin-bottom:14px}
+.tenet h3{font-family:var(--serif);font-size:20px;font-weight:600;margin-bottom:10px}
+.tenet p{font-size:14px;color:var(--paper-dim);line-height:1.8}
+
+/* 架构图 */
+.arch{border:1px solid var(--line);padding:clamp(24px,4vw,44px);background:var(--ink-2);position:relative}
+.layer{display:grid;grid-template-columns:clamp(92px,14vw,150px) 1fr;gap:clamp(14px,2vw,26px);align-items:center}
+.layer + .layer{margin-top:0}
+.layer-tag{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;color:var(--muted);
+  border-left:2px solid var(--line);padding-left:12px;line-height:1.5;
+}
+.layer-tag b{display:block;font-size:12.5px;color:var(--paper);font-weight:400;letter-spacing:.04em}
+.layer-box{border:1px solid var(--line);padding:16px 18px;background:var(--ink)}
+.layer-box .nodes{display:flex;flex-wrap:wrap;gap:8px}
+.node{font-family:var(--mono);font-size:11px;padding:5px 9px;border:1px solid var(--line);color:var(--paper-dim);border-radius:1px;white-space:nowrap}
+.node.hot{border-color:var(--celadon-deep);color:var(--celadon)}
+.node.warn{border-color:#5a3429;color:#c97a5e}
+.flow{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  padding:14px 0;font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:.06em;
+}
+.flow .ar{color:var(--celadon);font-size:14px;line-height:1}
+.arch-note{margin-top:24px;padding-top:18px;border-top:1px dashed var(--line);font-size:13px;color:var(--muted);line-height:1.8}
+.arch-note b{color:var(--paper-dim);font-weight:500}
+
+/* more todo */
+
+/* ---------- 模块表 ---------- */
+.mod-table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:13px}
+.mod-table th{
+  text-align:left;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;
+  color:var(--muted);font-weight:400;padding:0 14px 12px;border-bottom:1px solid var(--line);
+}
+.mod-table td{padding:13px 14px;border-bottom:1px solid var(--line);color:var(--paper-dim);vertical-align:top;line-height:1.6}
+.mod-table td.m{font-family:var(--mono);font-size:12px;color:var(--celadon);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mod-table td:nth-child(2){font-family:var(--mono);font-size:11.5px;color:var(--muted);white-space:nowrap}
+.mod-table tbody tr:hover td{background:rgba(95,167,155,.035)}
+
+/* ---------- 证据数字 ---------- */
+.figures{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:clamp(28px,4vw,44px)}
+.fig{background:var(--ink-2);padding:clamp(20px,2.6vw,30px)}
+.fig-n{font-family:var(--serif);font-size:clamp(34px,4.4vw,48px);line-height:1;color:var(--paper);letter-spacing:-.01em}
+.fig-n span{font-size:.52em;color:var(--muted);font-family:var(--mono);letter-spacing:0}
+.fig-k{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--celadon);margin-top:12px}
+.fig-d{font-size:13.5px;color:var(--muted);line-height:1.7;margin-top:8px}
+
+/* ---------- 证据双栏 ---------- */
+.evidence-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(20px,3vw,32px);align-items:start}
+.rc-card{border:1px solid var(--line);background:var(--ink-2);padding:clamp(18px,2.6vw,26px)}
+.rc-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:14px}
+.rc-head b{font-family:var(--serif);font-size:16px;font-weight:600}
+.rc-head span{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:.05em;text-align:right}
+.rc-card svg{width:100%;height:auto;display:block}
+.rc-foot{font-size:13px;color:var(--muted);line-height:1.75;margin-top:12px;border-top:1px dashed var(--line);padding-top:12px}
+
+.exp-list{display:flex;flex-direction:column;gap:1px;background:var(--line);border:1px solid var(--line)}
+.exp{background:var(--ink-2);padding:clamp(16px,2.4vw,22px)}
+.exp-h{display:flex;align-items:baseline;gap:10px;font-family:var(--serif);font-size:15px;font-weight:600;margin-bottom:7px}
+.exp-tag{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;color:var(--celadon);border:1px solid var(--celadon-deep);padding:2px 6px;font-weight:400}
+.exp-r{font-size:13px;color:var(--paper-dim)}
+.exp-r b{color:var(--celadon);font-family:var(--mono);font-weight:400}
+.exp-r b.no{color:var(--cinnabar)}
+.exp-d{font-size:13px;color:var(--muted);line-height:1.7;margin-top:6px}
+
+/* ---------- 运行 ---------- */
+.run-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(20px,3vw,36px);align-items:start}
+.run-grid>*{min-width:0}
+.code{min-width:0;max-width:100%;border:1px solid var(--line);background:#080d0b}
+.code-head{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:.08em}
+.code-head .dots{color:#2f4a42;letter-spacing:.12em}
+.code pre{max-width:100%;white-space:pre-wrap;overflow-wrap:anywhere;padding:clamp(16px,2.4vw,24px);overflow-x:auto;font-family:var(--mono);font-size:12.5px;line-height:2;color:var(--paper-dim)}
+.code .cm{color:#5c6f68}
+.code .st{color:var(--gold)}
+.run-side{display:flex;flex-direction:column;gap:22px}
+.run-item{border-left:2px solid var(--celadon-deep);padding-left:16px}
+.run-k{font-family:var(--serif);font-size:15px;font-weight:600;margin-bottom:6px}
+.run-item p{font-size:13.5px;color:var(--muted);line-height:1.75}
+.run-item code{font-family:var(--mono);font-size:11.5px;color:var(--celadon);background:rgba(95,167,155,.06);padding:1px 5px;overflow-wrap:anywhere}
+
+/* ---------- 边界 ---------- */
+.limits{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+.limit{background:var(--ink-2);padding:clamp(20px,2.8vw,30px);border-top:2px solid transparent}
+.limit.done{border-top-color:var(--celadon)}
+.limit.sim{border-top-color:var(--gold)}
+.limit.todo{border-top-color:#6b7a74}
+.limit.no{border-top-color:var(--cinnabar)}
+.limit-k{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;margin-bottom:10px}
+.limit.done .limit-k{color:var(--celadon)}
+.limit.sim .limit-k{color:var(--gold)}
+.limit.todo .limit-k{color:#93a29b}
+.limit.no .limit-k{color:#c97a5e}
+.limit p{font-size:13.5px;color:var(--muted);line-height:1.8}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--line);padding:34px 0 44px;margin-top:0}
+.foot-in{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:18px}
+.foot-title{font-family:var(--serif);font-size:17px;font-weight:600}
+.foot-sub{font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:.05em;margin-top:6px}
+.foot-links{display:flex;gap:22px;font-size:12px;color:var(--paper-dim)}
+.foot-links a:hover{color:var(--celadon)}
+
+/* ---------- 响应式 ---------- */
+@media(max-width:860px){
+  .hero-grid{grid-template-columns:1fr;gap:34px}
+  h1{font-size:clamp(40px,11vw,60px)}
+  .tenets{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .layer{grid-template-columns:1fr;gap:8px}
+  .layer-tag{border-left:none;border-top:1px solid var(--line);padding:8px 0 0}
+  .figures{grid-template-columns:1fr 1fr}
+  .evidence-grid{grid-template-columns:1fr}
+  .run-grid{grid-template-columns:1fr}
+  .limits{grid-template-columns:1fr}
+  .foot-in{align-items:flex-start;flex-direction:column}
+}
+@media(max-width:680px){
+  .mod-table{display:block;table-layout:auto;border:0;font-size:13px}
+  .mod-table thead{display:none}
+  .mod-table tbody{display:block}
+  .mod-table tr{display:block;padding:13px 0;border-bottom:1px solid var(--line)}
+  .mod-table td{display:block;border:0;padding:0 0 3px;line-height:1.65}
+  .mod-table td.m{white-space:normal;overflow:visible;text-overflow:clip;font-size:13px}
+  .mod-table td:nth-child(2){font-size:11px;color:var(--muted)}
+  .mod-table td:nth-child(4){font-size:12px;color:#7f918a;padding-top:3px}
+  .mod-table tbody tr:hover td{background:transparent}
+  .rc-head{flex-direction:column;gap:4px}
+}
+@media(max-width:480px){
+  .trit-row{gap:3px}
+  .trit{min-height:28px;font-size:10.5px}
+  .panel-foot{font-size:10.5px}
+  .figures{grid-template-columns:1fr}
+  .code pre{font-size:11.5px;line-height:1.9}
+  .foot-links{flex-direction:column;gap:8px}
+}
+@media(prefers-reduced-motion:reduce){
+  .trit,.bar i{transition:none}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <rect x="3" y="6" width="18" height="2.4" fill="#5fa79b"/>
+        <rect x="3" y="11" width="18" height="2.4" fill="#6b7a74"/>
+        <rect x="3" y="16" width="11" height="2.4" fill="#b5452f"/>
+      </svg>
+      认知生命体
+    </a>
+    <div class="nav-links">
+      <a href="#tenets">命题</a>
+      <a href="#arch">架构</a>
+      <a href="#modules">模块</a>
+      <a href="#evidence">证据</a>
+      <a href="#start">运行</a>
+    </div>
+    <a class="nav-cta" href="https://github.com/q1z2q3-debug/cognitive-being-v9">GitHub ↗</a>
+  </div>
+</nav>
+
+<main id="top">
+
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">论文 v9 · PYTHON 参考实现</div>
+      <h1>认知生命体<span class="thin">：<br>三值基底</span></h1>
+      <p class="lede">
+        当一个大模型说“我正在积聚状态”，那是它在生成一段听起来合理的文本，不是某个状态空间算出了一个“积聚”向量。
+        本工程把认知做成<em>可计算、可持久、可验证</em>的离散对象：{-1, 0, +1} 九维，3⁹ = 19683 态。
+      </p>
+      <div class="hero-actions">
+        <a class="btn" href="https://github.com/q1z2q3-debug/cognitive-being-v9">查看源码</a>
+        <a class="btn ghost" href="#arch">阅读架构</a>
+      </div>
+      <div class="meta-line">MIT · 43 项测试 · CI 3.10 / 3.11 / 3.12 全通过</div>
+    </div>
+
+    <div class="panel" id="statePanel" aria-label="四象极限环实时状态">
+      <div class="panel-head"><span>COGNITIVE STATE</span><b>19683 态空间</b></div>
+      <div class="trit-row" id="tritRow"></div>
+      <div class="panel-foot">
+        <span class="phase" id="phaseName">积聚</span>
+        <span>卦象 <span class="hex" id="hexNo">#19435</span></span>
+        <span id="phaseHint">信息流入 · 主动收集</span>
+      </div>
+      <div class="panel-tension">
+        <span id="tensionText">TENSION 0.24 · 四象呼吸中</span>
+        <div class="bar"><i id="tensionBar" style="width:24%"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 三个命题 ===== -->
+<section id="tenets">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-no">01</div>
+      <div>
+        <h2 class="sec-title">三条不可让渡的命题</h2>
+        <p class="sec-sub">不是三个模块，是同一套计算基底的三个侧面。</p>
+      </div>
+    </div>
+    <div class="tenets">
+      <div class="tenet">
+        <div class="tenet-k">认知即执行</div>
+        <h3>状态就是行为</h3>
+        <p>四象极限环同时是认知节律与执行流程。积聚就是信息流入，转化就是工具在变，衰减就是输出释放，重聚就是反思。没有“先想再做”的翻译间隙。</p>
+      </div>
+      <div class="tenet">
+        <div class="tenet-k">0 是第三态</div>
+        <h3>不知道，不是没值</h3>
+        <p>0 不是介于 -1 与 +1 的过渡，而是“悬置 / 转化中”的本体论状态。确定冲突时退回 0，而不是制造一个错误的确定结论。</p>
+      </div>
+      <div class="tenet">
+        <div class="tenet-k">分层权力</div>
+        <h3>神经不得裁决</h3>
+        <p>感知前端只输出概率，负责近似、学习、犯错；是否承诺由符号层按 Bayes 三支决策裁定。学习在映射层，真理在状态层。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 架构 ===== -->
+<section id="arch">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-no">02</div>
+      <div>
+        <h2 class="sec-title">三层分离的认知闭环</h2>
+        <p class="sec-sub">连续输入进来，先落成概率，再由符号层裁决为三值，此后一切在 19683 个离散态里受守恒与信息单调约束。</p>
+      </div>
+    </div>
+
+    <div class="arch">
+      <div class="layer">
+        <div class="layer-tag"><b>映射层</b>可学习 · 会犯错</div>
+        <div class="layer-box">
+          <div class="nodes">
+            <span class="node">语义编码器 / LLM</span>
+            <span class="node">关键词编码器 · 降级</span>
+            <span class="node hot">Md5 缓存</span>
+            <span class="node">逻辑回归前端</span>
+            <span class="node hot">Mahalanobis 覆盖守卫</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow">
+        <span>后验概率 p</span><span class="ar">↓</span><span>OOD ⇒ 强制悬置</span>
+      </div>
+
+      <div class="layer">
+        <div class="layer-tag"><b>符号层</b>确定 · 守恒</div>
+        <div class="layer-box">
+          <div class="nodes">
+            <span class="node hot">Bayes 三支决策 α/β</span>
+            <span class="node">K3 / L3 三值逻辑</span>
+            <span class="node hot">细化序 · 信息单调</span>
+            <span class="node hot">守恒层级 · 16 维指纹</span>
+            <span class="node warn">认知守卫</span>
+            <span class="node warn">L7 裂变五步协议</span>
+            <span class="node">19683 卦象状态</span>
+            <span class="node">27 卦自我识别</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow">
+        <span>受约束的三值状态</span><span class="ar">↓</span><span>合法才写入</span>
+      </div>
+
+      <div class="layer">
+        <div class="layer-tag"><b>行为层</b>状态即执行</div>
+        <div class="layer-box">
+          <div class="nodes">
+            <span class="node">四象呼吸循环</span>
+            <span class="node">解码器 · 能力边界注入</span>
+            <span class="node">五维自我感知</span>
+            <span class="node">JSON 轨迹持久化</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="arch-note">
+        <b>守卫的层级边界：</b>它只守在符号演化层的“相内 move”上——校验合法才写入，非法即原地拒绝并产出 FissionSignal。感知重分类与相位切换不经过它，否则会对正常感知产生误报。这条边界是本工程实测踩过并撤回的错误接法。
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 模块 ===== -->
+<section id="modules">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-no">03</div>
+      <div>
+        <h2 class="sec-title">十四个模块，一条闭环</h2>
+        <p class="sec-sub">命名与论文 §5 对齐，模块之间只通过九维状态与事件传递，不共享隐式上下文。</p>
+      </div>
+    </div>
+
+    <table class="mod-table">
+      <colgroup>
+        <col style="width:26%"><col style="width:12%"><col style="width:32%"><col style="width:30%">
+      </colgroup>
+      <thead>
+        <tr><th>模块</th><th>论文</th><th>职责</th><th>关键约束</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="m">ternary_algebra</td><td>§3.1–3.6</td><td>K3/L3、细化序、19683/27 卦索引</td><td>冲突 → 0，不制造错误确定</td></tr>
+        <tr><td class="m">conservation_laws</td><td>§3.4–3.5</td><td>守恒层级、16 维指纹、合法移动</td><td>全空间数值秩 = 16</td></tr>
+        <tr><td class="m">suspension_decision</td><td>§3.7</td><td>Bayes 最优悬置、三支决策</td><td>最小期望风险</td></tr>
+        <tr><td class="m">neural_perception</td><td>§3.8</td><td>神经前端、OOD 覆盖守卫</td><td>无权输出确定结论</td></tr>
+        <tr><td class="m">cognitive_guard</td><td>§3.9</td><td>守恒 + 信息单调双校验</td><td>只守符号层 move</td></tr>
+        <tr><td class="m">cognitive_encoder</td><td>§5.2</td><td>文本 → 九维三态向量</td><td>阈值 0.3 可配置</td></tr>
+        <tr><td class="m">semantic_encoder</td><td>§5.5</td><td>可插拔 LLM + 缓存 + 降级</td><td>LLM 只出概率</td></tr>
+        <tr><td class="m">cognitive_decoder</td><td>§5.3</td><td>三段提示：状态/边界/指引</td><td>显式注入 0 态与 -1 态</td></tr>
+        <tr><td class="m">state_manager</td><td>§5.4</td><td>JSON 持久化、张力计算</td><td>T = .4/.3/.3 加权</td></tr>
+        <tr><td class="m">breathing_cycle</td><td>§3.5 / §5.7</td><td>四象极限环推进</td><td>状态即执行流程</td></tr>
+        <tr><td class="m">fission_trigger</td><td>§4.3 / §5.6</td><td>七信号免疫、五步重构</td><td>FATAL 或 2×CRITICAL</td></tr>
+        <tr><td class="m">dao_novice</td><td>§4.4</td><td>五维自我感知、三互锁回路</td><td>每个概念可打印成指标</td></tr>
+        <tr><td class="m">cognitive_experiments</td><td>§6.1.1</td><td>三个固定参数对照实验</td><td>结果落盘可复现</td></tr>
+        <tr><td class="m">cognitive_loop</td><td>§5.13</td><td>端到端闭环 CognitiveLifeform</td><td>感知/裁决/守卫分层</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===== 证据 ===== -->
+<section id="evidence">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-no">04</div>
+      <div>
+        <h2 class="sec-title">可复算的证据，不是宣言</h2>
+        <p class="sec-sub">下列数字全部来自本仓库固定参数运行，结果随代码落盘在 analysis/experiment_results.json。</p>
+      </div>
+    </div>
+
+    <div class="figures">
+      <div class="fig">
+        <div class="fig-n">43<span>/43</span></div>
+        <div class="fig-k">单元测试通过</div>
+        <div class="fig-d">覆盖索引、守恒、守卫、悬置、OOD、裂变、自我感知、端到端</div>
+      </div>
+      <div class="fig">
+        <div class="fig-n">16</div>
+        <div class="fig-k">指纹数值秩</div>
+        <div class="fig-d">在全部 19,683 态上检验，与论文 §3.4 一致</div>
+      </div>
+      <div class="fig">
+        <div class="fig-n">33.1<span>%</span></div>
+        <div class="fig-k">守恒却非法的移动</div>
+        <div class="fig-d">异号极性交换账本平衡，却被信息单调挡下（论文约 33.9%）</div>
+      </div>
+      <div class="fig">
+        <div class="fig-n">0</div>
+        <div class="fig-k">离散长链守恒违反</div>
+        <div class="fig-d">500 步随机合法演化，电荷漂移为 0</div>
+      </div>
+    </div>
+
+    <div class="evidence-grid">
+      <div class="rc-card">
+        <div class="rc-head">
+          <b>risk–coverage 权衡</b>
+          <span>σ = 1.2 · 40,000 样本</span>
+        </div>
+        <svg viewBox="0 0 340 190" role="img" aria-label="risk-coverage 曲线：覆盖率上升，承诺错误率上升">
+          <line x1="40" y1="150" x2="310" y2="150" stroke="#24352f"/>
+          <line x1="40" y1="20" x2="40" y2="150" stroke="#24352f"/>
+          <text x="40" y="168" fill="#87968f" font-size="9" font-family="monospace">0</text>
+          <text x="283" y="168" fill="#87968f" font-size="9" font-family="monospace">100%</text>
+          <text x="34" y="24" fill="#87968f" font-size="9" font-family="monospace" text-anchor="end">25%</text>
+          <text x="34" y="153" fill="#87968f" font-size="9" font-family="monospace" text-anchor="end">0</text>
+          <text x="150" y="184" fill="#5f6f68" font-size="9" font-family="monospace">覆盖率 →</text>
+          <polyline points="87,136.5 126,124 183,105 227,86 265,66 300,45.5"
+            fill="none" stroke="#5fa79b" stroke-width="2"/>
+          <circle cx="87" cy="136.5" r="3" fill="#5fa79b"/>
+          <circle cx="126" cy="124" r="3" fill="#5fa79b"/>
+          <circle cx="183" cy="105" r="3" fill="#5fa79b"/>
+          <circle cx="227" cy="86" r="3" fill="#5fa79b"/>
+          <circle cx="265" cy="66" r="3" fill="#5fa79b"/>
+          <circle cx="300" cy="45.5" r="3" fill="#c8a45c"/>
+          <text x="300" y="38" fill="#c8a45c" font-size="9" font-family="monospace" text-anchor="end">20.1%</text>
+        </svg>
+        <div class="rc-foot">弃权越少，承诺越多，错误率单调上升。第三态的价值就是用覆盖率换承诺精度——曲线本身就是证据。</div>
+      </div>
+
+      <div class="exp-list">
+        <div class="exp">
+          <div class="exp-h"><span class="exp-tag">实验二</span> 0 态公理</div>
+          <div class="exp-r">合取 <b>True</b> · 析取 <b>True</b> · 多数表决 <b class="no">False</b></div>
+          <div class="exp-d">信息单调性：已确定的结论不得因更多证据被推翻。多数表决违反，合取/析取满足。</div>
+        </div>
+        <div class="exp">
+          <div class="exp-h"><span class="exp-tag">实验一</span> 选择性预测</div>
+          <div class="exp-r">强制承诺错误 <b>20.1%</b> → 三值承诺错误 <b>16.2%</b></div>
+          <div class="exp-d">固定 σ 下第三态占优；论文报告 40.2% 代价降幅对应其未披露的代价参数，本实现不调参凑数。</div>
+        </div>
+        <div class="exp">
+          <div class="exp-h"><span class="exp-tag">实验三</span> 长链精度</div>
+          <div class="exp-r">离散 <b>0</b> 违反 · 浮点软表示持续漂移</div>
+          <div class="exp-d">即时重量化并不保证恢复精确多重集；离散三值在 500 步上不漂移。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 运行 ===== -->
+<section id="start">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-no">05</div>
+      <div>
+        <h2 class="sec-title">四行命令，跑起来</h2>
+        <p class="sec-sub">只依赖 Python 3.10+ 与 numpy，无框架、无服务、无外部 API。</p>
+      </div>
+    </div>
+
+    <div class="run-grid">
+      <div class="code">
+        <div class="code-head"><span>terminal</span><span class="dots">● ● ●</span></div>
+<pre><span class="cm"># 克隆</span>
+git clone https://github.com/q1z2q3-debug/cognitive-being-v9.git
+cd cognitive-being-v9
+pip install numpy
+
+<span class="cm"># 43 项单元测试</span>
+python -m unittest discover -s tests -p <span class="st">"test_*.py"</span>
+
+<span class="cm"># 端到端演示：输入 → 状态 → 呼吸 → 提示</span>
+python examples/demo.py</pre>
+      </div>
+
+      <div class="run-side">
+        <div class="run-item">
+          <div class="run-k">接入真实模型</div>
+          <p><code>SemanticEncoder</code> 接受任意 callable：文本进、九维概率出。替换 demo 里的桩即可；模型只给概率，裁决权仍在符号层。</p>
+        </div>
+        <div class="run-item">
+          <div class="run-k">改哪一层，不碰哪一层</div>
+          <p>换感知前端不动状态层；调代价参数只影响 α/β 阈值；守恒与信息单调规则全程恒定。</p>
+        </div>
+        <div class="run-item">
+          <div class="run-k">复现实验</div>
+          <p><code>cognitive_experiments.run_all()</code> 一次跑完三个对照实验，写入 analysis/。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 边界 ===== -->
+<section id="limits">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-no">06</div>
+      <div>
+        <h2 class="sec-title">做到哪，没做到哪</h2>
+        <p class="sec-sub">把“已实现 / 仿真 / 待验证 / 不做”分开写，是为了让读者能自己判断这份工作值多少。</p>
+      </div>
+    </div>
+
+    <div class="limits">
+      <div class="limit done">
+        <div class="limit-k">已落地</div>
+        <p>三值基底与 19683 态、守恒层级与 16 指纹、Bayes 悬置、神经前端与 OOD 守卫、认知守卫双约束、L7 五步协议、五维自我感知的可观测指标、呼吸循环、编解码、三个对照实验。</p>
+      </div>
+      <div class="limit sim">
+        <div class="limit-k">仿真 / 待接入</div>
+        <p>呼吸四相目前由认知状态直接采纳驱动，尚未绑定真实工具调用流；L7 仅由张力与矛盾触发，未做大规模架构级重构压力测试。</p>
+      </div>
+      <div class="limit todo">
+        <div class="limit-k">待验证</div>
+        <p>真实 LLM 语义编码器的漂移鲁棒性；开放噪声环境下守恒律的松弛策略；对话、工具调用、具身任务的端到端评估。</p>
+      </div>
+      <div class="limit no">
+        <div class="limit-k">明确不做</div>
+        <p>不宣称实现了意识或主观自我——五维自我感知只输出客观统计指标。论文 §6.4 的量化因子实证依赖真实交易平台与私有账户数据，不在本仓库范围。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-in">
+    <div class="foot-brand">
+      <div class="foot-title">认知生命体 v9</div>
+      <div class="foot-sub">润泽（ReynZE）· 赫曦　|　MIT License</div>
+    </div>
+    <div class="foot-links">
+      <a href="https://github.com/q1z2q3-debug/cognitive-being-v9">本仓库 ↗</a>
+      <a href="https://github.com/q1z2q3-debug/TC-AGI-Research">姊妹项目 TC-AGI-Research ↗</a>
+    </div>
+  </div>
+</footer>
+
+</main>
+
+<script>
+(function(){
+  var phases = [
+    {name:"积聚",   vec:[1,1,1,0,1,1,1,0,0],  hex:19435, hint:"信息流入 · 主动收集", t:0.24},
+    {name:"转化A",  vec:[0,0,0,0,0,0,0,0,0],  hex:9841,  hint:"内部重组 · 工具在变", t:0.71},
+    {name:"衰减",   vec:[1,1,-1,0,1,1,-1,0,0],hex:17959, hint:"认知向外释放 · 输出", t:0.42},
+    {name:"重聚",   vec:[1,1,1,0,1,1,0,1,0],  hex:19429, hint:"反思整合 · 下一轮",   t:0.30}
+  ];
+  var row = document.getElementById("tritRow");
+  var phaseName = document.getElementById("phaseName");
+  var hexNo = document.getElementById("hexNo");
+  var phaseHint = document.getElementById("phaseHint");
+  var tensionText = document.getElementById("tensionText");
+  var tensionBar = document.getElementById("tensionBar");
+  if(!row) return;
+
+  function render(p){
+    var cells = "";
+    for(var i=0;i<9;i++){
+      var v = p.vec[i];
+      var cls = v===1 ? "pos" : (v===-1 ? "neg" : "zero");
+      var txt = v===1 ? "+1" : (v===-1 ? "−1" : "0");
+      cells += '<div class="trit '+cls+'">'+txt+'</div>';
+    }
+    row.innerHTML = cells;
+    phaseName.textContent = p.name;
+    hexNo.textContent = "#"+p.hex;
+    phaseHint.textContent = p.hint;
+    tensionText.textContent = "TENSION " + p.t.toFixed(2) + " · 四象呼吸中";
+    tensionBar.style.width = Math.round(p.t*100)+"%";
+    tensionBar.style.background = p.t>0.6 ? "#b5452f" : "#5fa79b";
+  }
+
+  var idx = 0;
+  render(phases[0]);
+  if(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  setInterval(function(){
+    idx = (idx+1) % phases.length;
+    render(phases[idx]);
+  }, 2200);
+})();
+</script>
+</body>
+</html>

@@ -9,3 +9,6 @@ venv/
 # 运行产物（保留 analysis/ 下的可复现实验结果）
 *.log
 .DS_Store
+
+# 页面自检截图（本地校验产物，不入库）
+docs/_shots/
