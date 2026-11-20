@@ -1,0 +1,183 @@
+{
+  "experiment1_selective_prediction": {
+    "forced_commit_error_rate": 0.201,
+    "forced_mean_cost": 0.201,
+    "bayes_commit_rate": 0.86435,
+    "bayes_commit_error_rate": 0.16194250014461734,
+    "bayes_mean_cost": 0.194235,
+    "cost_reduction": 0.03365671641791055,
+    "sigma": 1.2,
+    "n": 40000,
+    "risk_coverage_curve": [
+      {
+        "abstain_cost": 0.05,
+        "coverage": 0.1812,
+        "commit_error_rate": 0.025800220750551876
+      },
+      {
+        "abstain_cost": 0.1,
+        "coverage": 0.331725,
+        "commit_error_rate": 0.04966463184866983
+      },
+      {
+        "abstain_cost": 0.2,
+        "coverage": 0.55065,
+        "commit_error_rate": 0.08562607827113411
+      },
+      {
+        "abstain_cost": 0.3,
+        "coverage": 0.717975,
+        "commit_error_rate": 0.122775862669313
+      },
+      {
+        "abstain_cost": 0.4,
+        "coverage": 0.86435,
+        "commit_error_rate": 0.16194250014461734
+      },
+      {
+        "abstain_cost": 0.5,
+        "coverage": 1.0,
+        "commit_error_rate": 0.201
+      },
+      {
+        "abstain_cost": 0.6,
+        "coverage": 1.0,
+        "commit_error_rate": 0.201
+      },
+      {
+        "abstain_cost": 0.7,
+        "coverage": 1.0,
+        "commit_error_rate": 0.201
+      },
+      {
+        "abstain_cost": 0.8,
+        "coverage": 1.0,
+        "commit_error_rate": 0.201
+      },
+      {
+        "abstain_cost": 0.9,
+        "coverage": 1.0,
+        "commit_error_rate": 0.201
+      },
+      {
+        "abstain_cost": 0.95,
+        "coverage": 1.0,
+        "commit_error_rate": 0.201
+      }
+    ]
+  },
+  "experiment2_zero_axiom": {
+    "coverage_curve": [
+      {
+        "op": "conjunction",
+        "coverage": 0.1,
+        "suspension_rate": 1.0,
+        "determinate_error_rate": 0.0,
+        "determined_count": 0
+      },
+      {
+        "op": "majority_vote",
+        "coverage": 0.1,
+        "suspension_rate": 1.0,
+        "determinate_error_rate": 0.0,
+        "determined_count": 0
+      },
+      {
+        "op": "conjunction",
+        "coverage": 0.3,
+        "suspension_rate": 1.0,
+        "determinate_error_rate": 0.0,
+        "determined_count": 0
+      },
+      {
+        "op": "majority_vote",
+        "coverage": 0.3,
+        "suspension_rate": 1.0,
+        "determinate_error_rate": 0.0,
+        "determined_count": 0
+      },
+      {
+        "op": "conjunction",
+        "coverage": 0.5,
+        "suspension_rate": 1.0,
+        "determinate_error_rate": 0.0,
+        "determined_count": 0
+      },
+      {
+        "op": "majority_vote",
+        "coverage": 0.5,
+        "suspension_rate": 1.0,
+        "determinate_error_rate": 0.0,
+        "determined_count": 0
+      },
+      {
+        "op": "conjunction",
+        "coverage": 0.7,
+        "suspension_rate": 1.0,
+        "determinate_error_rate": 0.0,
+        "determined_count": 0
+      },
+      {
+        "op": "majority_vote",
+        "coverage": 0.7,
+        "suspension_rate": 1.0,
+        "determinate_error_rate": 0.0,
+        "determined_count": 0
+      },
+      {
+        "op": "conjunction",
+        "coverage": 0.9,
+        "suspension_rate": 1.0,
+        "determinate_error_rate": 0.0,
+        "determined_count": 0
+      },
+      {
+        "op": "majority_vote",
+        "coverage": 0.9,
+        "suspension_rate": 1.0,
+        "determinate_error_rate": 0.0,
+        "determined_count": 0
+      }
+    ],
+    "monotonicity": {
+      "conjunction": true,
+      "disjunction": true,
+      "majority_vote": false
+    }
+  },
+  "experiment3_long_chain": {
+    "base": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1
+    ],
+    "steps": 500,
+    "discrete": {
+      "violations": 0,
+      "mean_abs_charge_drift": 0.0
+    },
+    "soft": [
+      {
+        "noise_std": 0.01,
+        "violations": 0,
+        "mean_abs_charge_drift": 0.0
+      },
+      {
+        "noise_std": 0.05,
+        "violations": 0,
+        "mean_abs_charge_drift": 0.0
+      },
+      {
+        "noise_std": 0.1,
+        "violations": 0,
+        "mean_abs_charge_drift": 0.0
+      }
+    ]
+  }
+}
