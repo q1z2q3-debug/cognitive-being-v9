@@ -218,6 +218,22 @@ section{padding:clamp(56px,8vw,92px) 0}
 .limit.no .limit-k{color:#c97a5e}
 .limit p{font-size:13.5px;color:var(--muted);line-height:1.8}
 
+/* ---------- market ---------- */
+.mk-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.mk-card{display:block;border:1px solid var(--line);background:var(--ink-2);padding:22px 24px;
+text-decoration:none;color:var(--paper);transition:border-color .22s ease,transform .22s ease}
+.mk-card:hover{border-color:var(--celadon-deep);transform:translateY(-2px)}
+.mk-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.mk-k{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--muted)}
+.mk-idx{font-family:var(--mono);font-size:12px;color:var(--gold)}
+.mk-t{font-family:var(--serif);font-size:20px;margin:10px 0 5px;letter-spacing:.01em}
+.mk-s{display:flex;align-items:baseline;gap:9px;font-size:12.5px;color:var(--muted);margin-bottom:12px}
+.mk-s b{font-family:var(--mono);font-size:13px;color:var(--celadon);font-weight:500}
+.mk-s.bear b{color:var(--cinnabar)}
+.mk-p{font-size:13px;line-height:1.78;color:var(--paper-dim);margin:0}
+.mk-go{margin-top:15px;font-family:var(--mono);font-size:11.5px;color:var(--celadon);letter-spacing:.04em}
+@media(max-width:860px){.mk-grid{grid-template-columns:1fr}}
+
 /* ---------- footer ---------- */
 footer{border-top:1px solid var(--line);padding:34px 0 44px;margin-top:0}
 .foot-in{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:18px}
@@ -283,6 +299,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 44px;margin-top:0}
       <a href="#modules">模块</a>
       <a href="#evidence">证据</a>
       <a href="#start">运行</a>
+      <a href="#market">市场</a>
     </div>
     <a class="nav-cta" href="https://github.com/q1z2q3-debug/cognitive-being-v9">GitHub ↗</a>
   </div>
@@ -585,11 +602,42 @@ python examples/demo.py</pre>
   </div>
 </section>
 
+<!-- ===== 市场 ===== -->
+<section id="market">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-no">06</div>
+      <div>
+        <h2 class="sec-title">让它看真实市场</h2>
+        <p class="sec-sub">同一个引擎，日 K 进、九维出。规则公开、阈值固定、结果可复算——不是选股模型，是把市场事实压进 19683 个离散态。</p>
+      </div>
+    </div>
+
+    <div class="mk-grid">
+      <a class="mk-card" href="stock-indices.html">
+        <div class="mk-top"><span class="mk-k">指数 · 19 个交易日</span><span class="mk-idx">10/27 – 11/20</span></div>
+        <div class="mk-t">上证 #186，沪深300 #21</div>
+        <div class="mk-s bear"><b>空头确立</b><span>张力 0.699 · 19 日最高</span></div>
+        <p class="mk-p">上证累计 −3.14%，九维中七维确定；跌破 10/23 低点 3574.27。观测层三次“+1 直落 −1”的硬反转，全部先退成悬置，未穿透状态层。</p>
+        <div class="mk-go">打开诊断 ↗</div>
+      </a>
+
+      <a class="mk-card" href="pa-000001.html">
+        <div class="mk-top"><span class="mk-k">个股 · 21 个交易日</span><span class="mk-idx">000001.SZ</span></div>
+        <div class="mk-t">平安银行 #18770</div>
+        <div class="mk-s"><b>多头确立</b><span>张力 0.40 · 五维确定</span></div>
+        <p class="mk-p">大盘 −1.22% 的日子它 +1.50%、成交 1.38 倍放量收红；索引与上证相隔 18584，几乎站在 19683 态的两端。归维已到 20 日区间 92% 分位。</p>
+        <div class="mk-go">打开诊断 ↗</div>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ===== 边界 ===== -->
 <section id="limits">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-no">06</div>
+      <div class="sec-no">07</div>
       <div>
         <h2 class="sec-title">做到哪，没做到哪</h2>
         <p class="sec-sub">把“已实现 / 仿真 / 待验证 / 不做”分开写，是为了让读者能自己判断这份工作值多少。</p>

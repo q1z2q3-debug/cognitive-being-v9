@@ -107,7 +107,7 @@ def encode_day(rows: List[Dict[str, float]], i: int) -> Tuple[Tuple[int, ...], D
         vec.append(-1)
     else:
         vec.append(0)
-    why["反"] = f"10日区间 {lo10:.0f}–{hi10:.0f}"
+    why["反"] = f"10日区间 {lo10:.2f}–{hi10:.2f}"
 
     # 合：均线同向
     if ma5 > ma20 and ma5 > ma5_prev:

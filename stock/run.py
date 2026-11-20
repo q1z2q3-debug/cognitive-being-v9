@@ -190,9 +190,15 @@ def run_symbol(name: str, csv_path: Path, warmup: int = 5) -> Dict:
 
 def main() -> None:
     OUT.mkdir(exist_ok=True)
+    target_files = [
+        ("上证指数 000001", "sh000001.csv"),
+        ("沪深300 000300", "sh000300.csv"),
+        ("平安银行 000001.SZ", "sz000001_pab.csv"),
+    ]
+    wanted = sys.argv[1:]
     targets = [
-        ("上证指数 000001", DATA / "sh000001.csv"),
-        ("沪深300 000300", DATA / "sh000300.csv"),
+        (name, DATA / fn) for name, fn in target_files
+        if not wanted or fn in wanted or fn.split(".")[0] in wanted
     ]
     results = {}
 
